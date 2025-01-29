@@ -5,6 +5,10 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+        <option name="testRunner" value="CHOOSE_PER_TEST" />
+>>>>>>> Stashed changes
 =======
         <option name="testRunner" value="CHOOSE_PER_TEST" />
 >>>>>>> Stashed changes
