@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-mergeDebugResources-35:\\layout\\activity_phase3.xml",
+        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\layout\\activity_phase3.xml"
+    },
+    {
+        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-mergeDebugResources-35:\\layout\\activity_phase1.xml",
+        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\layout\\activity_phase1.xml"
+    },
+    {
+        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-mergeDebugResources-35:\\layout\\activity_phase2.xml",
+        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\layout\\activity_phase2.xml"
+    },
+    {
+        "merged": "com.example.quizora.app-mergeDebugResources-35:/layout/activity_phase1.xml",
+        "source": "com.example.quizora.app-main-38:/layout/activity_phase1.xml"
+    }
+]
