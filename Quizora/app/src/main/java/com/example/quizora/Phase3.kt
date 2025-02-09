@@ -18,18 +18,24 @@ class Phase3 : AppCompatActivity() {
 
         // Set click listeners for buttons
         binding.signbtn.setOnClickListener {
-            navigateToSign_Up()
+            navigateToSignUp()
         }
 
         binding.loginbtn.setOnClickListener {
-            //
+            navigateToLogin()
         }
-
     }
 
-    private fun navigateToSign_Up() {
-        // Navigate to Phase2 activity
+    private fun navigateToLogin() {
+        // Navigate to Login activity (assuming it's Phase2)
+        val intent = Intent(this, LoginForm::class.java)
+        startActivity(intent)
+    }
+
+    private fun navigateToSignUp() {
+        // Navigate to SignUp activity
         val intent = Intent(this, SignUp::class.java)
         startActivity(intent)
     }
 }
+
