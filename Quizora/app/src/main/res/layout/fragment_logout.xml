@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Logout">
+
+    <RelativeLayout
+        android:layout_width="331dp"
+        android:layout_height="247dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginVertical="40dp"
+        android:layout_marginBottom="272dp"
+        android:background="@drawable/sign_border">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="77dp"
+            android:layout_marginTop="147dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Log out of your account?"
+            android:textColor="#C97D8E"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/promt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="121dp"
+            android:layout_marginTop="108dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="LOG OUT"
+            android:textColor="#AF258F"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="138dp"
+            android:layout_height="86dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="144dp"
+            android:src="@drawable/log_out" />
+
+        <Button
+            android:id="@+id/btncancel2"
+            android:layout_width="129dp"
+            android:layout_height="38dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="266dp"
+            android:layout_marginEnd="175dp"
+            android:layout_marginBottom="22dp"
+            android:background="@drawable/create"
+            android:fontFamily="@font/poppins_medium"
+            android:text="CANCEL"
+            android:textColor="#AF258F" />
+
+        <Button
+            android:id="@+id/btnlogout"
+            android:layout_width="129dp"
+            android:layout_height="38dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="266dp"
+            android:layout_marginEnd="29dp"
+            android:layout_marginBottom="22dp"
+            android:background="@drawable/border"
+            android:fontFamily="@font/poppins_medium"
+            android:text="LOG OUT"
+            android:textColor="#80FF0000" />
+
+    </RelativeLayout>
+
+</FrameLayout>
