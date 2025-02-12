@@ -23,17 +23,21 @@ class MainActivity : AppCompatActivity() {
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_nav1)
 
-        // Load the default fragment (HomeFragment)
+        // Load the default fragment only once
         if (savedInstanceState == null) {
-            loadFragment(SettingsFragment())
+            loadFragment(HomeFragment()) // Choose a default fragment
         }
 
         // Set up item selection listener
         bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
-
                 R.id.navigation_settings -> loadFragment(SettingsFragment())
-                else -> false
+                R.id.navigation_profile -> loadFragment(ProfileFragment())
+                R.id.navigation_home -> loadFragment(HomeFragment())
+                R.id.navigation_explore -> loadFragment(ExploreFragment())
+                R.id.navigation_activity -> loadFragment(ActivityFragment())
+
+                else -> false // Corrected position
             }
         }
     }
@@ -46,3 +50,4 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 }
+
