@@ -1,6 +1,8 @@
 package com.example.quizora
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -15,6 +17,15 @@ class ForgotPassword2 : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+        // Navigate to ForgotPassword2
+        findViewById<Button>(R.id.btnBack1).setOnClickListener {
+            val intent = Intent(this, ForgotPassword::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<Button>(R.id.Save1).setOnClickListener {
+            // Do nothing
         }
     }
 }
