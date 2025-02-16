@@ -3145,6 +3145,7 @@ id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
+id Changebtn
 id EmailAddress
 id FUNCTION
 id ImageView1
@@ -3159,7 +3160,6 @@ id SHOW_ALL
 id SHOW_PATH
 id SHOW_PROGRESS
 id SYM
-id Save1
 id Signin
 id Signup
 id Signupbtn
@@ -3842,7 +3842,6 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_forgot_password
 layout activity_forgot_password2
-layout activity_login
 layout activity_login_form
 layout activity_main
 layout activity_phase1

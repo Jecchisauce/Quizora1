@@ -3144,6 +3144,7 @@ int id ALT 0x7f090000
 int id BOTTOM_END 0x7f090001
 int id BOTTOM_START 0x7f090002
 int id CTRL 0x7f090003
+int id Changebtn 0x7f090249
 int id EmailAddress 0x7f090004
 int id FUNCTION 0x7f090005
 int id ImageView1 0x7f090006
@@ -3158,7 +3159,6 @@ int id SHOW_ALL 0x7f09000e
 int id SHOW_PATH 0x7f09000f
 int id SHOW_PROGRESS 0x7f090010
 int id SYM 0x7f090011
-int id Save1 0x7f090012
 int id Signin 0x7f090013
 int id Signup 0x7f090014
 int id Signupbtn 0x7f090015
@@ -3841,7 +3841,6 @@ int layout abc_select_dialog_material 0x7f0c001a
 int layout abc_tooltip 0x7f0c001b
 int layout activity_forgot_password 0x7f0c001c
 int layout activity_forgot_password2 0x7f0c001d
-int layout activity_login 0x7f0c001e
 int layout activity_login_form 0x7f0c001f
 int layout activity_main 0x7f0c0020
 int layout activity_phase1 0x7f0c0021
