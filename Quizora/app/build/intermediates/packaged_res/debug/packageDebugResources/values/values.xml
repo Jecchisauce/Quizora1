@@ -3,9 +3,18 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">Quizora</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <style name="ActiveText" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">14sp</item>
+    </style>
     <style name="Base.Theme.Quizora" parent="Theme.AppCompat.Light.NoActionBar">
         
         
+    </style>
+    <style name="InactiveText" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">12sp</item>
     </style>
     <style name="Theme.Quizora" parent="Base.Theme.Quizora"/>
 </resources>

@@ -1,178 +1,298 @@
 [
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\layout\\activity_main.xml"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_baseline_arrow_forward_ios_24.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\baseline_arrow_forward_ios_24.xml"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\xml\\backup_rules.xml"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_sign_border.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\sign_border.xml"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\drawable_lo_go.png.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\drawable\\lo_go.png"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_activity_forgot_password.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\activity_forgot_password.xml"
     },
     {
-        "merged": "com.example.quizora.app-debug-36:/drawable_border.xml.flat",
-        "source": "com.example.quizora.app-main-38:/drawable/border.xml"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\mipmap-mdpi\\ic_launcher_foreground.webp"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\xml\\data_extraction_rules.xml"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_fragment_home.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\fragment_home.xml"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\drawable_textbox.xml.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\drawable\\textbox.xml"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_fragment_profile.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\fragment_profile.xml"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\mipmap-xxhdpi\\ic_launcher_foreground.webp"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_cha_rac.png.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\cha_rac.png"
     },
     {
-        "merged": "com.example.quizora.app-debug-36:/drawable_create.xml.flat",
-        "source": "com.example.quizora.app-main-38:/drawable/create.xml"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\font_poppins_regular.ttf.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\font\\poppins_regular.ttf"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\layout_activity_sign_up.xml.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\layout\\activity_sign_up.xml"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_b_g.png.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\b_g.png"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\mipmap-xxxhdpi\\ic_launcher_foreground.webp"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\font_poppins_medium.ttf.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\font\\poppins_medium.ttf"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\xml_backup_rules.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "com.example.quizora.app-debug-36:/drawable_b_g.png.flat",
-        "source": "com.example.quizora.app-main-38:/drawable/b_g.png"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_fragment_update_password.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\fragment_update_password.xml"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\drawable_cha_rac.png.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\drawable\\cha_rac.png"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_fragment_explore.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\fragment_explore.xml"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\font_poppins_extrabold.ttf.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\font\\poppins_extrabold.ttf"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_border.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\border.xml"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\layout_activity_phase2.xml.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\layout\\activity_phase2.xml"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_baseline_arrow_back_ios_24.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\baseline_arrow_back_ios_24.xml"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\drawable_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\drawable\\ic_launcher_foreground.xml"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_edit_mode.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\edit_mode.xml"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\drawable_sign_border.xml.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\drawable\\sign_border.xml"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_activity_forgot_password2.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\activity_forgot_password2.xml"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\font_poppins_thin.ttf.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\font\\poppins_thin.ttf"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\layout_activity_phase1.xml.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\layout\\activity_phase1.xml"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_sp_lash.png.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\sp_lash.png"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\mipmap-mdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\mipmap-mdpi\\ic_launcher_foreground.webp"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_circle_border.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\circle_border.xml"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_lo_go.png.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\lo_go.png"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_back_arrow.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\back_arrow.xml"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\mipmap-xxxhdpi\\ic_launcher_foreground.webp"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_activity_phase2.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\activity_phase2.xml"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\drawable_border.xml.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\drawable\\border.xml"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\mipmap-hdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\mipmap-hdpi\\ic_launcher_foreground.webp"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_baseline_home_24.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\baseline_home_24.xml"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\font_poppins_regular.ttf.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\font\\poppins_regular.ttf"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\font_poppins_medium.ttf.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\font\\poppins_medium.ttf"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\mipmap-xhdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\mipmap-xhdpi\\ic_launcher_foreground.webp"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\layout_activity_splash_screen.xml.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\layout\\activity_splash_screen.xml"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_profile.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\profile.xml"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\drawable\\ic_launcher_background.xml"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_baseline_arrow_back_24.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\baseline_arrow_back_24.xml"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\drawable_button.xml.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\drawable\\button.xml"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\drawable_b_g.png.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\drawable\\b_g.png"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_fragment_delete_account.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\fragment_delete_account.xml"
     },
     {
-        "merged": "com.example.quizora.app-debug-36:/layout_activity_sign_up.xml.flat",
-        "source": "com.example.quizora.app-main-38:/layout/activity_sign_up.xml"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\font_poppins_thin.ttf.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\font\\poppins_thin.ttf"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\xml_data_extraction_rules.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\drawable_create.xml.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\drawable\\create.xml"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\menu_bottom_nav_menu.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\menu\\bottom_nav_menu.xml"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\layout_activity_login.xml.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\layout\\activity_login.xml"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_activity_splash_screen.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\activity_splash_screen.xml"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\layout_activity_phase3.xml.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\layout\\activity_phase3.xml"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_ic_launcher_background.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_textbox.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\textbox.xml"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "com.example.quizora.app-debug-4:/layout_fragment_explore.xml.flat",
+        "source": "com.example.quizora.app-main-6:/layout/fragment_explore.xml"
     },
     {
-        "merged": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-36:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Johnr\\.gradle\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-38:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_activity_login.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_log_out.png.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\log_out.png"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_up_date.png.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\up_date.png"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_de_lete.png.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\de_lete.png"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_fragment_logout.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\fragment_logout.xml"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_activity.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\activity.xml"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_activity_phase1.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\activity_phase1.xml"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_settings.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\settings.xml"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_fragment_profile2.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\fragment_profile2.xml"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_create.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\create.xml"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\mipmap-xxhdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_button.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\button.xml"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_activity_main.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_search.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\search.xml"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_art_bg.png.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\art_bg.png"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_se_arch.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\se_arch.xml"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_activity_login_form.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\activity_login_form.xml"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\font_poppins_extrabold.ttf.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\font\\poppins_extrabold.ttf"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_activity_phase3.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\activity_phase3.xml"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_profile_circle.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\profile_circle.xml"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_activity_sign_up.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\activity_sign_up.xml"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_borders.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\borders.xml"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\mipmap-hdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\color_bottom_nav_icon_color.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\color\\bottom_nav_icon_color.xml"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_fragment_settings.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\fragment_settings.xml"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\mipmap-xhdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_fragment_activity.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\fragment_activity.xml"
     }
 ]

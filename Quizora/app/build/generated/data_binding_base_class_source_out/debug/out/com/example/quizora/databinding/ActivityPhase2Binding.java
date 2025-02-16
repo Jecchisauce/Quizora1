@@ -37,9 +37,12 @@ public abstract class ActivityPhase2Binding extends ViewDataBinding {
   @NonNull
   public final TextView textView3;
 
+  @NonNull
+  public final TextView textView6;
+
   protected ActivityPhase2Binding(Object _bindingComponent, View _root, int _localFieldCount,
       Button instructor, RelativeLayout main, Button parent, Button student, TextView textView,
-      TextView textView2, TextView textView3) {
+      TextView textView2, TextView textView3, TextView textView6) {
     super(_bindingComponent, _root, _localFieldCount);
     this.instructor = instructor;
     this.main = main;
@@ -48,6 +51,7 @@ public abstract class ActivityPhase2Binding extends ViewDataBinding {
     this.textView = textView;
     this.textView2 = textView2;
     this.textView3 = textView3;
+    this.textView6 = textView6;
   }
 
   @NonNull

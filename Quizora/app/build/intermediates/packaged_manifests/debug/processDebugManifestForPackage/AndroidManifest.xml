@@ -28,11 +28,17 @@
         android:testOnly="true"
         android:theme="@style/Theme.Quizora" >
         <activity
+            android:name="com.example.quizora.ForgotPassword2"
+            android:exported="false" />
+        <activity
+            android:name="com.example.quizora.ForgotPassword"
+            android:exported="true" />
+        <activity
             android:name="com.example.quizora.SignUp"
             android:exported="false" />
         <activity
-            android:name="com.example.quizora.Login"
-            android:exported="false" />
+            android:name="com.example.quizora.LoginForm"
+            android:exported="true" />
         <activity
             android:name="com.example.quizora.Phase1"
             android:exported="true" />

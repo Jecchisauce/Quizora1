@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.quizora.app-mergeDebugResources-34:/values-en-rAU/values-en-rAU.xml",
+            "outputFile": "com.example.quizora.app-mergeDebugResources-2:/values-en-rAU/values-en-rAU.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Johnr\\.gradle\\caches\\8.13-milestone-3\\transforms\\a7d3da6bdf9fa3e01e1ee0f0f64b595f\\transformed\\appcompat-1.7.0\\res\\values-en-rAU\\values-en-rAU.xml",
+                    "source": "D:\\Quizora2\\caches\\8.13-milestone-3\\transforms\\a7d3da6bdf9fa3e01e1ee0f0f64b595f\\transformed\\appcompat-1.7.0\\res\\values-en-rAU\\values-en-rAU.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Johnr\\.gradle\\caches\\8.13-milestone-3\\transforms\\687fa46d2368181b1f4ddaf58236a6d1\\transformed\\core-1.15.0\\res\\values-en-rAU\\values-en-rAU.xml",
+                    "source": "D:\\Quizora2\\caches\\8.13-milestone-3\\transforms\\687fa46d2368181b1f4ddaf58236a6d1\\transformed\\core-1.15.0\\res\\values-en-rAU\\values-en-rAU.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
