@@ -12,10 +12,6 @@
         "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.quizora.app-debug-4:/layout_fragment_update_password.xml.flat",
-        "source": "com.example.quizora.app-main-6:/layout/fragment_update_password.xml"
-    },
-    {
         "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_activity_forgot_password.xml.flat",
         "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\activity_forgot_password.xml"
     },
@@ -170,6 +166,10 @@
     {
         "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_textbox.xml.flat",
         "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\textbox.xml"
+    },
+    {
+        "merged": "com.example.quizora.app-debug-4:/layout_fragment_explore.xml.flat",
+        "source": "com.example.quizora.app-main-6:/layout/fragment_explore.xml"
     },
     {
         "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_activity_login.xml.flat",
