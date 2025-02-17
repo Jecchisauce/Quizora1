@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1f1e1e"
+    android:background="#5E1239"
     tools:context=".ExploreFragment">
 
     <RelativeLayout
@@ -24,6 +24,7 @@
             android:elevation="6dp">
 
             <ImageView
+                android:id="@+id/search_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:contentDescription="Search Icon"
@@ -31,34 +32,342 @@
 
             <EditText
                 android:id="@+id/search_bar"
-                android:layout_width="343dp"
+                android:layout_width="0dp"
                 android:layout_height="48dp"
+                android:layout_weight="1"
                 android:background="@android:color/transparent"
-                android:hint="Search for topics"
+                android:hint="Find a quiz"
                 android:paddingStart="10dp"
                 android:textColor="@color/black"
                 android:textColorHint="#B3B3B3"
                 android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/clear_button"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:contentDescription="Clear Text"
+                android:src="@drawable/clear"
+                android:visibility="gone" />
+
         </LinearLayout>
 
     </RelativeLayout>
 
 
-    <HorizontalScrollView
-        android:id="@+id/scrollhori"
+    <LinearLayout
+        android:outlineAmbientShadowColor="@color/black"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginTop="100dp"
-        android:background="#5E1239"
-        android:contentDescription="Horizontal Scroll View"
-        android:padding="12dp"/>
+        android:layout_height="85dp"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/art_bg"
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <ListView
-        android:contentDescription="Lists"
-        android:id="@+id/lists"
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="Please select your grade level and subject to proceed."
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:padding="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/Gradebtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:background="@drawable/borders"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Grade"
+                android:textColor="#C97D8E" />
+
+            <Button
+                android:id="@+id/Subjectbtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/borders"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Subject"
+                android:textColor="#C97D8E" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/scrollbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="260dp"
-        android:background="#4D0E2D"
-        android:padding="10dp"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="175dp"
+        android:background="#5E1239"
+        android:padding="12dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/Newbtn"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/borders"
+                android:fontFamily="@font/poppins_extrabold"
+                android:text="NEW"
+                android:textColor="@android:color/black" />
+
+            <Button
+                android:id="@+id/Sugbtn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/borders"
+                android:fontFamily="@font/poppins_extrabold"
+                android:text="suggestion"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/Recbtn"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/borders"
+                android:fontFamily="@font/poppins_extrabold"
+                android:text="Recommendation"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/test"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/borders"
+                android:fontFamily="@font/poppins_extrabold"
+                android:text="IQ test"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@+id/Others"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/borders"
+                android:fontFamily="@font/poppins_extrabold"
+                android:text="Others"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="485dp"
+        android:layout_marginTop="255dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <!-- Quiz Item 1 -->
+            <LinearLayout
+                android:id="@+id/Math"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/textbox"
+                android:elevation="4dp"
+                android:orientation="horizontal"
+                android:padding="10dp"> <!-- Spacing between items -->
+
+                <ImageView
+                    android:id="@+id/quiz_type_icon1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="Quiz Type Icon"
+                    android:src="@drawable/ma_th" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/quiz_title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Math Quiz"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/quiz_description1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Basic algebra and equations."
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Quiz Item 2 -->
+            <LinearLayout
+                android:id="@+id/Science"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/textbox"
+                android:elevation="4dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/quiz_type_icon2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="Quiz Type Icon"
+                    android:src="@drawable/scie_nce" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/quiz_title2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Science Quiz"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/quiz_description2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Test your knowledge about bio-chemistry."
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Quiz Item 3 -->
+            <LinearLayout
+                android:id="@+id/History"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textbox"
+                android:elevation="4dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/quiz_type_icon3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="Quiz Type Icon"
+                    android:src="@drawable/his_tory" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/quiz_title3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="History Quiz"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/quiz_description3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Explore world history and key events."
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Quiz Item 5 -->
+            <LinearLayout
+                android:id="@+id/Geography"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/textbox"
+                android:elevation="4dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/quiz_type_icon4"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="Quiz Type Icon"
+                    android:src="@drawable/en_glish" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/quiz_title4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Geography Quiz"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/quiz_description4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Test your knowledge about geography."
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
 </FrameLayout>

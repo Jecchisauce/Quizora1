@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:2:1-50:12
-INJECTED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:2:1-50:12
-INJECTED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:2:1-50:12
-INJECTED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:2:1-50:12
+ADDED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:2:1-51:12
 MERGED from [androidx.databinding:databinding-adapters:8.8.0] D:\Quizora2\caches\8.13-milestone-3\transforms\54504b23bba3a4d35a54ee948bae3d9c\transformed\databinding-adapters-8.8.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.databinding:databinding-ktx:8.8.0] D:\Quizora2\caches\8.13-milestone-3\transforms\5f17d122dae055ecde5f3b060aca9d10\transformed\databinding-ktx-8.8.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.databinding:databinding-runtime:8.8.0] D:\Quizora2\caches\8.13-milestone-3\transforms\d9d56c3d50b37e48046fa1f51c57aa9f\transformed\databinding-runtime-8.8.0\AndroidManifest.xml:2:1-7:12
@@ -62,8 +62,8 @@ MERGED from [androidx.annotation:annotation-experimental:1.4.1] D:\Quizora2\cach
 	xmlns:android
 		ADDED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:5:5-48:19
-INJECTED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:5:5-48:19
+ADDED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:5:5-49:19
+INJECTED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:5:5-49:19
 MERGED from [com.google.android.material:material:1.12.0] D:\Quizora2\caches\8.13-milestone-3\transforms\75b1123dfbcbbb1eed97d3196a481657\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] D:\Quizora2\caches\8.13-milestone-3\transforms\75b1123dfbcbbb1eed97d3196a481657\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.0] D:\Quizora2\caches\8.13-milestone-3\transforms\05663c4c2c9081c38a9af66d6ae3ffdf\transformed\constraintlayout-2.2.0\AndroidManifest.xml:7:5-20
@@ -145,27 +145,29 @@ ADDED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:33:
 	android:name
 		ADDED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:34:13-35
 activity#com.example.quizora.MainActivity
-ADDED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:36:9-38:39
+ADDED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:36:9-39:39
+	android:windowSoftInputMode
+		ADDED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:38:13-52
 	android:exported
-		ADDED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:38:13-36
+		ADDED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:39:13-36
 	android:name
 		ADDED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:37:13-41
 activity#com.example.quizora.SplashScreen
-ADDED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:39:9-47:20
+ADDED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:40:9-48:20
 	android:exported
-		ADDED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:41:13-36
+		ADDED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:42:13-36
 	android:name
-		ADDED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:40:13-41
+		ADDED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:41:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:42:13-46:29
+ADDED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:43:13-47:29
 action#android.intent.action.MAIN
-ADDED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:43:17-69
+ADDED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:44:17-69
 	android:name
-		ADDED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:43:25-66
+		ADDED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:44:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:45:17-77
+ADDED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:46:17-77
 	android:name
-		ADDED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:45:27-74
+		ADDED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml:46:27-74
 uses-sdk
 INJECTED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Quizora Repo\Quizora1\Quizora\app\src\main\AndroidManifest.xml

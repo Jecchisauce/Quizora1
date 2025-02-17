@@ -1,23 +1,27 @@
 [
     {
-        "merged": "com.example.quizora.app-mergeDebugResources-3:/layout/activity_phase2.xml",
-        "source": "com.example.quizora.app-main-6:/layout/activity_phase2.xml"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-mergeDebugResources-3:\\layout\\activity_phase2.xml",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\activity_phase2.xml"
     },
     {
-        "merged": "com.example.quizora.app-mergeDebugResources-3:/layout/activity_sign_up.xml",
-        "source": "com.example.quizora.app-main-6:/layout/activity_sign_up.xml"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-mergeDebugResources-3:\\layout\\activity_phase3.xml",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\activity_phase3.xml"
     },
     {
-        "merged": "com.example.quizora.app-mergeDebugResources-3:/layout/activity_main.xml",
-        "source": "com.example.quizora.app-main-6:/layout/activity_main.xml"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-mergeDebugResources-3:\\layout\\activity_login_form.xml",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\activity_login_form.xml"
     },
     {
-        "merged": "com.example.quizora.app-mergeDebugResources-3:/layout/activity_phase3.xml",
-        "source": "com.example.quizora.app-main-6:/layout/activity_phase3.xml"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-mergeDebugResources-3:\\layout\\activity_main.xml",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.example.quizora.app-mergeDebugResources-3:/layout/activity_phase1.xml",
-        "source": "com.example.quizora.app-main-6:/layout/activity_phase1.xml"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-mergeDebugResources-3:\\layout\\activity_sign_up.xml",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\activity_sign_up.xml"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-mergeDebugResources-3:\\layout\\activity_phase1.xml",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\activity_phase1.xml"
     },
     {
         "merged": "com.example.quizora.app-mergeDebugResources-3:/layout/activity_login_form.xml",
