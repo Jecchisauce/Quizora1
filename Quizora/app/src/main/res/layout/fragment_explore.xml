@@ -3,32 +3,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5E1239"
+    android:background="#411036"
     tools:context=".ExploreFragment">
 
     <RelativeLayout
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:background="#5E1239"
+        android:layout_height="80dp"
+        android:background="@android:color/transparent"
         android:padding="12dp">
 
         <LinearLayout
+            android:layout_width="389dp"
+            android:layout_height="50dp"
             android:layout_marginTop="2dp"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
             android:background="@drawable/textbox"
+            android:elevation="6dp"
+            android:gravity="center_vertical"
             android:orientation="horizontal"
             android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:gravity="center_vertical"
-            android:elevation="6dp">
+            android:paddingEnd="12dp">
 
             <ImageView
                 android:id="@+id/search_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:contentDescription="Search Icon"
-                android:src="@drawable/se_arch"/>
+                android:src="@drawable/se_arch" />
 
             <EditText
                 android:id="@+id/search_bar"
@@ -40,7 +41,7 @@
                 android:paddingStart="10dp"
                 android:textColor="@color/black"
                 android:textColorHint="#B3B3B3"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <ImageView
                 android:id="@+id/clear_button"
@@ -55,65 +56,11 @@
     </RelativeLayout>
 
 
-    <LinearLayout
-        android:outlineAmbientShadowColor="@color/black"
-        android:layout_width="match_parent"
-        android:layout_height="85dp"
-        android:layout_marginTop="90dp"
-        android:background="@drawable/art_bg"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/titleText"
-            android:layout_width="wrap_content"
-            android:layout_height="24dp"
-            android:fontFamily="@font/poppins_medium"
-            android:gravity="center"
-            android:text="Please select your grade level and subject to proceed."
-            android:textColor="@android:color/white"
-            android:textSize="12sp"
-            android:textStyle="bold" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="58dp"
-            android:padding="5dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/Gradebtn"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.8"
-                android:background="@drawable/borders"
-                android:fontFamily="@font/poppins_medium"
-                android:text="Grade"
-                android:textColor="#C97D8E" />
-
-            <Button
-                android:id="@+id/Subjectbtn"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.8"
-                android:layout_marginStart="10dp"
-                android:background="@drawable/borders"
-                android:fontFamily="@font/poppins_medium"
-                android:text="Subject"
-                android:textColor="#C97D8E" />
-        </LinearLayout>
-
-
-
-    </LinearLayout>
-
     <HorizontalScrollView
         android:id="@+id/scrollbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="175dp"
-        android:background="#5E1239"
+        android:layout_marginTop="90dp"
         android:padding="12dp"
         android:fillViewport="true">
 
@@ -135,7 +82,7 @@
             <Button
                 android:id="@+id/Sugbtn"
                 android:layout_width="150dp"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_margin="5dp"
                 android:background="@drawable/borders"
                 android:fontFamily="@font/poppins_extrabold"
@@ -178,13 +125,14 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="485dp"
-        android:layout_marginTop="255dp"
+        android:layout_height="600dp"
+        android:layout_marginTop="170dp"
         android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/textbox"
             android:orientation="vertical"
             android:padding="10dp">
 

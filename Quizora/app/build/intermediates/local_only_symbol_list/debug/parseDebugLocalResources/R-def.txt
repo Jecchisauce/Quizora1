@@ -11,6 +11,7 @@ drawable baseline_arrow_back_24
 drawable baseline_arrow_back_ios_24
 drawable baseline_arrow_forward_ios_24
 drawable baseline_home_24
+drawable bg
 drawable border
 drawable borders
 drawable button
@@ -21,6 +22,7 @@ drawable create
 drawable de_lete
 drawable edit_mode
 drawable en_glish
+drawable gb
 drawable his_tory
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -44,7 +46,6 @@ font poppins_thin
 id Changebtn
 id EmailAddress
 id Geography
-id Gradebtn
 id History
 id ImageView1
 id Math
@@ -60,7 +61,6 @@ id Signin
 id Signup
 id Signupbtn
 id SpalshScreen
-id Subjectbtn
 id Sugbtn
 id backButton
 id bottom_nav1
@@ -139,7 +139,6 @@ id textView6
 id textView7
 id textView8
 id textView9
-id titleText
 id txtNickname
 id txtUserType
 id university

@@ -3008,6 +3008,7 @@ int drawable baseline_arrow_back_24 0x7f07007e
 int drawable baseline_arrow_back_ios_24 0x7f07007f
 int drawable baseline_arrow_forward_ios_24 0x7f070080
 int drawable baseline_home_24 0x7f070081
+int drawable bg 0x7f070107
 int drawable border 0x7f070082
 int drawable borders 0x7f070083
 int drawable btn_checkbox_checked_mtrl 0x7f070084
@@ -3031,6 +3032,7 @@ int drawable design_password_eye 0x7f070095
 int drawable design_snackbar_background 0x7f070096
 int drawable edit_mode 0x7f070097
 int drawable en_glish 0x7f070106
+int drawable gb 0x7f070108
 int drawable his_tory 0x7f070103
 int drawable ic_arrow_back_black_24 0x7f070098
 int drawable ic_call_answer 0x7f070099
@@ -3153,7 +3155,6 @@ int id Changebtn 0x7f090004
 int id EmailAddress 0x7f090005
 int id FUNCTION 0x7f090006
 int id Geography 0x7f090263
-int id Gradebtn 0x7f090007
 int id History 0x7f090264
 int id ImageView1 0x7f090008
 int id META 0x7f090009
@@ -3176,7 +3177,6 @@ int id Signin 0x7f090017
 int id Signup 0x7f090018
 int id Signupbtn 0x7f090019
 int id SpalshScreen 0x7f09001a
-int id Subjectbtn 0x7f09001b
 int id Sugbtn 0x7f09001c
 int id TOP_END 0x7f09001d
 int id TOP_START 0x7f09001e
@@ -3709,7 +3709,6 @@ int id textinput_suffix_text 0x7f090223
 int id time 0x7f090224
 int id title 0x7f090225
 int id titleDividerNoCustom 0x7f090226
-int id titleText 0x7f090227
 int id title_template 0x7f090228
 int id toggle 0x7f090229
 int id top 0x7f09022a
