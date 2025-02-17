@@ -16,28 +16,28 @@
         "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\activity_forgot_password.xml"
     },
     {
-        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\mipmap-mdpi_ic_launcher_foreground.webp.flat",
-        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\mipmap-mdpi\\ic_launcher_foreground.webp"
-    },
-    {
-        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_fragment_profile.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\fragment_profile.xml"
     },
     {
         "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_fragment_home.xml.flat",
         "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\fragment_home.xml"
     },
     {
-        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_fragment_profile.xml.flat",
-        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\fragment_profile.xml"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_cha_rac.png.flat",
-        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\cha_rac.png"
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\mipmap-mdpi\\ic_launcher_foreground.webp"
     },
     {
         "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\font_poppins_regular.ttf.flat",
         "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\font\\poppins_regular.ttf"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_cha_rac.png.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\cha_rac.png"
     },
     {
         "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_b_g.png.flat",
@@ -180,10 +180,6 @@
         "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\textbox.xml"
     },
     {
-        "merged": "com.example.quizora.app-debug-4:/layout_fragment_explore.xml.flat",
-        "source": "com.example.quizora.app-main-6:/layout/fragment_explore.xml"
-    },
-    {
         "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_activity_login.xml.flat",
         "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\activity_login.xml"
     },
@@ -202,6 +198,10 @@
     {
         "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_de_lete.png.flat",
         "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\de_lete.png"
+    },
+    {
+        "merged": "com.example.quizora.app-debug-4:/layout_activity_login_form.xml.flat",
+        "source": "com.example.quizora.app-main-6:/layout/activity_login_form.xml"
     },
     {
         "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_fragment_logout.xml.flat",
