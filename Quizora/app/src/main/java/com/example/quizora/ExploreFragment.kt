@@ -30,10 +30,19 @@ class ExploreFragment : Fragment() {
 
         val quizStatusText = view.findViewById<TextView>(R.id.quiz_status_text1)
 
-    // Example logic to check if the quiz is answered
+        val quiz1 = view.findViewById<View>(R.id.Quiz1) // Get reference to Quiz1 layout
+
+        quiz1.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, AnswerMath()) // Replace with your FrameLayout ID
+                .addToBackStack(null) // Allows going back to ExploreFragment
+                .commit()
+        }
+
+        // Example logic to check if the quiz is answered
         val isAnswered = false // Replace with actual logic
 
-    // Update text dynamically
+        // Update text dynamically
         if (isAnswered) {
             quizStatusText.text = "Completed"
             quizStatusText.setTextColor(ContextCompat.getColor(requireContext(), android.R.color.darker_gray))
@@ -102,5 +111,7 @@ class ExploreFragment : Fragment() {
         imm?.hideSoftInputFromWindow(view.windowToken, 0)
     }
 }
+
+
 
 

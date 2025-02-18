@@ -41,6 +41,7 @@ drawable settings
 drawable sign_border
 drawable sp_lash
 drawable textbox
+drawable timer
 drawable up_date
 font poppins_extrabold
 font poppins_medium
@@ -62,6 +63,10 @@ id Signup
 id Signupbtn
 id SpalshScreen
 id Sugbtn
+id answer_a
+id answer_b
+id answer_c
+id answer_d
 id backButton
 id bottom_nav1
 id btnBack
@@ -80,6 +85,7 @@ id container
 id createQuizCard
 id deletebtn
 id forgotbtn
+id fragment_container
 id grade12
 id historyCard
 id imageView
@@ -111,6 +117,8 @@ id profileTitle
 id profile_section
 id prompt
 id promt
+id question_container
+id question_text
 id quiz_buttons
 id quiz_description1
 id quiz_status_text1
@@ -137,6 +145,7 @@ id textView6
 id textView7
 id textView8
 id textView9
+id timer_progress
 id txtNickname
 id txtUserType
 id university
@@ -152,6 +161,7 @@ layout activity_phase3
 layout activity_sign_up
 layout activity_splash_screen
 layout fragment_activity
+layout fragment_answer_math
 layout fragment_delete_account
 layout fragment_explore
 layout fragment_home
@@ -164,9 +174,7 @@ menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
-string answer_quiz
 string app_name
-string completed
 string hello_blank_fragment
 style ActiveText
 style Base.Theme.Quizora

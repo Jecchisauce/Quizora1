@@ -3143,6 +3143,7 @@ int drawable sign_border 0x7f070105
 int drawable sp_lash 0x7f070106
 int drawable test_level_drawable 0x7f070107
 int drawable textbox 0x7f070108
+int drawable timer 0x7f07010c
 int drawable tooltip_frame_dark 0x7f070109
 int drawable tooltip_frame_light 0x7f07010a
 int drawable up_date 0x7f07010b
@@ -3245,6 +3246,10 @@ int id allStates 0x7f09005b
 int id always 0x7f09005c
 int id animateToEnd 0x7f09005d
 int id animateToStart 0x7f09005e
+int id answer_a 0x7f09025a
+int id answer_b 0x7f09025b
+int id answer_c 0x7f09025c
+int id answer_d 0x7f09025d
 int id antiClockwise 0x7f09005f
 int id anticipate 0x7f090060
 int id arc 0x7f090061
@@ -3384,6 +3389,7 @@ int id flip 0x7f0900e6
 int id floating 0x7f0900e7
 int id forever 0x7f0900e8
 int id forgotbtn 0x7f0900e9
+int id fragment_container 0x7f09025e
 int id fragment_container_view_tag 0x7f0900ea
 int id frost 0x7f0900eb
 int id fullscreen_header 0x7f0900ec
@@ -3576,6 +3582,8 @@ int id progress_circular 0x7f0901a6
 int id progress_horizontal 0x7f0901a7
 int id prompt 0x7f0901a8
 int id promt 0x7f0901a9
+int id question_container 0x7f09025f
+int id question_text 0x7f090260
 int id quiz_buttons 0x7f0901aa
 int id quiz_description1 0x7f0901ab
 int id quiz_status_text1 0x7f0901ac
@@ -3705,6 +3713,7 @@ int id textinput_placeholder 0x7f090227
 int id textinput_prefix_text 0x7f090228
 int id textinput_suffix_text 0x7f090229
 int id time 0x7f09022a
+int id timer_progress 0x7f090261
 int id title 0x7f09022b
 int id titleDividerNoCustom 0x7f09022c
 int id title_template 0x7f09022d
@@ -3892,6 +3901,7 @@ int layout design_navigation_menu_item 0x7f0c0032
 int layout design_text_input_end_icon 0x7f0c0033
 int layout design_text_input_start_icon 0x7f0c0034
 int layout fragment_activity 0x7f0c0035
+int layout fragment_answer_math 0x7f0c007d
 int layout fragment_delete_account 0x7f0c0036
 int layout fragment_explore 0x7f0c0037
 int layout fragment_home 0x7f0c0038
@@ -3996,7 +4006,6 @@ int string abc_shareactionprovider_share_with 0x7f110018
 int string abc_shareactionprovider_share_with_application 0x7f110019
 int string abc_toolbar_collapse_description 0x7f11001a
 int string androidx_startup 0x7f11001b
-int string answer_quiz 0x7f11001c
 int string app_name 0x7f11001d
 int string appbar_scrolling_view_behavior 0x7f11001e
 int string bottom_sheet_behavior 0x7f11001f
@@ -4016,7 +4025,6 @@ int string character_counter_content_description 0x7f11002c
 int string character_counter_overflowed_content_description 0x7f11002d
 int string character_counter_pattern 0x7f11002e
 int string clear_text_end_icon_content_description 0x7f11002f
-int string completed 0x7f110030
 int string error_a11y_label 0x7f110031
 int string error_icon_content_description 0x7f110032
 int string exposed_dropdown_menu_content_description 0x7f110033

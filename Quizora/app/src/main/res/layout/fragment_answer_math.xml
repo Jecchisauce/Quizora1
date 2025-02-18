@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="#411036"
+    tools:context=".AnswerMath">
+
+    <!-- Timer Progress Bar -->
+    <ProgressBar
+        android:id="@+id/timer_progress"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_marginBottom="16dp"
+        android:indeterminate="false"
+        android:progressDrawable="@drawable/timer"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:max="100"
+        android:progress="100"/>
+
+    <!-- Question Container -->
+    <LinearLayout
+        android:id="@+id/question_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/textbox"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/question_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Which gas is the lightest?"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_medium"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+    <!-- Answer Choices -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/answer_a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="A: Hydrogen"
+            android:fontFamily="@font/poppins_medium"
+            android:background="@drawable/textbox"/>
+
+        <Button
+            android:id="@+id/answer_b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="B: Helium"
+            android:fontFamily="@font/poppins_medium"
+            android:background="@drawable/textbox"/>
+
+        <Button
+            android:id="@+id/answer_c"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="C: Ammonia"
+            android:fontFamily="@font/poppins_medium"
+            android:background="@drawable/textbox"/>
+
+        <Button
+            android:id="@+id/answer_d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="D: Oxygen"
+            android:fontFamily="@font/poppins_medium"
+            android:background="@drawable/textbox"/>
+    </LinearLayout>
+
+</LinearLayout>

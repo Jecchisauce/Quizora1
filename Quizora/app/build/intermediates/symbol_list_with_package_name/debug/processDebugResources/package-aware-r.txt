@@ -3144,6 +3144,7 @@ drawable sign_border
 drawable sp_lash
 drawable test_level_drawable
 drawable textbox
+drawable timer
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable up_date
@@ -3246,6 +3247,10 @@ id allStates
 id always
 id animateToEnd
 id animateToStart
+id answer_a
+id answer_b
+id answer_c
+id answer_d
 id antiClockwise
 id anticipate
 id arc
@@ -3385,6 +3390,7 @@ id flip
 id floating
 id forever
 id forgotbtn
+id fragment_container
 id fragment_container_view_tag
 id frost
 id fullscreen_header
@@ -3577,6 +3583,8 @@ id progress_circular
 id progress_horizontal
 id prompt
 id promt
+id question_container
+id question_text
 id quiz_buttons
 id quiz_description1
 id quiz_status_text1
@@ -3706,6 +3714,7 @@ id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
 id time
+id timer_progress
 id title
 id titleDividerNoCustom
 id title_template
@@ -3893,6 +3902,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_activity
+layout fragment_answer_math
 layout fragment_delete_account
 layout fragment_explore
 layout fragment_home
@@ -3997,7 +4007,6 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string androidx_startup
-string answer_quiz
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
@@ -4017,7 +4026,6 @@ string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
 string clear_text_end_icon_content_description
-string completed
 string error_a11y_label
 string error_icon_content_description
 string exposed_dropdown_menu_content_description

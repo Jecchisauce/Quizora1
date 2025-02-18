@@ -12,6 +12,10 @@
         "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "com.example.quizora.app-debug-4:/drawable_timer.xml.flat",
+        "source": "com.example.quizora.app-main-6:/drawable/timer.xml"
+    },
+    {
         "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_activity_forgot_password.xml.flat",
         "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\activity_forgot_password.xml"
     },
@@ -98,6 +102,10 @@
     {
         "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_add.xml.flat",
         "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\add.xml"
+    },
+    {
+        "merged": "com.example.quizora.app-debug-4:/layout_fragment_answer_math.xml.flat",
+        "source": "com.example.quizora.app-main-6:/layout/fragment_answer_math.xml"
     },
     {
         "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
