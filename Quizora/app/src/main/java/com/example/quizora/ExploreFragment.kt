@@ -11,6 +11,7 @@ import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -26,6 +27,21 @@ class ExploreFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val quizStatusText = view.findViewById<TextView>(R.id.quiz_status_text1)
+
+    // Example logic to check if the quiz is answered
+        val isAnswered = false // Replace with actual logic
+
+    // Update text dynamically
+        if (isAnswered) {
+            quizStatusText.text = "Completed"
+            quizStatusText.setTextColor(ContextCompat.getColor(requireContext(), android.R.color.darker_gray))
+        } else {
+            quizStatusText.text = "Answer Quiz"
+            quizStatusText.setTextColor(ContextCompat.getColor(requireContext(), android.R.color.holo_green_dark))
+        }
+
 
         // Get references to UI elements
         val searchBar = view.findViewById<EditText>(R.id.search_bar)
@@ -48,11 +64,19 @@ class ExploreFragment : Fragment() {
             }
         })
 
-        // Handle search action when the user presses the Enter/Search key
         searchBar.setOnEditorActionListener { _, actionId, event ->
             if (actionId == EditorInfo.IME_ACTION_SEARCH ||
                 (event != null && event.keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_DOWN)) {
-                performSearch(searchBar.text.toString())
+
+                // Trim spaces and ensure only a single-line input
+                val query = searchBar.text.toString().trim()
+
+                if (query.isNotEmpty()) {
+                    performSearch(query)
+                } else {
+                    Toast.makeText(requireContext(), "Please enter a search term", Toast.LENGTH_SHORT).show()
+                }
+
                 hideKeyboard(searchBar)
                 true
             } else {
@@ -78,3 +102,5 @@ class ExploreFragment : Fragment() {
         imm?.hideSoftInputFromWindow(view.windowToken, 0)
     }
 }
+
+

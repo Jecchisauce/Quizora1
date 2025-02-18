@@ -3158,11 +3158,8 @@ id CTRL
 id Changebtn
 id EmailAddress
 id FUNCTION
-id Geography
-id History
 id ImageView1
 id META
-id Math
 id NO_DEBUG
 id Newbtn
 id Nickname
@@ -3170,13 +3167,13 @@ id Others
 id Password
 id Password1
 id Password2
+id Quiz1
 id Recbtn
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
 id SHOW_PROGRESS
 id SYM
-id Science
 id Signin
 id Signup
 id Signupbtn
@@ -3403,6 +3400,7 @@ id groups
 id header_title
 id hide_ime_id
 id hideable
+id historyCard
 id home
 id homeAsUp
 id honorRequest
@@ -3507,6 +3505,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id myQuizCard
 id nPassword
 id navigation_activity
 id navigation_bar_item_active_indicator_view
@@ -3580,17 +3579,9 @@ id prompt
 id promt
 id quiz_buttons
 id quiz_description1
-id quiz_description2
-id quiz_description3
-id quiz_description4
+id quiz_status_text1
 id quiz_title1
-id quiz_title2
-id quiz_title3
-id quiz_title4
 id quiz_type_icon1
-id quiz_type_icon2
-id quiz_type_icon3
-id quiz_type_icon4
 id rPassword
 id radio
 id ratio
@@ -4006,6 +3997,7 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string androidx_startup
+string answer_quiz
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
@@ -4025,6 +4017,7 @@ string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
 string clear_text_end_icon_content_description
+string completed
 string error_a11y_label
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
