@@ -2920,6 +2920,7 @@ dimen tooltip_precise_anchor_threshold
 dimen tooltip_vertical_padding
 dimen tooltip_y_offset_non_touch
 dimen tooltip_y_offset_touch
+drawable a
 drawable abc_ab_share_pack_mtrl_alpha
 drawable abc_action_bar_item_background_material
 drawable abc_btn_borderless_material
@@ -3004,6 +3005,7 @@ drawable add
 drawable art_bg
 drawable avd_hide_password
 drawable avd_show_password
+drawable b
 drawable b_g
 drawable back_arrow
 drawable baseline_arrow_back_24
@@ -3022,10 +3024,13 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable button
+drawable c
 drawable cha_rac
 drawable circle_border
 drawable clear
+drawable correct_answer
 drawable create
+drawable d
 drawable de_lete
 drawable design_fab_background
 drawable design_ic_visibility
@@ -3137,6 +3142,7 @@ drawable profile
 drawable profile_circle
 drawable quiz
 drawable scie_nce
+drawable score_bg
 drawable se_arch
 drawable search
 drawable settings
@@ -3148,6 +3154,7 @@ drawable timer
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable up_date
+drawable wrong_answer
 font poppins_extrabold
 font poppins_medium
 font poppins_regular
@@ -3161,6 +3168,7 @@ id EmailAddress
 id FUNCTION
 id ImageView1
 id META
+id Math_backbtn
 id NO_DEBUG
 id Newbtn
 id Nickname
@@ -3558,6 +3566,7 @@ id open_search_view_toolbar
 id open_search_view_toolbar_container
 id outline
 id outward
+id overlay_blocker
 id overshoot
 id packed
 id parallax
@@ -3608,6 +3617,7 @@ id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
 id scale
+id scoreboard
 id screen
 id scroll
 id scrollIndicatorDown

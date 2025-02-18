@@ -1,5 +1,6 @@
 package com.example.quizora
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.LayoutInflater
@@ -14,10 +15,12 @@ import androidx.fragment.app.Fragment
 class AnswerMath : Fragment() {
     private lateinit var timerProgressBar: ProgressBar
     private lateinit var questionText: TextView
+    private lateinit var scoreboard: TextView  // Scoreboard Reference
     private lateinit var answerA: Button
     private lateinit var answerB: Button
     private lateinit var answerC: Button
     private lateinit var answerD: Button
+    private var score = 0  // Score Counter
     private var timeLeft = 100  // Timer starts at 100%
 
     override fun onCreateView(
@@ -35,6 +38,7 @@ class AnswerMath : Fragment() {
 
         // Initialize UI Elements
         timerProgressBar = view.findViewById(R.id.timer_progress)
+        scoreboard = view.findViewById(R.id.scoreboard)  // Initialize Scoreboard
         questionText = view.findViewById(R.id.question_text)
         answerA = view.findViewById(R.id.answer_a)
         answerB = view.findViewById(R.id.answer_b)
@@ -44,11 +48,11 @@ class AnswerMath : Fragment() {
         // Start Timer
         startTimer()
 
-        // Answer Click Listeners
-        answerA.setOnClickListener { checkAnswer("A") }
-        answerB.setOnClickListener { checkAnswer("B") }
-        answerC.setOnClickListener { checkAnswer("C") }
-        answerD.setOnClickListener { checkAnswer("D") }
+        // Answer Listeners
+        answerA.setOnClickListener { checkAnswer(answerA, "A") }
+        answerB.setOnClickListener { checkAnswer(answerB, "B") }
+        answerC.setOnClickListener { checkAnswer(answerC, "C") }
+        answerD.setOnClickListener { checkAnswer(answerD, "D") }
     }
 
     override fun onDestroyView() {
@@ -57,28 +61,50 @@ class AnswerMath : Fragment() {
         requireActivity().findViewById<View>(R.id.bottom_nav1)?.visibility = View.VISIBLE
     }
 
-
     private fun startTimer() {
-        val timer = object : CountDownTimer(10000, 100) { // 10 seconds
+        val timer = object : CountDownTimer(20000, 200) { // 20 seconds countdown
             override fun onTick(millisUntilFinished: Long) {
-                timeLeft = (millisUntilFinished / 100).toInt()
+                timeLeft = (millisUntilFinished / 200).toInt()
                 timerProgressBar.progress = timeLeft
             }
 
             override fun onFinish() {
                 timerProgressBar.progress = 0
-                Toast.makeText(requireContext(), "Time's up!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "You did not choose Any answer", Toast.LENGTH_SHORT).show()
+
+                // Disable all buttons after timeout
+                disableAllButtons()
             }
         }
         timer.start()
     }
 
-    private fun checkAnswer(selected: String) {
-        val correctAnswer = "A"  // Example correct answer
-        if (selected == correctAnswer) {
+    private fun checkAnswer(selectedButton: Button, selectedAnswer: String) {
+        val correctAnswer = "A"  // Correct answer ID
+
+        if (selectedAnswer == correctAnswer) {
+            selectedButton.setBackgroundResource(R.drawable.correct_answer)  // Green background
             Toast.makeText(requireContext(), "Correct!", Toast.LENGTH_SHORT).show()
+            updateScore()  // Increment score
         } else {
+            selectedButton.setBackgroundResource(R.drawable.wrong_answer)  // Red background
             Toast.makeText(requireContext(), "Wrong answer!", Toast.LENGTH_SHORT).show()
         }
+
+        // Disable all buttons after answering
+        disableAllButtons()
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun updateScore() {
+        score += 1  // Increase score by 1 points
+        scoreboard.text = "SCORE: $score"  // Update scoreboard UI
+    }
+
+    private fun disableAllButtons() {
+        answerA.isEnabled = false
+        answerB.isEnabled = false
+        answerC.isEnabled = false
+        answerD.isEnabled = false
     }
 }

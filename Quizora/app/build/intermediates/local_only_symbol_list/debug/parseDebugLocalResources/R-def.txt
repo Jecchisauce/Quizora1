@@ -3,9 +3,11 @@ local
 color black
 color bottom_nav_icon_color
 color white
+drawable a
 drawable activity
 drawable add
 drawable art_bg
+drawable b
 drawable b_g
 drawable back_arrow
 drawable baseline_arrow_back_24
@@ -16,10 +18,13 @@ drawable bg
 drawable border
 drawable borders
 drawable button
+drawable c
 drawable cha_rac
 drawable circle_border
 drawable clear
+drawable correct_answer
 drawable create
+drawable d
 drawable de_lete
 drawable edit_mode
 drawable en_glish
@@ -35,6 +40,7 @@ drawable profile
 drawable profile_circle
 drawable quiz
 drawable scie_nce
+drawable score_bg
 drawable se_arch
 drawable search
 drawable settings
@@ -43,6 +49,7 @@ drawable sp_lash
 drawable textbox
 drawable timer
 drawable up_date
+drawable wrong_answer
 font poppins_extrabold
 font poppins_medium
 font poppins_regular
@@ -50,6 +57,7 @@ font poppins_thin
 id Changebtn
 id EmailAddress
 id ImageView1
+id Math_backbtn
 id Newbtn
 id Nickname
 id Others
@@ -109,6 +117,7 @@ id navigation_home
 id navigation_profile
 id navigation_settings
 id nickname
+id overlay_blocker
 id parent
 id personal
 id profileImage
@@ -127,6 +136,7 @@ id quiz_type_icon1
 id rPassword
 id roundedImageView
 id saveButton
+id scoreboard
 id scrollbar
 id search_bar
 id search_icon

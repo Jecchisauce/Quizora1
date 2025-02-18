@@ -179,9 +179,9 @@
                 <!-- Quiz Status Icon (Checkmark or Lock) -->
 
                 <LinearLayout
-                    android:layout_marginTop="3dp"
-                    android:layout_width="0dp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
                     android:layout_weight="1"
                     android:orientation="vertical">
 
@@ -200,7 +200,7 @@
                         android:layout_height="wrap_content"
                         android:text="Basic algebra and equations."
                         android:textColor="@android:color/darker_gray"
-                        android:textSize="13sp" />
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 
@@ -215,7 +215,8 @@
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginStart="10dp"/>
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"/>
 
             </LinearLayout>
 
