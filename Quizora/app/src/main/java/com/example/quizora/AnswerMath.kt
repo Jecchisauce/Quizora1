@@ -30,6 +30,9 @@ class AnswerMath : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Hide the Bottom Navigation Bar when AnswerMath is opened
+        requireActivity().findViewById<View>(R.id.bottom_nav1)?.visibility = View.GONE
+
         // Initialize UI Elements
         timerProgressBar = view.findViewById(R.id.timer_progress)
         questionText = view.findViewById(R.id.question_text)
@@ -47,6 +50,13 @@ class AnswerMath : Fragment() {
         answerC.setOnClickListener { checkAnswer("C") }
         answerD.setOnClickListener { checkAnswer("D") }
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        // Show the Bottom Navigation Bar again when leaving AnswerMath
+        requireActivity().findViewById<View>(R.id.bottom_nav1)?.visibility = View.VISIBLE
+    }
+
 
     private fun startTimer() {
         val timer = object : CountDownTimer(10000, 100) { // 10 seconds

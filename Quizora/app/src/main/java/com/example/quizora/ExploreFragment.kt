@@ -56,7 +56,6 @@ class ExploreFragment : Fragment() {
         val searchBar = view.findViewById<EditText>(R.id.search_bar)
         val clearButton = view.findViewById<ImageView>(R.id.clear_button)
 
-        // Add TextWatcher to search bar to prevent unnecessary spaces
         searchBar.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 clearButton.visibility = if (s.isNullOrEmpty()) View.GONE else View.VISIBLE
@@ -65,13 +64,14 @@ class ExploreFragment : Fragment() {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                val trimmedText = s.toString().trim()
-                if (searchBar.text.toString() != trimmedText) {
-                    searchBar.setText(trimmedText)
-                    searchBar.setSelection(trimmedText.length) // Keep cursor at the end
+                val filteredText = s.toString().replace(Regex("\\s{2,}"), " ") // Replace multiple spaces with a single space
+                if (searchBar.text.toString() != filteredText) {
+                    searchBar.setText(filteredText)
+                    searchBar.setSelection(filteredText.length) // Keep cursor at the end
                 }
             }
         })
+
 
         searchBar.setOnEditorActionListener { _, actionId, event ->
             if (actionId == EditorInfo.IME_ACTION_SEARCH ||
@@ -83,7 +83,7 @@ class ExploreFragment : Fragment() {
                 if (query.isNotEmpty()) {
                     performSearch(query)
                 } else {
-                    Toast.makeText(requireContext(), "Please enter a search term", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "Search bar is Empty", Toast.LENGTH_SHORT).show()
                 }
 
                 hideKeyboard(searchBar)
@@ -92,6 +92,7 @@ class ExploreFragment : Fragment() {
                 false
             }
         }
+
 
         // Set click listener to clear button
         clearButton.setOnClickListener {
