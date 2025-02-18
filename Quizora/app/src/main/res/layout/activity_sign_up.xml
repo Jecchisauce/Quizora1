@@ -7,7 +7,7 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/b_g"
+        android:background="@drawable/bg"
         tools:context=".SignUp">
 
         <ImageView
@@ -26,7 +26,7 @@
             android:layout_width="0dp"
             android:layout_height="550dp"
             android:layout_marginTop="80dp"
-            android:background="@drawable/sign_border"
+            android:background="@drawable/textbox"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -127,7 +127,7 @@
                 android:background="@drawable/create"
                 android:fontFamily="@font/poppins_extrabold"
                 android:text="SIGN UP"
-                android:textColor="#861D6D"
+                android:textColor="#C97D8E"
                 android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

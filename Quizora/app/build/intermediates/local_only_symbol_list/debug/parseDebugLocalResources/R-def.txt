@@ -4,6 +4,7 @@ color black
 color bottom_nav_icon_color
 color white
 drawable activity
+drawable add
 drawable art_bg
 drawable b_g
 drawable back_arrow
@@ -24,6 +25,7 @@ drawable edit_mode
 drawable en_glish
 drawable gb
 drawable his_tory
+drawable history
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable lo_go
@@ -31,6 +33,7 @@ drawable log_out
 drawable ma_th
 drawable profile
 drawable profile_circle
+drawable quiz
 drawable scie_nce
 drawable se_arch
 drawable search
@@ -74,8 +77,10 @@ id btncancel2
 id btnlogout
 id btnsave
 id cPassword
+id categoryTitle
 id clear_button
 id container
+id createQuizCard
 id deletebtn
 id forgotbtn
 id grade12
@@ -104,8 +109,10 @@ id personal
 id profileImage
 id profileImageview
 id profileTitle
+id profile_section
 id prompt
 id promt
+id quiz_buttons
 id quiz_description1
 id quiz_description2
 id quiz_description3

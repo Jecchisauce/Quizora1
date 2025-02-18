@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#393636"
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SettingsFragment">
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="731dp"
         android:layout_marginTop="9dp"
         android:fontFamily="@font/poppins_extrabold"
         android:text="Settings"
         android:textAlignment="center"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="19dp" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="244dp"
         android:layout_marginTop="130px"
-        android:background="#1f1e1e">
+        android:background="#411036">
 
 
         <Button
@@ -31,7 +31,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="-1dp"
             android:layout_marginTop="113dp"
-            android:background="#1f1e1e"
+            android:background="#411036"
             android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
             android:drawableTint="@color/white"
             android:fontFamily="@font/poppins_medium"
@@ -50,7 +50,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="0dp"
             android:layout_marginTop="48dp"
-            android:background="#1f1e1e"
+            android:background="#411036"
             android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
             android:drawableTint="@color/white"
             android:fontFamily="@font/poppins_medium"
@@ -69,7 +69,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="-1dp"
             android:layout_marginTop="178dp"
-            android:background="#1f1e1e"
+            android:background="#411036"
             android:drawableTint="@color/white"
             android:fontFamily="@font/poppins_medium"
             android:gravity="start|center_vertical"
