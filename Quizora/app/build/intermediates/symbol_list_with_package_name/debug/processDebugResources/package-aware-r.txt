@@ -3297,7 +3297,7 @@ id btnBack
 id btnBack1
 id btnEditProfile
 id btnSend
-id btnSkip
+id btn_skip
 id btncancel
 id btncancel1
 id btncancel2

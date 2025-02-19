@@ -3296,7 +3296,7 @@ int id btnBack 0x7f09007f
 int id btnBack1 0x7f090080
 int id btnEditProfile 0x7f090081
 int id btnSend 0x7f090082
-int id btnSkip 0x7f090269
+int id btn_skip 0x7f09026c
 int id btncancel 0x7f090083
 int id btncancel1 0x7f090084
 int id btncancel2 0x7f090085

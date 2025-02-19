@@ -8,9 +8,9 @@
     android:background="@color/white"
     android:id="@+id/mainboard"
     android:padding="10dp"
-    tools:context="ItemOnboarding">
+    tools:context=".ItemOnboarding">
 
-    <!-- Inner Layout with Border -->
+    <!-- Existing Onboarding Content -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/onboardingframe"
         android:layout_width="339dp"
@@ -67,25 +67,5 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Skip Button -->
-    <Button
-        android:id="@+id/btnSkip"
-        android:layout_width="338dp"
-        android:layout_height="61dp"
-        android:background="@drawable/skip_border"
-        android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
-        android:drawableTint="#411036"
-        android:fontFamily="@font/poppins_medium"
-        android:paddingLeft="33dp"
-        android:paddingRight="10dp"
-        android:text="Skip"
-        android:textColor="#411036"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/onboardingframe"
-        app:layout_constraintVertical_bias="0.428" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
