@@ -1,38 +1,28 @@
+//is connetected to OnboardingAdapter,OnboardingItem, and ItemOnboarding
+
 package com.example.quizora
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.quizora.databinding.ActivityPhase1Binding
+import androidx.viewpager2.widget.ViewPager2
 
 class Phase1 : AppCompatActivity() {
-
-    private lateinit var binding: ActivityPhase1Binding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_phase1)
 
-        // Initialize data binding
-        binding = ActivityPhase1Binding.inflate(layoutInflater)
-        setContentView(binding.root)
+        val viewPager: ViewPager2 = findViewById(R.id.viewPager)
 
-        // Set click listeners for buttons
-        binding.grade12.setOnClickListener {
-            navigateToPhase2()
-        }
+        // List of onboarding pages with custom text
+        val onboardingItems = listOf(
+            OnboardingItem(R.drawable.onboard_1, "Learn & Improve", "Enhance your knowledge with engaging quizzes on various topics."),
+            OnboardingItem(R.drawable.onboard_2, "Challenge Yourself", "Test your skills with different difficulty levels and track your progress."),
+            OnboardingItem(R.drawable.onboard_3, "Time-Based Quizzes", "Race against time in exciting quiz battles and boost your speed."),
+            OnboardingItem(R.drawable.onboard_4, "Make Your Own Quiz", "Create custom quizzes and share them with friends or the community."),
+            OnboardingItem(R.drawable.onboard_5, "View Quiz History", "Revisit past quizzes, analyze your performance, and improve your scores.")
+        )
 
-        binding.university.setOnClickListener {
-            navigateToPhase2()
-        }
-
-        binding.personal.setOnClickListener {
-            // You can add logic here if needed for b3 button
-        }
-    }
-
-    private fun navigateToPhase2() {
-        // Navigate to Phase2 activity
-        val intent = Intent(this, Phase2::class.java)
-        startActivity(intent)
+        val adapter = OnboardingAdapter(onboardingItems)
+        viewPager.adapter = adapter
     }
 }
