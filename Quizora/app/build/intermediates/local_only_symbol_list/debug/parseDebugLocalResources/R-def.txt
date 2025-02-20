@@ -27,6 +27,7 @@ drawable create
 drawable d
 drawable de_lete
 drawable edit_mode
+drawable em_pty
 drawable en_glish
 drawable gb
 drawable his_tory
@@ -100,6 +101,7 @@ id btnsave
 id cPassword
 id categoryTitle
 id clear_button
+id constraintLayout
 id container
 id createQuizCard
 id deletebtn
