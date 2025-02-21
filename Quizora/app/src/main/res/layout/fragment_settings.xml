@@ -8,8 +8,8 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="731dp"
-        android:layout_marginTop="9dp"
+        android:layout_height="766dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/poppins_extrabold"
         android:text="Settings"
         android:textAlignment="center"
@@ -19,7 +19,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="244dp"
-        android:layout_marginTop="130px"
+        android:layout_marginTop="147px"
         android:background="#411036">
 
 

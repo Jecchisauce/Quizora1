@@ -99,6 +99,7 @@ id btncancel2
 id btnlogout
 id btnsave
 id cPassword
+id cancel_button
 id clear_button
 id container
 id createQuizCard
@@ -119,6 +120,7 @@ id logoImage
 id logoutbtn
 id main
 id mainboard
+id myButton
 id myQuizCard
 id nPassword
 id navigation_activity
@@ -139,8 +141,11 @@ id promt
 id question_container
 id question_text
 id quiz_buttons
+id quiz_description
 id quiz_description1
+id quiz_question_count
 id quiz_status_text1
+id quiz_title
 id quiz_title1
 id quiz_type_icon1
 id rPassword
@@ -152,6 +157,7 @@ id search_bar
 id search_icon
 id signbtn
 id signupContainer
+id start_quiz_button
 id student
 id test
 id textView
@@ -193,6 +199,7 @@ layout fragment_home
 layout fragment_logout
 layout fragment_profile
 layout fragment_profile2
+layout fragment_quiz_dialog
 layout fragment_settings
 layout fragment_update_password
 menu bottom_nav_menu

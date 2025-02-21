@@ -3529,6 +3529,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id myButton
 id myQuizCard
 id nPassword
 id navigation_activity
@@ -3605,8 +3606,11 @@ id promt
 id question_container
 id question_text
 id quiz_buttons
+id quiz_description
 id quiz_description1
+id quiz_question_count
 id quiz_status_text1
+id quiz_title
 id quiz_title1
 id quiz_type_icon1
 id rPassword
@@ -3682,6 +3686,7 @@ id start
 id startHorizontal
 id startToEnd
 id startVertical
+id start_quiz_button
 id staticLayout
 id staticPostLayout
 id stop
@@ -3934,6 +3939,7 @@ layout fragment_home
 layout fragment_logout
 layout fragment_profile
 layout fragment_profile2
+layout fragment_quiz_dialog
 layout fragment_settings
 layout fragment_update_password
 layout ime_base_split_test_activity

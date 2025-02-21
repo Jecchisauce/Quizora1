@@ -25,13 +25,6 @@
             android:paddingStart="12dp"
             android:paddingEnd="12dp">
 
-            <ImageView
-                android:id="@+id/search_icon"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:contentDescription="Search Icon"
-                android:src="@drawable/se_arch" />
-
             <EditText
                 android:id="@+id/search_bar"
                 android:layout_width="0dp"
@@ -54,6 +47,13 @@
                 android:contentDescription="Clear Text"
                 android:src="@drawable/clear"
                 android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:contentDescription="Search Icon"
+                android:src="@drawable/se_arch" />
 
         </LinearLayout>
 

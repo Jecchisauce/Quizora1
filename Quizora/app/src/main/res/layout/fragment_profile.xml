@@ -26,7 +26,7 @@
     <RelativeLayout
         android:background="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="46dp"
+        android:layout_height="50dp"
         android:layout_marginTop="0dp">
 
 
@@ -47,7 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="700dp"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="34dp"
         android:background="#411036"
         android:gravity="center"
         android:orientation="vertical"
