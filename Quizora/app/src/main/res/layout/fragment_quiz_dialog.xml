@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/sign_border"
+    android:padding="20dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/quiz_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz Title"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/quiz_description"
+        android:paddingLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginBottom="10dp"
+        android:text="Quiz Description"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/quiz_question_count"
+        android:layout_width="165dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="20dp"
+        android:textAlignment="center"
+        android:text="Number of Questions"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/wrong_answer"
+            android:text="CANCEL"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="10dp"/>
+
+        <Button
+            android:id="@+id/start_quiz_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ANSWER QUIZ"
+            android:background="@drawable/correct_answer"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+</LinearLayout>

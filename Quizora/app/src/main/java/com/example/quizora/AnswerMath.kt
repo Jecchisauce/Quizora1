@@ -1,3 +1,5 @@
+//for now it stops because you have answered
+
 package com.example.quizora
 
 import android.annotation.SuppressLint
@@ -22,6 +24,8 @@ class AnswerMath : Fragment() {
     private lateinit var answerD: Button
     private var score = 0  // Score Counter
     private var timeLeft = 100  // Timer starts at 100%
+    private var isAnswered = false // Track if the user has answered
+    private var timer: CountDownTimer? = null // Store timer reference
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -62,24 +66,33 @@ class AnswerMath : Fragment() {
     }
 
     private fun startTimer() {
-        val timer = object : CountDownTimer(20000, 200) { // 20 seconds countdown
+        timer = object : CountDownTimer(15000, 150) { // 15 seconds countdown
             override fun onTick(millisUntilFinished: Long) {
-                timeLeft = (millisUntilFinished / 200).toInt()
+                timeLeft = (millisUntilFinished / 150).toInt()
                 timerProgressBar.progress = timeLeft
             }
 
             override fun onFinish() {
                 timerProgressBar.progress = 0
-                Toast.makeText(requireContext(), "You did not choose Any answer", Toast.LENGTH_SHORT).show()
+
+                // If timer is up and no answer is selected
+                if (!isAnswered) {
+                    Toast.makeText(requireContext(), "Time is up", Toast.LENGTH_SHORT).show()
+                }
 
                 // Disable all buttons after timeout
                 disableAllButtons()
             }
         }
-        timer.start()
+        timer?.start()
     }
 
     private fun checkAnswer(selectedButton: Button, selectedAnswer: String) {
+        if (isAnswered) return // Prevent multiple selections
+
+        isAnswered = true // Mark that the user has answered
+        timer?.cancel() // Stop the timer immediately
+
         val correctAnswer = "A"  // Correct answer ID
 
         if (selectedAnswer == correctAnswer) {
@@ -97,7 +110,7 @@ class AnswerMath : Fragment() {
 
     @SuppressLint("SetTextI18n")
     private fun updateScore() {
-        score += 1  // Increase score by 1 points
+        score += 1  // Increase score by 1 point
         scoreboard.text = "SCORE: $score"  // Update scoreboard UI
     }
 

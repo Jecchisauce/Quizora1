@@ -3310,7 +3310,6 @@ id cache_measures
 id callMeasure
 id cancel_button
 id carryVelocity
-id categoryTitle
 id center
 id centerCrop
 id centerInside
@@ -3333,7 +3332,6 @@ id collapseActionView
 id compress
 id confirm_button
 id constraint
-id constraintLayout
 id container
 id content
 id contentPanel
@@ -3426,7 +3424,6 @@ id groups
 id header_title
 id hide_ime_id
 id hideable
-id historyCard
 id home
 id homeAsUp
 id honorRequest
@@ -3756,6 +3753,9 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tvAverage
+id tvTotalQuizzes
+id tvUsername
 id txtNickname
 id txtUserType
 id unchecked
@@ -3765,6 +3765,7 @@ id up
 id updatebtn
 id useLogo
 id userType
+id user_dashboard
 id vertical
 id vertical_only
 id viewPager
