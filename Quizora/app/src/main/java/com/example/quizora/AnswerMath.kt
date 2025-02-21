@@ -31,6 +31,7 @@ class AnswerMath : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         return inflater.inflate(R.layout.fragment_answer_math, container, false)
     }
 
@@ -48,6 +49,12 @@ class AnswerMath : Fragment() {
         answerB = view.findViewById(R.id.answer_b)
         answerC = view.findViewById(R.id.answer_c)
         answerD = view.findViewById(R.id.answer_d)
+
+        // Initialize Back Button
+        val backButton = view.findViewById<Button>(R.id.Math_backbtn)
+        backButton.setOnClickListener {
+            parentFragmentManager.popBackStack() // Navigate back to the previous fragment
+        }
 
         // Start Timer
         startTimer()
@@ -95,6 +102,7 @@ class AnswerMath : Fragment() {
 
         val correctAnswer = "A"  // Correct answer ID
 
+
         if (selectedAnswer == correctAnswer) {
             selectedButton.setBackgroundResource(R.drawable.correct_answer)  // Green background
             Toast.makeText(requireContext(), "Correct!", Toast.LENGTH_SHORT).show()
@@ -121,3 +129,4 @@ class AnswerMath : Fragment() {
         answerD.isEnabled = false
     }
 }
+

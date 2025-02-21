@@ -9,7 +9,7 @@
 
     <!-- Click-blocking Full-Screen Overlay -->
     <View
-        android:contentDescription="blocker"
+        android:contentDescription="Screenblocker"
         android:id="@+id/overlay_blocker"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -19,8 +19,6 @@
 
     <!-- Back Button at Top Left -->
     <Button
-
-        android:contentDescription="back_button"
         android:id="@+id/Math_backbtn"
         android:layout_width="48dp"
         android:layout_height="48dp"
@@ -30,8 +28,8 @@
         android:drawableLeft="@drawable/baseline_arrow_back_24"
         android:textSize="20sp"
         android:textColor="@android:color/white"
-        android:fontFamily="@font/poppins_medium"/>
-
+        android:fontFamily="@font/poppins_medium"
+        android:contentDescription="back_button"/>
 
     <!-- Scoreboard at Top Right -->
     <TextView
@@ -46,119 +44,128 @@
         android:padding="8dp"
         android:text="SCORE: 0"
         android:textColor="@android:color/white"
-        android:textSize="18sp" />
+        android:textSize="18sp"/>
 
     <!-- Main Quiz Content -->
     <LinearLayout
-        android:contentDescription="score_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="16dp">
 
-        <TextView
-            android:paddingTop="8dp"
-            android:textAlignment="center"
-            android:fontFamily="@font/poppins_extrabold"
-            android:textColor="@color/white"
-            android:text="Basic Algebra"
-            android:textSize="26sp"
-            android:layout_width="380dp"
-            android:layout_height="50dp"
-            android:layout_marginBottom="20dp"/>
-
-        <!-- Timer Progress Bar -->
-        <ProgressBar
-            android:id="@+id/timer_progress"
-            style="@android:style/Widget.ProgressBar.Horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="8dp"
-            android:layout_marginBottom="16dp"
-            android:indeterminate="false"
-            android:max="100"
-            android:progress="100"
-            android:progressDrawable="@drawable/timer" />
-
-        <!-- Question Container -->
-
-        <!-- Answer Choices -->
-        <LinearLayout
-            android:id="@+id/question_container"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-
-            android:layout_marginBottom="12dp"
-            android:background="@drawable/textbox"
-            android:orientation="vertical"
-            android:paddingTop="15dp">
-
-            <TextView
-                android:id="@+id/question_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/poppins_extrabold"
-                android:paddingLeft="20dp"
-                android:text="Solve for x: 2x + 3 = 7"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
+        <!-- Border around Quiz Content -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/skip_border"
+            android:gravity="center"
             android:orientation="vertical"
-            android:background="@drawable/textbox"
-            android:padding="10dp">
+            android:padding="16dp">
 
-            <Button
-                android:id="@+id/answer_a"
+            <!-- Quiz Title -->
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:background="@drawable/b"
-                android:fontFamily="@font/poppins_medium"
-                android:textSize="18sp"
-                android:text="A: x = 1"
-                android:textAlignment="viewStart"
-                android:textColor="@color/black" />
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/poppins_extrabold"
+                android:paddingTop="8dp"
+                android:text="Basic Algebra"
+                android:textAllCaps="true"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="26sp" />
 
-            <Button
-                android:id="@+id/answer_b"
+            <!-- Timer Progress Bar -->
+            <ProgressBar
+                android:id="@+id/timer_progress"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginBottom="16dp"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="100"
+                android:progressDrawable="@drawable/timer" />
+
+            <!-- Question Box -->
+            <LinearLayout
+                android:id="@+id/question_container"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/textbox"
+                android:orientation="vertical"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:id="@+id/question_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins_extrabold"
+                    android:paddingLeft="20dp"
+                    android:text="Solve for x: 2x + 3 = 7"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Answer Choices -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:background="@drawable/b"
-                android:fontFamily="@font/poppins_medium"
-                android:textSize="18sp"
-                android:text="B: x = 2"
-                android:textAlignment="viewStart"
-                android:textColor="@color/black" />
+                android:background="@drawable/textbox"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            <Button
-                android:id="@+id/answer_c"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:background="@drawable/b"
-                android:fontFamily="@font/poppins_medium"
-                android:textSize="18sp"
-                android:text="C: x = 3"
-                android:textAlignment="viewStart"
-                android:textColor="@color/black" />
+                <Button
+                    android:id="@+id/answer_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/b"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="A: x = 1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
 
-            <Button
-                android:id="@+id/answer_d"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/b"
-                android:fontFamily="@font/poppins_medium"
-                android:textSize="18sp"
-                android:text="D: x = 4"
-                android:textAlignment="viewStart"
-                android:textColor="@color/black" />
+                <Button
+                    android:id="@+id/answer_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/b"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="B: x = 2"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/answer_c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/b"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="C: x = 3"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/answer_d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/b"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="D: x = 4"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </FrameLayout>

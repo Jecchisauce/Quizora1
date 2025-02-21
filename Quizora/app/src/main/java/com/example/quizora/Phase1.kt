@@ -1,5 +1,6 @@
 package com.example.quizora
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -26,11 +27,30 @@ class Phase1 : AppCompatActivity() {
         val adapter = OnboardingAdapter(onboardingItems)
         viewPager.adapter = adapter
 
-        // Skip button click event
+        // Change button text dynamically
+        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            @SuppressLint("SetTextI18n")
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                if (position == onboardingItems.size - 1) {
+                    btnSkip.text = buildString {
+            append("Next")
+        }  // Change text when on the last page
+                } else {
+                    btnSkip.text = "Skip"  // Default text for other pages
+                }
+            }
+        })
+
+        // Button click event
         btnSkip.setOnClickListener {
-            val intent = Intent(this, LoginForm::class.java) // Change MainActivity to the target screen
-            startActivity(intent)
-            finish() // Close onboarding screen
+            if (viewPager.currentItem == onboardingItems.size - 1) {
+                val intent = Intent(this, LoginForm::class.java) // Navigate to LoginForm
+                startActivity(intent)
+                finish() // Close onboarding screen
+            } else {
+                viewPager.currentItem = onboardingItems.size - 1 // Skip to last page
+            }
         }
     }
 }

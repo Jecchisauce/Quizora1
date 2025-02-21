@@ -3010,6 +3010,7 @@ int drawable back_arrow 0x7f070080
 int drawable baseline_arrow_back_24 0x7f070081
 int drawable baseline_arrow_back_ios_24 0x7f070082
 int drawable baseline_arrow_forward_ios_24 0x7f070083
+int drawable baseline_delete_24 0x7f07011c
 int drawable baseline_home_24 0x7f070084
 int drawable bg 0x7f070085
 int drawable border 0x7f070086
@@ -3187,6 +3188,7 @@ int id Password 0x7f090011
 int id Password1 0x7f090012
 int id Password2 0x7f090013
 int id Quiz1 0x7f090014
+int id Quiz2 0x7f090271
 int id Recbtn 0x7f090015
 int id SHIFT 0x7f090016
 int id SHOW_ALL 0x7f090017
@@ -3351,6 +3353,7 @@ int id decelerate 0x7f0900b5
 int id decelerateAndComplete 0x7f0900b6
 int id decor_content_parent 0x7f0900b7
 int id default_activity_button 0x7f0900b8
+int id deleteButton 0x7f090270
 int id deletebtn 0x7f0900b9
 int id deltaRelative 0x7f0900ba
 int id dependency_ordering 0x7f0900bb
@@ -3607,11 +3610,15 @@ int id question_text 0x7f0901b4
 int id quiz_buttons 0x7f0901b5
 int id quiz_description 0x7f0901b6
 int id quiz_description1 0x7f0901b7
+int id quiz_description2 0x7f090272
 int id quiz_question_count 0x7f0901b8
 int id quiz_status_text1 0x7f0901b9
+int id quiz_status_text2 0x7f090273
 int id quiz_title 0x7f0901ba
 int id quiz_title1 0x7f0901bb
+int id quiz_title2 0x7f090274
 int id quiz_type_icon1 0x7f0901bc
+int id quiz_type_icon2 0x7f090275
 int id rPassword 0x7f0901bd
 int id radio 0x7f0901be
 int id ratio 0x7f0901bf

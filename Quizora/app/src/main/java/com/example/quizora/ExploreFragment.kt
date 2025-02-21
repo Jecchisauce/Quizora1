@@ -100,6 +100,7 @@ class ExploreFragment : Fragment() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun showQuizDialog() {
         val dialogView = LayoutInflater.from(requireContext()).inflate(R.layout.fragment_quiz_dialog, null)
         val dialog = AlertDialog.Builder(requireContext())
