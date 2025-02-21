@@ -1,5 +1,7 @@
 package com.example.quizora
 
+import android.annotation.SuppressLint
+import android.app.AlertDialog
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -9,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
+import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
@@ -25,18 +28,16 @@ class ExploreFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_explore, container, false)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         val quizStatusText = view.findViewById<TextView>(R.id.quiz_status_text1)
-
         val quiz1 = view.findViewById<View>(R.id.Quiz1) // Get reference to Quiz1 layout
 
+        // Show quiz details when clicked
         quiz1.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, AnswerMath()) // Replace with your FrameLayout ID
-                .addToBackStack(null) // Allows going back to ExploreFragment
-                .commit()
+            showQuizDialog()
         }
 
         // Example logic to check if the quiz is answered
@@ -45,12 +46,15 @@ class ExploreFragment : Fragment() {
         // Update text dynamically
         if (isAnswered) {
             quizStatusText.text = "Completed"
-            quizStatusText.setTextColor(ContextCompat.getColor(requireContext(), android.R.color.darker_gray))
+            quizStatusText.setTextColor(
+                ContextCompat.getColor(requireContext(), android.R.color.darker_gray)
+            )
         } else {
             quizStatusText.text = "Answer Quiz"
-            quizStatusText.setTextColor(ContextCompat.getColor(requireContext(), android.R.color.holo_green_dark))
+            quizStatusText.setTextColor(
+                ContextCompat.getColor(requireContext(), android.R.color.holo_green_dark)
+            )
         }
-
 
         // Get references to UI elements
         val searchBar = view.findViewById<EditText>(R.id.search_bar)
@@ -72,12 +76,10 @@ class ExploreFragment : Fragment() {
             }
         })
 
-
         searchBar.setOnEditorActionListener { _, actionId, event ->
             if (actionId == EditorInfo.IME_ACTION_SEARCH ||
-                (event != null && event.keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_DOWN)) {
-
-                // Trim spaces and ensure only a single-line input
+                (event != null && event.keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_DOWN)
+            ) {
                 val query = searchBar.text.toString().trim()
 
                 if (query.isNotEmpty()) {
@@ -93,16 +95,48 @@ class ExploreFragment : Fragment() {
             }
         }
 
-
-        // Set click listener to clear button
         clearButton.setOnClickListener {
             searchBar.text.clear()
         }
     }
 
+    private fun showQuizDialog() {
+        val dialogView = LayoutInflater.from(requireContext()).inflate(R.layout.fragment_quiz_dialog, null)
+        val dialog = AlertDialog.Builder(requireContext())
+            .setView(dialogView)
+            .create()
+
+        // Hide background of the dialog
+        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+        val quizTitle: TextView = dialogView.findViewById(R.id.quiz_title)
+        val quizDescription: TextView = dialogView.findViewById(R.id.quiz_description)
+        val questionCount: TextView = dialogView.findViewById(R.id.quiz_question_count)
+        val cancelButton: Button = dialogView.findViewById(R.id.cancel_button)
+        val startButton: Button = dialogView.findViewById(R.id.start_quiz_button)
+
+        quizTitle.text = "Math Quiz"
+        quizDescription.text = "Basic algebra and equations."
+        questionCount.text = "1 Question"
+
+        cancelButton.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        startButton.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, AnswerMath())
+                .addToBackStack(null)
+                .commit()
+            dialog.dismiss()
+        }
+
+        dialog.show()
+    }
+
+
     private fun performSearch(query: String) {
         if (query.isNotEmpty()) {
-            // Here you can add logic to search within the quiz items
             Toast.makeText(requireContext(), "Searching for: $query", Toast.LENGTH_SHORT).show()
         }
     }
@@ -112,7 +146,3 @@ class ExploreFragment : Fragment() {
         imm?.hideSoftInputFromWindow(view.windowToken, 0)
     }
 }
-
-
-
-

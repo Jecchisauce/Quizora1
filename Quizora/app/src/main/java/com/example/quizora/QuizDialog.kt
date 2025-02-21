@@ -1,6 +1,5 @@
 package com.example.quizora
 
-import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,13 +8,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.DialogFragment
 
-class QuizDialog(
-    private val quizTitle: String,
-    private val quizDescription: String,
-    private val numberOfQuestions: Int,
-    private val onCancel: () -> Unit,
-    private val onStartQuiz: () -> Unit
-) : DialogFragment() {
+class QuizDialog : DialogFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,17 +26,11 @@ class QuizDialog(
         val cancelButton: Button = view.findViewById(R.id.cancel_button)
         val startButton: Button = view.findViewById(R.id.start_quiz_button)
 
-        titleTextView.text = quizTitle
-        descriptionTextView.text = quizDescription
-        questionCountTextView.text = "Number of Questions: $numberOfQuestions"
-
         cancelButton.setOnClickListener {
-            onCancel()
             dismiss()
         }
 
         startButton.setOnClickListener {
-            onStartQuiz()
             dismiss()
         }
     }
@@ -54,12 +41,8 @@ class QuizDialog(
     }
 
     companion object {
-        fun newInstance(
-            quizTitle: String,
-            quizDescription: String,
-            numberOfQuestions: Int,
-            onCancel: () -> Unit,
-            onStartQuiz: () -> Unit
-        ) = QuizDialog(quizTitle, quizDescription, numberOfQuestions, onCancel, onStartQuiz)
+        fun newInstance(): QuizDialog {
+            return QuizDialog()
+        }
     }
 }
