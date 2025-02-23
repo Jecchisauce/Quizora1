@@ -46,7 +46,7 @@ class LoginActivity : AppCompatActivity() {
                         showToast(result.message)
 
                         if (result.success) {
-                            startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
+                            startActivity(Intent(this@LoginActivity, HomeFragment::class.java))
                             finish()
                         }
                     } else {

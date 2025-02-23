@@ -35,6 +35,16 @@
           <theme>@style/Theme.Quizora</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/Quizora/app/src/main/res/layout/fragment_logout.xml">
+        <config>
+          <theme>@style/Theme.Quizora</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/Quizora/app/src/main/res/layout/fragment_settings.xml">
+        <config>
+          <theme>@style/Theme.Quizora</theme>
+        </config>
+      </layout>
     </layouts>
   </component>
   <component name="AutoImportSettings">
@@ -42,30 +52,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca899fb1-70e8-4b9c-aa2d-254c7316aca6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/appInsightsSettings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/migrations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/LoginActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/SignupActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/api/ApiService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/api/RetrofitClient.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/models/LoginResponse.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/models/RegisterResponse.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quizora/.gradle/8.13-milestone-3/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/.gradle/8.13-milestone-3/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quizora/.gradle/8.13-milestone-3/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/.gradle/8.13-milestone-3/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quizora/.gradle/8.13-milestone-3/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/.gradle/8.13-milestone-3/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quizora/.gradle/8.13-milestone-3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/.gradle/8.13-milestone-3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Quizora/.gradle/8.13-milestone-3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/.gradle/8.13-milestone-3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quizora/.gradle/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/.gradle/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quizora/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/LoginActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Quizora/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/build/reports/problems/problems-report.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -162,6 +151,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Android App.Quizora.app.androidTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
@@ -499,12 +489,12 @@
       <map>
         <entry key="com.example.quizora">
           <value>
-            <CheckInfo lastCheckTimestamp="1739693032108" />
+            <CheckInfo lastCheckTimestamp="1739789933127" />
           </value>
         </entry>
         <entry key="com.example.quizora.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1739693032108" />
+            <CheckInfo lastCheckTimestamp="1739789933122" />
           </value>
         </entry>
       </map>
