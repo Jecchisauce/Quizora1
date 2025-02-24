@@ -300,6 +300,10 @@
         "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\edit_mode.xml"
     },
     {
+        "merged": "com.example.quizora.app-debug-4:/layout_fragment_answer_math.xml.flat",
+        "source": "com.example.quizora.app-main-6:/layout/fragment_answer_math.xml"
+    },
+    {
         "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_sp_lash.png.flat",
         "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\sp_lash.png"
     },
@@ -342,10 +346,6 @@
     {
         "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_textbox.xml.flat",
         "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\textbox.xml"
-    },
-    {
-        "merged": "com.example.quizora.app-debug-4:/layout_fragment_explore.xml.flat",
-        "source": "com.example.quizora.app-main-6:/layout/fragment_explore.xml"
     },
     {
         "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_onboard_2.png.flat",

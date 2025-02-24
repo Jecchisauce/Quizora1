@@ -1,5 +1,3 @@
-//for now it stops because you have answered
-
 package com.example.quizora
 
 import android.annotation.SuppressLint
@@ -15,111 +13,142 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 
 class AnswerMath : Fragment() {
+
     private lateinit var timerProgressBar: ProgressBar
     private lateinit var questionText: TextView
-    private lateinit var scoreboard: TextView  // Scoreboard Reference
+    private lateinit var scoreboard: TextView
     private lateinit var answerA: Button
     private lateinit var answerB: Button
     private lateinit var answerC: Button
     private lateinit var answerD: Button
-    private var score = 0  // Score Counter
-    private var timeLeft = 100  // Timer starts at 100%
-    private var isAnswered = false // Track if the user has answered
-    private var timer: CountDownTimer? = null // Store timer reference
+
+    private var score = 0
+    private var currentQuestionIndex = 0
+    private var isAnswered = false
+    private var timer: CountDownTimer? = null
+
+    // Sample question set
+    private val questions = listOf(
+        Question("Solve for x: 2x + 3 = 7", listOf("x = 1", "x = 2", "x = 3", "x = 4"), 0),
+        Question("What is 3x3?", listOf("6", "7", "9", "12"), 2),
+        Question("Find the square root of 49", listOf("5", "7", "9", "11"), 1),
+        Question("Simplify: 4 + 4 × 2", listOf("12", "16", "8", "20"), 1),
+        Question("What is 15 ÷ 3?", listOf("2", "4", "5", "6"), 2),
+        Question("What is 8²?", listOf("64", "16", "32", "128"), 0),
+        Question("If a triangle has angles of 60° and 60°, what is the third angle?", listOf("30°", "45°", "60°", "90°"), 2),
+        Question("Solve for x: 5x - 10 = 0", listOf("x = 0", "x = 1", "x = 2", "x = 3"), 2),
+        Question("What is the value of π (pi) rounded to two decimal places?", listOf("3.10", "3.14", "3.16", "3.18"), 1),
+        Question("What is the perimeter of a square with a side length of 5?", listOf("10", "15", "20", "25"), 2),
+    )
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         return inflater.inflate(R.layout.fragment_answer_math, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Hide the Bottom Navigation Bar when AnswerMath is opened
         requireActivity().findViewById<View>(R.id.bottom_nav1)?.visibility = View.GONE
 
         // Initialize UI Elements
         timerProgressBar = view.findViewById(R.id.timer_progress)
-        scoreboard = view.findViewById(R.id.scoreboard)  // Initialize Scoreboard
+        scoreboard = view.findViewById(R.id.scoreboard)
         questionText = view.findViewById(R.id.question_text)
         answerA = view.findViewById(R.id.answer_a)
         answerB = view.findViewById(R.id.answer_b)
         answerC = view.findViewById(R.id.answer_c)
         answerD = view.findViewById(R.id.answer_d)
 
-        // Initialize Back Button
         val backButton = view.findViewById<Button>(R.id.Math_backbtn)
         backButton.setOnClickListener {
-            parentFragmentManager.popBackStack() // Navigate back to the previous fragment
+            parentFragmentManager.popBackStack()
         }
 
-        // Start Timer
-        startTimer()
-
-        // Answer Listeners
-        answerA.setOnClickListener { checkAnswer(answerA, "A") }
-        answerB.setOnClickListener { checkAnswer(answerB, "B") }
-        answerC.setOnClickListener { checkAnswer(answerC, "C") }
-        answerD.setOnClickListener { checkAnswer(answerD, "D") }
+        loadQuestion()
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        // Show the Bottom Navigation Bar again when leaving AnswerMath
         requireActivity().findViewById<View>(R.id.bottom_nav1)?.visibility = View.VISIBLE
+        timer?.cancel()
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun loadQuestion() {
+        if (currentQuestionIndex >= questions.size) {
+            endQuiz()
+            return
+        }
+
+        isAnswered = false
+        val currentQuestion = questions[currentQuestionIndex]
+        questionText.text = currentQuestion.question
+        answerA.text = "A: ${currentQuestion.choices[0]}"
+        answerB.text = "B: ${currentQuestion.choices[1]}"
+        answerC.text = "C: ${currentQuestion.choices[2]}"
+        answerD.text = "D: ${currentQuestion.choices[3]}"
+
+        // Reset button colors and enable them
+        resetButtons()
+
+        // Start the timer
+        startTimer()
+
+        // Set answer listeners
+        answerA.setOnClickListener { checkAnswer(0, answerA) }
+        answerB.setOnClickListener { checkAnswer(1, answerB) }
+        answerC.setOnClickListener { checkAnswer(2, answerC) }
+        answerD.setOnClickListener { checkAnswer(3, answerD) }
     }
 
     private fun startTimer() {
-        timer = object : CountDownTimer(15000, 150) { // 15 seconds countdown
+        timer?.cancel()
+        timerProgressBar.progress = 100
+
+        timer = object : CountDownTimer(20000, 200) {
             override fun onTick(millisUntilFinished: Long) {
-                timeLeft = (millisUntilFinished / 150).toInt()
-                timerProgressBar.progress = timeLeft
+                val progress = (millisUntilFinished / 200).toInt()
+                timerProgressBar.progress = progress
             }
 
             override fun onFinish() {
                 timerProgressBar.progress = 0
-
-                // If timer is up and no answer is selected
                 if (!isAnswered) {
-                    Toast.makeText(requireContext(), "Time is up", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "Time is up!", Toast.LENGTH_SHORT).show()
                 }
-
-                // Disable all buttons after timeout
-                disableAllButtons()
+                nextQuestion()
             }
-        }
-        timer?.start()
+        }.start()
     }
 
-    private fun checkAnswer(selectedButton: Button, selectedAnswer: String) {
-        if (isAnswered) return // Prevent multiple selections
+    private fun checkAnswer(selectedIndex: Int, selectedButton: Button) {
+        if (isAnswered) return
 
-        isAnswered = true // Mark that the user has answered
-        timer?.cancel() // Stop the timer immediately
+        isAnswered = true
+        timer?.cancel()
 
-        val correctAnswer = "A"  // Correct answer ID
-
-
-        if (selectedAnswer == correctAnswer) {
-            selectedButton.setBackgroundResource(R.drawable.correct_answer)  // Green background
+        val correctIndex = questions[currentQuestionIndex].correctAnswer
+        if (selectedIndex == correctIndex) {
+            selectedButton.setBackgroundResource(R.drawable.correct_answer)
             Toast.makeText(requireContext(), "Correct!", Toast.LENGTH_SHORT).show()
-            updateScore()  // Increment score
+            updateScore()
         } else {
-            selectedButton.setBackgroundResource(R.drawable.wrong_answer)  // Red background
+            selectedButton.setBackgroundResource(R.drawable.wrong_answer)
             Toast.makeText(requireContext(), "Wrong answer!", Toast.LENGTH_SHORT).show()
         }
 
-        // Disable all buttons after answering
         disableAllButtons()
+        nextQuestionDelayed()
     }
 
     @SuppressLint("SetTextI18n")
     private fun updateScore() {
-        score += 1  // Increase score by 1 point
-        scoreboard.text = "SCORE: $score"  // Update scoreboard UI
+        score += 1
+        scoreboard.text = "SCORE: $score"
     }
 
     private fun disableAllButtons() {
@@ -128,5 +157,44 @@ class AnswerMath : Fragment() {
         answerC.isEnabled = false
         answerD.isEnabled = false
     }
+
+    private fun resetButtons() {
+        answerA.setBackgroundResource(R.drawable.b)
+        answerB.setBackgroundResource(R.drawable.b)
+        answerC.setBackgroundResource(R.drawable.b)
+        answerD.setBackgroundResource(R.drawable.b)
+
+        answerA.isEnabled = true
+        answerB.isEnabled = true
+        answerC.isEnabled = true
+        answerD.isEnabled = true
+    }
+
+    private fun nextQuestionDelayed() {
+        view?.postDelayed({
+            currentQuestionIndex++
+            loadQuestion()
+        }, 2500)
+    }
+
+    private fun nextQuestion() {
+        currentQuestionIndex++
+        loadQuestion()
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun endQuiz() {
+        questionText.text = "Quiz Completed! Your Score: $score"
+        answerA.visibility = View.GONE
+        answerB.visibility = View.GONE
+        answerC.visibility = View.GONE
+        answerD.visibility = View.GONE
+        timerProgressBar.visibility = View.GONE
+    }
 }
 
+data class Question(
+    val question: String,
+    val choices: List<String>,
+    val correctAnswer: Int
+)

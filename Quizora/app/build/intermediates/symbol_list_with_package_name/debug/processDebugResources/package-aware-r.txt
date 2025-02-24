@@ -3189,7 +3189,6 @@ id Password
 id Password1
 id Password2
 id Quiz1
-id Quiz2
 id Recbtn
 id SHIFT
 id SHOW_ALL
@@ -3611,15 +3610,11 @@ id question_text
 id quiz_buttons
 id quiz_description
 id quiz_description1
-id quiz_description2
 id quiz_question_count
 id quiz_status_text1
-id quiz_status_text2
 id quiz_title
 id quiz_title1
-id quiz_title2
 id quiz_type_icon1
-id quiz_type_icon2
 id rPassword
 id radio
 id ratio

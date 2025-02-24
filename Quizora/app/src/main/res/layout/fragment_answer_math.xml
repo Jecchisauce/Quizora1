@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#411036"
+    android:background="@color/white"
     tools:context=".AnswerMath">
 
     <!-- Click-blocking Full-Screen Overlay -->
@@ -92,7 +92,7 @@
             <LinearLayout
                 android:id="@+id/question_container"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="137dp"
                 android:layout_marginBottom="12dp"
                 android:background="@drawable/textbox"
                 android:orientation="vertical"

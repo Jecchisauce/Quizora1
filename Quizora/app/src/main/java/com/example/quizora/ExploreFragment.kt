@@ -118,7 +118,7 @@ class ExploreFragment : Fragment() {
 
         quizTitle.text = "Math Quiz"
         quizDescription.text = "Basic algebra and equations."
-        questionCount.text = "1 Question"
+        questionCount.text = "10 Questions"
 
         cancelButton.setOnClickListener {
             dialog.dismiss()
