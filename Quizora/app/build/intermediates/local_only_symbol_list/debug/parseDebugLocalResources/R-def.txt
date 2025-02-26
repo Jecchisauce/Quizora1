@@ -93,6 +93,9 @@ id btnBack
 id btnBack1
 id btnEditProfile
 id btnSend
+id btn_continue
+id btn_retry
+id btn_return
 id btn_skip
 id btncancel
 id btncancel1
@@ -202,6 +205,7 @@ layout fragment_logout
 layout fragment_profile
 layout fragment_profile2
 layout fragment_quiz_dialog
+layout fragment_quiz_progress_dialog
 layout fragment_settings
 layout fragment_update_password
 menu bottom_nav_menu
@@ -212,6 +216,7 @@ string app_name
 string hello_blank_fragment
 style ActiveText
 style Base.Theme.Quizora
+style DialogTheme
 style InactiveText
 style Theme.Quizora
 xml backup_rules

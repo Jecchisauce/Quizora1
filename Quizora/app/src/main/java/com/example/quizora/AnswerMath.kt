@@ -22,12 +22,14 @@ class AnswerMath : Fragment() {
     private lateinit var answerC: Button
     private lateinit var answerD: Button
 
+
+    private var remainingTime: Long = 20000 // Default 20 seconds
     private var score = 0
     private var currentQuestionIndex = 0
     private var isAnswered = false
     private var timer: CountDownTimer? = null
 
-    // Sample question set
+
     private val questions = listOf(
         Question("Solve for x: 2x + 3 = 7", listOf("x = 1", "x = 2", "x = 3", "x = 4"), 0),
         Question("What is 3x3?", listOf("6", "7", "9", "12"), 2),
@@ -41,7 +43,6 @@ class AnswerMath : Fragment() {
         Question("What is the perimeter of a square with a side length of 5?", listOf("10", "15", "20", "25"), 2),
     )
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -54,7 +55,6 @@ class AnswerMath : Fragment() {
 
         requireActivity().findViewById<View>(R.id.bottom_nav1)?.visibility = View.GONE
 
-        // Initialize UI Elements
         timerProgressBar = view.findViewById(R.id.timer_progress)
         scoreboard = view.findViewById(R.id.scoreboard)
         questionText = view.findViewById(R.id.question_text)
@@ -65,9 +65,41 @@ class AnswerMath : Fragment() {
 
         val backButton = view.findViewById<Button>(R.id.Math_backbtn)
         backButton.setOnClickListener {
-            parentFragmentManager.popBackStack()
+            stopQuizTimer() // Stops the timer
+            showQuizProgressDialog()
         }
 
+        loadQuestion()
+    }
+    private fun stopQuizTimer() {
+        timer?.cancel() // Cancel the timer if it's running
+    }
+
+
+    private fun showQuizProgressDialog() {
+        val dialog = QuizProgressDialog(
+            onReturn = { parentFragmentManager.popBackStack() },
+            onRetry = { restartQuiz() },
+            onContinue = { resumeQuiz() } // Call resume function when "Continue" is clicked
+        )
+        dialog.show(parentFragmentManager, "QuizProgressDialog")
+    }
+
+    private var quizPaused = false // Track if the quiz was paused
+
+    private fun resumeQuiz() {
+        if (quizPaused) {
+            startTimer(remainingTime) // Resume timer only if quiz was paused
+            quizPaused = false
+        }
+    }
+
+
+    @SuppressLint("SetTextI18n")
+    private fun restartQuiz() {
+        score = 0
+        currentQuestionIndex = 0
+        scoreboard.text = "SCORE: $score" // Explicitly reset UI score
         loadQuestion()
     }
 
@@ -92,27 +124,37 @@ class AnswerMath : Fragment() {
         answerC.text = "C: ${currentQuestion.choices[2]}"
         answerD.text = "D: ${currentQuestion.choices[3]}"
 
-        // Reset button colors and enable them
         resetButtons()
 
-        // Start the timer
-        startTimer()
+        if (!quizPaused) {
+            startTimer(20000) // Start fresh timer for a new question
+        } else {
+            quizPaused = false // If it was paused, just resume without resetting
+        }
 
-        // Set answer listeners
         answerA.setOnClickListener { checkAnswer(0, answerA) }
         answerB.setOnClickListener { checkAnswer(1, answerB) }
         answerC.setOnClickListener { checkAnswer(2, answerC) }
         answerD.setOnClickListener { checkAnswer(3, answerD) }
     }
 
-    private fun startTimer() {
-        timer?.cancel()
-        timerProgressBar.progress = 100
 
-        timer = object : CountDownTimer(20000, 200) {
+    private fun endQuiz() {
+        // Do not show the progress dialog here
+        Toast.makeText(requireContext(), "Quiz Finished!", Toast.LENGTH_SHORT).show()
+        // You can navigate to a results screen or display a summary instead
+    }
+
+
+    private fun startTimer(time: Long) {
+        timer?.cancel() // Cancel any previous timer
+        timerProgressBar.progress = (time / 200).toInt()
+        remainingTime = time // Store the remaining time
+
+        timer = object : CountDownTimer(time, 200) {
             override fun onTick(millisUntilFinished: Long) {
-                val progress = (millisUntilFinished / 200).toInt()
-                timerProgressBar.progress = progress
+                remainingTime = millisUntilFinished // Continuously update remaining time
+                timerProgressBar.progress = (millisUntilFinished / 200).toInt()
             }
 
             override fun onFinish() {
@@ -124,6 +166,7 @@ class AnswerMath : Fragment() {
             }
         }.start()
     }
+
 
     private fun checkAnswer(selectedIndex: Int, selectedButton: Button) {
         if (isAnswered) return
@@ -180,16 +223,6 @@ class AnswerMath : Fragment() {
     private fun nextQuestion() {
         currentQuestionIndex++
         loadQuestion()
-    }
-
-    @SuppressLint("SetTextI18n")
-    private fun endQuiz() {
-        questionText.text = "Quiz Completed! Your Score: $score"
-        answerA.visibility = View.GONE
-        answerB.visibility = View.GONE
-        answerC.visibility = View.GONE
-        answerD.visibility = View.GONE
-        timerProgressBar.visibility = View.GONE
     }
 }
 
