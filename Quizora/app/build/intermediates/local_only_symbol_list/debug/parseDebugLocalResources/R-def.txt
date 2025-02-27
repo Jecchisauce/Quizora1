@@ -10,6 +10,7 @@ drawable art_bg
 drawable b
 drawable b_g
 drawable back_arrow
+drawable back_bg
 drawable baseline_arrow_back_24
 drawable baseline_arrow_back_ios_24
 drawable baseline_arrow_forward_ios_24
@@ -19,6 +20,7 @@ drawable bg
 drawable border
 drawable borders
 drawable button
+drawable button_selector
 drawable c
 drawable cha_rac
 drawable circle_border
@@ -47,6 +49,7 @@ drawable onboarding_border
 drawable profile
 drawable profile_circle
 drawable quiz
+drawable rounded_button
 drawable scie_nce
 drawable score_bg
 drawable se_arch
@@ -144,10 +147,12 @@ id profile_section
 id prompt
 id promt
 id question_container
+id question_counter
 id question_text
 id quiz_buttons
 id quiz_description
 id quiz_description1
+id quiz_image
 id quiz_question_count
 id quiz_status_text1
 id quiz_title

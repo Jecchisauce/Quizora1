@@ -2,6 +2,7 @@ package com.example.quizora
 
 import android.app.Dialog
 import android.os.Bundle
+import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +12,7 @@ import androidx.fragment.app.DialogFragment
 class QuizProgressDialog(
     private val onReturn: () -> Unit,
     private val onRetry: () -> Unit,
-    private val onContinue: () -> Unit // New function for continue button
+    private val onContinue: () -> Unit
 ) : DialogFragment() {
 
     override fun onCreateView(
@@ -26,28 +27,45 @@ class QuizProgressDialog(
 
         val btnReturn = view.findViewById<Button>(R.id.btn_return)
         val btnRetry = view.findViewById<Button>(R.id.btn_retry)
-        val btnContinue = view.findViewById<Button>(R.id.btn_continue) // Add Continue button
+        val btnContinue = view.findViewById<Button>(R.id.btn_continue)
 
-        // Handle Return (Save Progress)
+        // Set the background selector for all buttons
+        btnReturn.setBackgroundResource(R.drawable.button_selector)
+        btnRetry.setBackgroundResource(R.drawable.button_selector)
+        btnContinue.setBackgroundResource(R.drawable.button_selector)
+
+        // Handle clicks
         btnReturn.setOnClickListener {
             onReturn.invoke()
             dismiss()
         }
 
-        // Handle Retry (Restart Quiz)
         btnRetry.setOnClickListener {
             onRetry.invoke()
             dismiss()
         }
 
-        // Handle Continue (Resume Quiz)
         btnContinue.setOnClickListener {
             onContinue.invoke()
             dismiss()
         }
+
+        // Prevent back button from dismissing the dialog
+        dialog?.setOnKeyListener { _, keyCode, event ->
+            if (keyCode == KeyEvent.KEYCODE_BACK && event.action == KeyEvent.ACTION_UP) {
+                onContinue.invoke() // Continue the quiz instead of closing the dialog
+                dismiss()
+                true
+            } else {
+                false
+            }
+        }
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        return Dialog(requireContext(), R.style.DialogTheme) // Apply theme if needed
+        return Dialog(requireContext(), R.style.DialogTheme).apply {
+            setCancelable(false) // Prevents dismissing by tapping outside
+            setCanceledOnTouchOutside(false) // Prevents dismissing by touching outside the dialog
+        }
     }
 }

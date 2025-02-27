@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
 
 class AnswerMath : Fragment() {
@@ -24,6 +25,7 @@ class AnswerMath : Fragment() {
 
 
     private var remainingTime: Long = 20000 // Default 20 seconds
+    private var canGoBack = false // Prevents showing progress dialog before the next question
     private var score = 0
     private var currentQuestionIndex = 0
     private var isAnswered = false
@@ -65,12 +67,20 @@ class AnswerMath : Fragment() {
 
         val backButton = view.findViewById<Button>(R.id.Math_backbtn)
         backButton.setOnClickListener {
-            stopQuizTimer() // Stops the timer
+            stopQuizTimer()
             showQuizProgressDialog()
         }
 
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
+            if (!isAnswered || !canGoBack) return@addCallback // Block back press if answer isn't declared or next question isn't ready
+            stopQuizTimer()
+            showQuizProgressDialog()
+        }
+
+
         loadQuestion()
     }
+
     private fun stopQuizTimer() {
         timer?.cancel() // Cancel the timer if it's running
     }
@@ -98,9 +108,15 @@ class AnswerMath : Fragment() {
     private fun restartQuiz() {
         score = 0
         currentQuestionIndex = 0
-        scoreboard.text = "SCORE: $score" // Explicitly reset UI score
+        scoreboard.text = "SCORE: $score" // Reset UI score
+
+        // Reset Question Counter
+        val questionCounter = view?.findViewById<TextView>(R.id.question_counter)
+        questionCounter?.text = "Question 1/${questions.size}"
+
         loadQuestion()
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
@@ -114,6 +130,10 @@ class AnswerMath : Fragment() {
             endQuiz()
             return
         }
+
+        // Update the Question Counter dynamically
+        val questionCounter = view?.findViewById<TextView>(R.id.question_counter)
+        questionCounter?.text = "Question ${currentQuestionIndex + 1}/${questions.size}"
 
         isAnswered = false
         val currentQuestion = questions[currentQuestionIndex]
@@ -213,11 +233,16 @@ class AnswerMath : Fragment() {
     }
 
     private fun nextQuestionDelayed() {
+        val backButton = view?.findViewById<Button>(R.id.Math_backbtn)
+        backButton?.isEnabled = false // Disable back button
+
         view?.postDelayed({
             currentQuestionIndex++
             loadQuestion()
+            backButton?.isEnabled = true // Enable back button after delay
         }, 2500)
     }
+
 
     private fun nextQuestion() {
         currentQuestionIndex++

@@ -3007,6 +3007,7 @@ int drawable avd_show_password 0x7f07007d
 int drawable b 0x7f07007e
 int drawable b_g 0x7f07007f
 int drawable back_arrow 0x7f070080
+int drawable back_bg 0x7f07011f
 int drawable baseline_arrow_back_24 0x7f070081
 int drawable baseline_arrow_back_ios_24 0x7f070082
 int drawable baseline_arrow_forward_ios_24 0x7f070083
@@ -3024,6 +3025,7 @@ int drawable btn_radio_off_to_on_mtrl_animation 0x7f07008e
 int drawable btn_radio_on_mtrl 0x7f07008f
 int drawable btn_radio_on_to_off_mtrl_animation 0x7f070090
 int drawable button 0x7f070091
+int drawable button_selector 0x7f070120
 int drawable c 0x7f070092
 int drawable cha_rac 0x7f070093
 int drawable circle_border 0x7f070094
@@ -3148,6 +3150,7 @@ int drawable onboarding_border 0x7f07010a
 int drawable profile 0x7f07010b
 int drawable profile_circle 0x7f07010c
 int drawable quiz 0x7f07010d
+int drawable rounded_button 0x7f07011e
 int drawable scie_nce 0x7f07010e
 int drawable score_bg 0x7f07010f
 int drawable se_arch 0x7f070110
@@ -3608,10 +3611,12 @@ int id progress_horizontal 0x7f0901b4
 int id prompt 0x7f0901b5
 int id promt 0x7f0901b6
 int id question_container 0x7f0901b7
+int id question_counter 0x7f090274
 int id question_text 0x7f0901b8
 int id quiz_buttons 0x7f0901b9
 int id quiz_description 0x7f0901ba
 int id quiz_description1 0x7f0901bb
+int id quiz_image 0x7f090277
 int id quiz_question_count 0x7f0901bc
 int id quiz_status_text1 0x7f0901bd
 int id quiz_title 0x7f0901be

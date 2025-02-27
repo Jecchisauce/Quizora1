@@ -110,15 +110,21 @@ class ExploreFragment : Fragment() {
         // Hide background of the dialog
         dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
 
+        // References to UI elements
+        val quizImage: ImageView = dialogView.findViewById(R.id.quiz_image) // ImageView
         val quizTitle: TextView = dialogView.findViewById(R.id.quiz_title)
         val quizDescription: TextView = dialogView.findViewById(R.id.quiz_description)
         val questionCount: TextView = dialogView.findViewById(R.id.quiz_question_count)
         val cancelButton: Button = dialogView.findViewById(R.id.cancel_button)
         val startButton: Button = dialogView.findViewById(R.id.start_quiz_button)
 
+        // Set dynamic quiz content
         quizTitle.text = "Math Quiz"
         quizDescription.text = "Basic algebra and equations."
         questionCount.text = "10 Questions"
+
+        // Set the quiz image dynamically (Replace with actual logic)
+        quizImage.setImageResource(R.drawable.ma_th) // Change `math_quiz_image` to actual resource
 
         cancelButton.setOnClickListener {
             dialog.dismiss()
@@ -134,6 +140,7 @@ class ExploreFragment : Fragment() {
 
         dialog.show()
     }
+
 
 
     private fun performSearch(query: String) {
