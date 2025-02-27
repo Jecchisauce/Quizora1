@@ -88,10 +88,9 @@ class AnswerMath : Fragment() {
     private var quizPaused = false // Track if the quiz was paused
 
     private fun resumeQuiz() {
-        if (quizPaused) {
-            startTimer(remainingTime) // Resume timer only if quiz was paused
-            quizPaused = false
-        }
+        println("Resuming quiz with remaining time: $remainingTime")
+        startTimer(remainingTime)
+        quizPaused = false
     }
 
 
