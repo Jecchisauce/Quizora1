@@ -114,6 +114,9 @@ id deleteButton
 id deletebtn
 id forgotbtn
 id fragment_container
+id historyQuizImage
+id historyQuizScore
+id historyQuizTitle
 id imageView
 id imageView2
 id imageView3
@@ -159,6 +162,7 @@ id quiz_title
 id quiz_title1
 id quiz_type_icon1
 id rPassword
+id recyclerViewHistory
 id roundedImageView
 id saveButton
 id scoreboard
@@ -183,6 +187,7 @@ id textView8
 id textView9
 id timer_progress
 id tvAverage
+id tvHistoryTitle
 id tvTotalQuizzes
 id tvUsername
 id txtNickname
@@ -213,6 +218,7 @@ layout fragment_quiz_dialog
 layout fragment_quiz_progress_dialog
 layout fragment_settings
 layout fragment_update_password
+layout item_quiz_history
 menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_foreground

@@ -28,6 +28,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.Quizora" >
         <activity
+            android:name="com.example.quizora.ItemQuizHistory"
+            android:exported="false" />
+        <activity
             android:name="com.example.quizora.ItemOnboarding"
             android:exported="false" />
         <activity

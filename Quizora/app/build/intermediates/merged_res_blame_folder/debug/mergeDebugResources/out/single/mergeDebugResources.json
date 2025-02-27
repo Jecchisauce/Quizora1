@@ -96,12 +96,12 @@
         "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\onboard_1.png"
     },
     {
-        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_en_glish.jpg.flat",
-        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\en_glish.jpg"
-    },
-    {
         "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_lo_go.png.flat",
         "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\lo_go.png"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_en_glish.jpg.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\en_glish.jpg"
     },
     {
         "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_back_arrow.xml.flat",
@@ -134,6 +134,10 @@
     {
         "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_fragment_delete_account.xml.flat",
         "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\fragment_delete_account.xml"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_item_quiz_history.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\item_quiz_history.xml"
     },
     {
         "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\font_poppins_thin.ttf.flat",
@@ -246,6 +250,10 @@
     {
         "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_fragment_activity.xml.flat",
         "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\fragment_activity.xml"
+    },
+    {
+        "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_activity_item_quiz_history.xml.flat",
+        "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\activity_item_quiz_history.xml"
     },
     {
         "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_timer.xml.flat",
@@ -384,16 +392,16 @@
         "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\fragment_profile2.xml"
     },
     {
-        "merged": "com.example.quizora.app-debug-4:/layout_fragment_quiz_dialog.xml.flat",
-        "source": "com.example.quizora.app-main-6:/layout/fragment_quiz_dialog.xml"
-    },
-    {
         "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_art_bg.png.flat",
         "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\art_bg.png"
     },
     {
         "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_activity_login_form.xml.flat",
         "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\activity_login_form.xml"
+    },
+    {
+        "merged": "com.example.quizora.app-debug-4:/layout_item_quiz_history.xml.flat",
+        "source": "com.example.quizora.app-main-6:/layout/item_quiz_history.xml"
     },
     {
         "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_fragment_loading_screen.xml.flat",

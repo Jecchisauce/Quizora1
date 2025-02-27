@@ -7,6 +7,7 @@
     tools:context=".ActivityFragment">
 
     <RelativeLayout
+        android:background="#411036"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -32,7 +33,7 @@
             android:gravity="center"
             android:padding="10dp"
             android:text="YOUR QUIZ"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="20sp" />
 
         <!-- Button on the Right -->

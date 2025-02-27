@@ -3432,6 +3432,9 @@ id groups
 id header_title
 id hide_ime_id
 id hideable
+id historyQuizImage
+id historyQuizScore
+id historyQuizTitle
 id home
 id homeAsUp
 id honorRequest
@@ -3627,6 +3630,7 @@ id rPassword
 id radio
 id ratio
 id rectangles
+id recyclerViewHistory
 id report_drawn
 id reverseSawtooth
 id right
@@ -3769,6 +3773,7 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tvAverage
+id tvHistoryTitle
 id tvTotalQuizzes
 id tvUsername
 id txtNickname
@@ -3955,6 +3960,7 @@ layout fragment_settings
 layout fragment_update_password
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_quiz_history
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
