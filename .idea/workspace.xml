@@ -52,7 +52,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca899fb1-70e8-4b9c-aa2d-254c7316aca6" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/api/UserRequest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Quizora/.gradle/8.13-milestone-3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/.gradle/8.13-milestone-3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/api/RetrofitClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/api/RetrofitClient.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/models/LoginResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/models/LoginResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/models/RegisterResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/models/RegisterResponse.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +117,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin File" />
+        <option value="Class" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -166,6 +175,11 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.example.quizora.api" />
+    </key>
+  </component>
   <component name="RunManager" selected="Android App.Quizora.app.androidTest">
     <configuration name="Quizora.app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="Quizora.app" />
@@ -497,12 +511,12 @@
       <map>
         <entry key="com.example.quizora">
           <value>
-            <CheckInfo lastCheckTimestamp="1739789933127" />
+            <CheckInfo lastCheckTimestamp="1740979393377" />
           </value>
         </entry>
         <entry key="com.example.quizora.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1739789933122" />
+            <CheckInfo lastCheckTimestamp="1740979393377" />
           </value>
         </entry>
       </map>
