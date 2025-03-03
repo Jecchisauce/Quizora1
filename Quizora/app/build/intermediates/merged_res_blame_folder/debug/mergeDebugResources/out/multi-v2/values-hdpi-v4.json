@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.quizora.app-mergeDebugResources-34:/values-hdpi-v4/values-hdpi-v4.xml",
+            "outputFile": "com.example.quizora.app-mergeDebugResources-2:/values-hdpi-v4/values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Johnr\\.gradle\\caches\\8.13-milestone-3\\transforms\\a7d3da6bdf9fa3e01e1ee0f0f64b595f\\transformed\\appcompat-1.7.0\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "source": "D:\\Quizora2\\caches\\8.13-milestone-3\\transforms\\a7d3da6bdf9fa3e01e1ee0f0f64b595f\\transformed\\appcompat-1.7.0\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

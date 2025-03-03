@@ -24,8 +24,9 @@ class ForgotPassword2 : AppCompatActivity() {
             startActivity(intent)
         }
 
-        findViewById<Button>(R.id.Save1).setOnClickListener {
-            // Do nothing
+        findViewById<Button>(R.id.Changebtn).setOnClickListener {
+            val intent = Intent(this, LoginForm::class.java)
+            startActivity(intent)
         }
     }
 }

@@ -17,9 +17,10 @@ public class ActivityPhase2BindingImpl extends ActivityPhase2Binding  {
         sViewsWithIds.put(R.id.textView, 1);
         sViewsWithIds.put(R.id.textView2, 2);
         sViewsWithIds.put(R.id.textView3, 3);
-        sViewsWithIds.put(R.id.student, 4);
-        sViewsWithIds.put(R.id.instructor, 5);
-        sViewsWithIds.put(R.id.parent, 6);
+        sViewsWithIds.put(R.id.textView6, 4);
+        sViewsWithIds.put(R.id.student, 5);
+        sViewsWithIds.put(R.id.instructor, 6);
+        sViewsWithIds.put(R.id.parent, 7);
     }
     // views
     // variables
@@ -28,17 +29,18 @@ public class ActivityPhase2BindingImpl extends ActivityPhase2Binding  {
     // Inverse Binding Event Handlers
 
     public ActivityPhase2BindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 7, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 8, sIncludes, sViewsWithIds));
     }
     private ActivityPhase2BindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (android.widget.Button) bindings[5]
-            , (android.widget.RelativeLayout) bindings[0]
             , (android.widget.Button) bindings[6]
-            , (android.widget.Button) bindings[4]
+            , (android.widget.RelativeLayout) bindings[0]
+            , (android.widget.Button) bindings[7]
+            , (android.widget.Button) bindings[5]
             , (android.widget.TextView) bindings[1]
             , (android.widget.TextView) bindings[2]
             , (android.widget.TextView) bindings[3]
+            , (android.widget.TextView) bindings[4]
             );
         this.main.setTag(null);
         setRootTag(root);

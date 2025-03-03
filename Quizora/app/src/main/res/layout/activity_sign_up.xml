@@ -7,7 +7,7 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/b_g"
+        android:background="@drawable/bg"
         tools:context=".SignUp">
 
         <ImageView
@@ -24,9 +24,9 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/signupContainer"
             android:layout_width="0dp"
-            android:layout_height="505dp"
-            android:layout_marginTop="104dp"
-            android:background="@drawable/sign_border"
+            android:layout_height="550dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/textbox"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -49,7 +49,7 @@
             <EditText
                 android:id="@+id/Nickname"
                 android:layout_width="0dp"
-                android:layout_height="44dp"
+                android:layout_height="48dp"
                 android:layout_marginHorizontal="40dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/textbox"
@@ -67,7 +67,7 @@
             <EditText
                 android:id="@+id/EmailAddress"
                 android:layout_width="0dp"
-                android:layout_height="44dp"
+                android:layout_height="48dp"
                 android:layout_marginHorizontal="40dp"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/textbox"
@@ -85,7 +85,7 @@
             <EditText
                 android:id="@+id/Password1"
                 android:layout_width="0dp"
-                android:layout_height="44dp"
+                android:layout_height="48dp"
                 android:layout_marginHorizontal="40dp"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/textbox"
@@ -103,7 +103,7 @@
             <EditText
                 android:id="@+id/Password2"
                 android:layout_width="0dp"
-                android:layout_height="44dp"
+                android:layout_height="48dp"
                 android:layout_marginHorizontal="40dp"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/textbox"
@@ -127,7 +127,7 @@
                 android:background="@drawable/create"
                 android:fontFamily="@font/poppins_extrabold"
                 android:text="SIGN UP"
-                android:textColor="#861D6D"
+                android:textColor="#C97D8E"
                 android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -143,7 +143,7 @@
                 android:text="I Already have an Account"
                 android:textAllCaps="false"
                 android:textColor="#797979"
-                android:textSize="14dp"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"

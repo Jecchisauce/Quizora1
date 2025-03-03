@@ -7,32 +7,38 @@
     tools:context=".ProfileFragment">
 
     <!-- Profile Section -->
-    <RelativeLayout
-        android:layout_marginTop="9dp"
-        android:layout_width="match_parent"
-        android:layout_height="35dp">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="38dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="324dp"
-            android:layout_marginBottom="-2dp"
-            android:background="android:color/transparent"
-            android:text="EDIT"
-            android:textColor="@color/white"
-            android:textSize="15dp" />
+    <Button
+        android:id="@+id/btnEditProfile"
+        android:layout_width="48dp"
+        android:layout_height="46dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="890px"
+        android:layout_marginBottom="4dp"
+        android:background="@android:color/transparent"
+        android:paddingRight="9dp"
+        android:drawableRight="@drawable/edit_mode"
+        android:textSize="15sp"
+        android:backgroundTint="@android:color/transparent"
+        android:contentDescription="Editprofile"/>
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="0dp">
+
 
         <TextView
             android:id="@+id/profileTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:fontFamily="@font/poppins_extrabold"
             android:text="Profile"
-            android:textColor="#FFFFFF"
-            android:textSize="19sp"
-            android:fontFamily="@font/poppins_extrabold" />
+            android:textColor="@color/black"
+            android:textSize="19sp" />
 
 
     </RelativeLayout>
@@ -42,7 +48,7 @@
         android:layout_height="700dp"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
-        android:background="#1f1e1e"
+        android:background="#411036"
         android:gravity="center"
         android:orientation="vertical"
         android:paddingBottom="30dp">
@@ -97,7 +103,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:text="Personal Details"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -111,7 +117,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Name"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -127,7 +133,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Email"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -143,7 +149,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="User"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
