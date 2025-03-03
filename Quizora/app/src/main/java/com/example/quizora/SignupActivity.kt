@@ -8,11 +8,12 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.quizora.api.RetrofitClient
 import com.example.quizora.models.RegisterResponse
-import kotlinx.coroutines.*
-import retrofit2.HttpException
+import com.example.quizora.models.UserRequest
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class SignupActivity : AppCompatActivity() {
-
     private lateinit var usernameEditText: EditText
     private lateinit var emailEditText: EditText
     private lateinit var passwordEditText: EditText
@@ -35,46 +36,29 @@ class SignupActivity : AppCompatActivity() {
             val password = passwordEditText.text.toString().trim()
             val confirmPassword = confirmPasswordEditText.text.toString().trim()
 
-            if (password != confirmPassword) {
-                showToast("Passwords do not match")
-                return@setOnClickListener
+            if (password == confirmPassword) {
+                registerUser(username, email, password)
+            } else {
+                Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show()
             }
-
-            registerUser(username, email, password)
         }
     }
 
     private fun registerUser(username: String, email: String, password: String) {
-        CoroutineScope(Dispatchers.IO).launch {
-            try {
-                val response = RetrofitClient.instance.registerUser(username, email, password)
+        val request = UserRequest(username, email, password)
 
-                withContext(Dispatchers.Main) {
-                    if (response.isSuccessful && response.body() != null) {
-                        val result: RegisterResponse = response.body()!!
-                        showToast(result.message)
-
-                        if (result.success) {
-                            startActivity(Intent(this@SignupActivity, LoginActivity::class.java))
-                            finish()
-                        }
-                    } else {
-                        showToast("Signup failed: ${response.code()}")
-                    }
-                }
-            } catch (e: HttpException) {
-                withContext(Dispatchers.Main) {
-                    showToast("Network error: ${e.message}")
-                }
-            } catch (e: Exception) {
-                withContext(Dispatchers.Main) {
-                    showToast("Error: ${e.localizedMessage}")
+        RetrofitClient.instance.registerUser(request).enqueue(object : Callback<RegisterResponse> {
+            override fun onResponse(call: Call<RegisterResponse>, response: Response<RegisterResponse>) {
+                Toast.makeText(this@SignupActivity, response.body()?.message, Toast.LENGTH_SHORT).show()
+                if (response.body()?.success == true) {
+                    startActivity(Intent(this@SignupActivity, LoginActivity::class.java))
+                    finish()
                 }
             }
-        }
-    }
 
-    private fun showToast(message: String) {
-        runOnUiThread { Toast.makeText(this, message, Toast.LENGTH_SHORT).show() }
+            override fun onFailure(call: Call<RegisterResponse>, t: Throwable) {
+                Toast.makeText(this@SignupActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 }

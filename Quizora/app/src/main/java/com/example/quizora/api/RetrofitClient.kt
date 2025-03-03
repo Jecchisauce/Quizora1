@@ -7,10 +7,11 @@ object RetrofitClient {
     private const val BASE_URL = "http://192.168.100.50/quizora/"
 
     val instance: ApiService by lazy {
-        Retrofit.Builder()
+        val retrofit = Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-            .create(ApiService::class.java)
+
+        retrofit.create(ApiService::class.java)
     }
 }

@@ -5,11 +5,6 @@
       <config />
     </shared>
     <layouts>
-      <layout url="file://$PROJECT_DIR$/Quizora/app/src/main/res/layout/activity_login.xml">
-        <config>
-          <theme>@style/Theme.Quizora</theme>
-        </config>
-      </layout>
       <layout url="file://$PROJECT_DIR$/Quizora/app/src/main/res/layout/activity_login_form.xml">
         <config>
           <theme>@style/Theme.Quizora</theme>
@@ -52,14 +47,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca899fb1-70e8-4b9c-aa2d-254c7316aca6" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/api/UserRequest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Quizora/.gradle/8.13-milestone-3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/.gradle/8.13-milestone-3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/LoginActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/SignupActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/SignupActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/api/ApiService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/api/ApiService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/api/RetrofitClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/api/RetrofitClient.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/models/LoginResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/models/LoginResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/api/UserRequest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/models/UserRequest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/models/RegisterResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/models/RegisterResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quizora/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/build/reports/problems/problems-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quizora/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,6 +140,12 @@
     &quot;accountId&quot;: &quot;aeec237c-de17-426e-8983-1dc99394ffe6&quot;
   }
 }</component>
+  <component name="KotlinCodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -177,6 +181,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.example.quizora.models" />
       <recent name="com.example.quizora.api" />
     </key>
   </component>

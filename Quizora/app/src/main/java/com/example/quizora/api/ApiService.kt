@@ -1,24 +1,15 @@
 package com.example.quizora.api
 
-import com.example.quizora.models.LoginResponse
 import com.example.quizora.models.RegisterResponse
-import retrofit2.Response
-import retrofit2.http.*
+import com.example.quizora.models.UserRequest
+import retrofit2.Call
+import retrofit2.http.Body
+import retrofit2.http.POST
 
 interface ApiService {
-
-    @FormUrlEncoded
     @POST("register.php")
-    suspend fun registerUser(
-        @Field("username") username: String,
-        @Field("email") email: String,
-        @Field("password") password: String
-    ): Response<RegisterResponse>
+    fun registerUser(@Body request: UserRequest): Call<RegisterResponse>
 
-    @FormUrlEncoded
     @POST("login.php")
-    suspend fun loginUser(
-        @Field("username") username: String,
-        @Field("password") password: String
-    ): Response<LoginResponse>
+    fun loginUser(@Body request: UserRequest): Call<RegisterResponse>
 }

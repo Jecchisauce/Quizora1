@@ -1,7 +1,10 @@
-package com.example.quizora.api
+package com.example.quizora.models
 
 data class UserRequest(
-    val name: String?,  // For signup
     val username: String,
+    val email: String?,
     val password: String
 )
+
+
+
