@@ -28,6 +28,9 @@
             android:name=".Phase1"
             android:exported="true" />
         <activity
+            android:name=".SignupActivity"
+            android:exported="true" />
+        <activity
             android:name=".Phase2"
             android:exported="true" />
         <activity

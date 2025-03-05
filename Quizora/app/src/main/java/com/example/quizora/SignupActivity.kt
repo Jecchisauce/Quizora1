@@ -1,5 +1,6 @@
 package com.example.quizora
 
+import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -19,6 +20,7 @@ class SignupActivity : AppCompatActivity() {
     private lateinit var passwordEditText: EditText
     private lateinit var confirmPasswordEditText: EditText
     private lateinit var signupButton: Button
+    private lateinit var progressDialog: ProgressDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,34 +32,57 @@ class SignupActivity : AppCompatActivity() {
         confirmPasswordEditText = findViewById(R.id.Password2)
         signupButton = findViewById(R.id.Signup)
 
+        progressDialog = ProgressDialog(this)
+        progressDialog.setMessage("Registering... Please wait")
+        progressDialog.setCancelable(false)
+
         signupButton.setOnClickListener {
             val username = usernameEditText.text.toString().trim()
             val email = emailEditText.text.toString().trim()
             val password = passwordEditText.text.toString().trim()
             val confirmPassword = confirmPasswordEditText.text.toString().trim()
 
-            if (password == confirmPassword) {
+            if (validateInput(username, email, password, confirmPassword)) {
                 registerUser(username, email, password)
-            } else {
-                Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show()
             }
         }
     }
 
+    private fun validateInput(username: String, email: String, password: String, confirmPassword: String): Boolean {
+        if (username.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
+            Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show()
+            return false
+        }
+
+        if (password != confirmPassword) {
+            Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show()
+            return false
+        }
+
+        return true
+    }
+
     private fun registerUser(username: String, email: String, password: String) {
+        progressDialog.show()
+
         val request = UserRequest(username, email, password)
 
         RetrofitClient.instance.registerUser(request).enqueue(object : Callback<RegisterResponse> {
             override fun onResponse(call: Call<RegisterResponse>, response: Response<RegisterResponse>) {
-                Toast.makeText(this@SignupActivity, response.body()?.message, Toast.LENGTH_SHORT).show()
-                if (response.body()?.success == true) {
+                progressDialog.dismiss()
+
+                if (response.isSuccessful && response.body()?.success == true) {
+                    Toast.makeText(this@SignupActivity, response.body()?.message, Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this@SignupActivity, LoginActivity::class.java))
                     finish()
+                } else {
+                    Toast.makeText(this@SignupActivity, response.body()?.message ?: "Signup failed", Toast.LENGTH_SHORT).show()
                 }
             }
 
             override fun onFailure(call: Call<RegisterResponse>, t: Throwable) {
-                Toast.makeText(this@SignupActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
+                progressDialog.dismiss()
+                Toast.makeText(this@SignupActivity, "Network error: ${t.message}", Toast.LENGTH_SHORT).show()
             }
         })
     }

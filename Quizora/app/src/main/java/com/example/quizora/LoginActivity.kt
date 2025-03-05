@@ -7,8 +7,8 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.quizora.api.RetrofitClient
-import com.example.quizora.models.RegisterResponse
-import com.example.quizora.models.UserRequest
+import com.example.quizora.models.LoginRequest
+import com.example.quizora.models.LoginResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -17,6 +17,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var usernameEditText: EditText
     private lateinit var passwordEditText: EditText
     private lateinit var loginButton: Button
+    private lateinit var signupButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,19 +26,42 @@ class LoginActivity : AppCompatActivity() {
         usernameEditText = findViewById(R.id.EmailAddress)
         passwordEditText = findViewById(R.id.Password)
         loginButton = findViewById(R.id.Signin)
+        signupButton = findViewById(R.id.Signupbtn)
 
         loginButton.setOnClickListener {
-            val request = UserRequest(usernameEditText.text.toString(), null, passwordEditText.text.toString())
+            val username = usernameEditText.text.toString().trim()
+            val password = passwordEditText.text.toString().trim()
 
-            RetrofitClient.instance.loginUser(request).enqueue(object : Callback<RegisterResponse> {
-                override fun onResponse(call: Call<RegisterResponse>, response: Response<RegisterResponse>) {
-                    Toast.makeText(this@LoginActivity, response.body()?.message, Toast.LENGTH_SHORT).show()
-                }
-
-                override fun onFailure(call: Call<RegisterResponse>, t: Throwable) {
-                    Toast.makeText(this@LoginActivity, t.message, Toast.LENGTH_SHORT).show()
-                }
-            })
+            if (username.isEmpty() || password.isEmpty()) {
+                Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show()
+            } else {
+                loginUser(username, password)
+            }
         }
+
+        signupButton.setOnClickListener {
+            startActivity(Intent(this, SignupActivity::class.java))
+        }
+    }
+
+    private fun loginUser(username: String, password: String) {
+        val request = LoginRequest(username, password)
+
+        RetrofitClient.instance.loginUser(request).enqueue(object : Callback<LoginResponse> {
+            override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
+                if (response.isSuccessful && response.body()?.success == true) {
+                    Toast.makeText(this@LoginActivity, "Login successful", Toast.LENGTH_SHORT).show()
+                    // Example: Go to MainActivity after login
+                    startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+                    finish()
+                } else {
+                    Toast.makeText(this@LoginActivity, response.body()?.message ?: "Login failed", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+                Toast.makeText(this@LoginActivity, "Network error: ${t.message}", Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 }

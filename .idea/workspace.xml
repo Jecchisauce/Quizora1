@@ -46,18 +46,18 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca899fb1-70e8-4b9c-aa2d-254c7316aca6" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ca899fb1-70e8-4b9c-aa2d-254c7316aca6" name="Changes" comment="update 2">
+      <change afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/models/LoginRequest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Quizora/.gradle/8.13-milestone-3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/.gradle/8.13-milestone-3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/LoginActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/LoginForm.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/LoginForm.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/SignupActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/SignupActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/api/ApiService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/api/ApiService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/api/RetrofitClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/api/RetrofitClient.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/api/UserRequest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/models/UserRequest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/models/RegisterResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/models/RegisterResponse.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quizora/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/build/reports/problems/problems-report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quizora/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/models/LoginResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/models/LoginResponse.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +67,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\Jecchi\.android\avd\Pixel_Fold_API_35.avd)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=PhysicalDevice, isTemplate=false, identifier=serial=5DTCNRMJNZ7PJNBQ)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$/Quizora">
       <ProjectState />
@@ -164,6 +164,7 @@
     &quot;Android App.Quizora.app.androidTest.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
@@ -176,7 +177,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.language.Kotlin&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -203,6 +204,7 @@
       <option name="MODE" value="default_activity" />
       <option name="RESTORE_ENABLED" value="false" />
       <option name="RESTORE_FILE" value="" />
+      <option name="RESTORE_FRESH_INSTALL_ONLY" value="false" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
@@ -272,6 +274,7 @@
       <option name="MODE" value="default_activity" />
       <option name="RESTORE_ENABLED" value="false" />
       <option name="RESTORE_FILE" value="" />
+      <option name="RESTORE_FRESH_INSTALL_ONLY" value="false" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
@@ -341,6 +344,7 @@
       <option name="MODE" value="default_activity" />
       <option name="RESTORE_ENABLED" value="false" />
       <option name="RESTORE_FILE" value="" />
+      <option name="RESTORE_FRESH_INSTALL_ONLY" value="false" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
@@ -410,6 +414,7 @@
       <option name="MODE" value="default_activity" />
       <option name="RESTORE_ENABLED" value="false" />
       <option name="RESTORE_FILE" value="" />
+      <option name="RESTORE_FRESH_INSTALL_ONLY" value="false" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
@@ -480,7 +485,23 @@
       <option name="project" value="LOCAL" />
       <updated>1740280297775</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update 2">
+      <option name="closed" value="true" />
+      <created>1741002759572</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1741002759572</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update 2">
+      <option name="closed" value="true" />
+      <created>1741002786474</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1741002786474</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -494,7 +515,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Front-End" />
+                        <option value="Backend-API-connector" />
                       </list>
                     </value>
                   </entry>
@@ -509,19 +530,20 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="update 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 2" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
       <map>
         <entry key="com.example.quizora">
           <value>
-            <CheckInfo lastCheckTimestamp="1740979393377" />
+            <CheckInfo lastCheckTimestamp="1741173750790" />
           </value>
         </entry>
         <entry key="com.example.quizora.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1740979393377" />
+            <CheckInfo lastCheckTimestamp="1741173750790" />
           </value>
         </entry>
       </map>
