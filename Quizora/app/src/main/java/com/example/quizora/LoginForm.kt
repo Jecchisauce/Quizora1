@@ -2,8 +2,7 @@ package com.example.quizora
 
 import android.content.Intent
 import android.os.Bundle
-//import android.text.method.HideReturnsTransformationMethod
-//import android.text.method.PasswordTransformationMethod
+import android.text.InputType
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -43,45 +42,30 @@ class LoginForm : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // ✅ Proceed to MainActivity if input is valid
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
-
-        // ✅ Toggle password visibility
-        binding.Signin.setOnClickListener {
-            val email = binding.EmailAddress.text.toString().trim()
-            val password = binding.Password.text.toString().trim()
-
-            if (email.isEmpty()) {
-                binding.EmailAddress.error = "Email is required!"
-                return@setOnClickListener
+            // ✅ Check user in database (Replace with actual query)
+            if (checkUserInDatabase(email, password)) {
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            } else {
+                binding.EmailAddress.error = "Invalid credentials"
+                binding.Password.error = "Invalid credentials"
             }
+        }
 
-            if (password.isEmpty()) {
-                binding.Password.error = "Password is required!"
-                return@setOnClickListener
+        //  Toggle password visibility
+        binding.togglePassword.setOnClickListener {
+            isPasswordVisible = !isPasswordVisible
+            if (isPasswordVisible) {
+                binding.Password.inputType = InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+                binding.togglePassword.setImageResource(R.drawable.baseline_remove_red_eye_24) // Change to "eye off"
+            } else {
+                binding.Password.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+                binding.togglePassword.setImageResource(R.drawable.baseline_remove_red_eye_24) // Change to "eye on"
             }
-
-//            // Check user in database
-//            val userExists = checkUserInDatabase(email, password)
-//
-//            if (userExists) {
-//                val intent = Intent(this, MainActivity::class.java)
-//                startActivity(intent)
-//            } else {
-//                binding.EmailAddress.error = "Invalid credentials"
-//                binding.Password.error = "Invalid credentials"
-//            }
+            binding.Password.setSelection(binding.Password.text.length) // Keep cursor at the end
         }
 
-        // (Replace with actual query)
-        fun checkUserInDatabase(email: String, password: String): Boolean {
-            return email == "user@example.com" && password == "password123"  // Replace with actual DB query
-        }
-
-
-        // ✅ Other buttons remain unchanged
+        //  Other buttons remain unchanged
         binding.Signupbtn.setOnClickListener {
             val intent = Intent(this, SignUp::class.java)
             startActivity(intent)
@@ -96,5 +80,11 @@ class LoginForm : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+
+    }
+
+    // ✅ Simulated user database check (Replace with actual DB query)
+    private fun checkUserInDatabase(email: String, password: String): Boolean {
+        return email == "user@example.com" && password == "password123"  // Example credentials
     }
 }
