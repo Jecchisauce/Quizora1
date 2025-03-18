@@ -16,6 +16,7 @@ drawable baseline_arrow_back_ios_24
 drawable baseline_arrow_forward_ios_24
 drawable baseline_delete_24
 drawable baseline_home_24
+drawable baseline_remove_red_eye_24
 drawable bg
 drawable border
 drawable borders
@@ -105,6 +106,7 @@ id btncancel1
 id btncancel2
 id btnlogout
 id btnsave
+id bypassbtn
 id cPassword
 id cancel_button
 id clear_button
@@ -186,6 +188,7 @@ id textView7
 id textView8
 id textView9
 id timer_progress
+id togglePassword
 id tvAverage
 id tvHistoryTitle
 id tvTotalQuizzes

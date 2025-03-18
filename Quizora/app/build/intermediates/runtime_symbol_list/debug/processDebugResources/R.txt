@@ -3013,6 +3013,7 @@ int drawable baseline_arrow_back_ios_24 0x7f070083
 int drawable baseline_arrow_forward_ios_24 0x7f070084
 int drawable baseline_delete_24 0x7f070085
 int drawable baseline_home_24 0x7f070086
+int drawable baseline_remove_red_eye_24 0x7f070120
 int drawable bg 0x7f070087
 int drawable border 0x7f070088
 int drawable borders 0x7f070089
@@ -3311,6 +3312,7 @@ int id btncancel2 0x7f090089
 int id btnlogout 0x7f09008a
 int id btnsave 0x7f09008b
 int id buttonPanel 0x7f09008c
+int id bypassbtn 0x7f09027b
 int id cPassword 0x7f09008d
 int id cache_measures 0x7f09008e
 int id callMeasure 0x7f09008f
@@ -3757,6 +3759,7 @@ int id title 0x7f090246
 int id titleDividerNoCustom 0x7f090247
 int id title_template 0x7f090248
 int id toggle 0x7f090249
+int id togglePassword 0x7f09027c
 int id top 0x7f09024a
 int id topPanel 0x7f09024b
 int id touch_outside 0x7f09024c
