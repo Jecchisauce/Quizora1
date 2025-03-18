@@ -41,6 +41,7 @@ drawable ic_launcher_foreground
 drawable lo_go
 drawable log_out
 drawable ma_th
+drawable nobg
 drawable onboard_1
 drawable onboard_2
 drawable onboard_3
