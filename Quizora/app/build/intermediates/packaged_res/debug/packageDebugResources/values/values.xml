@@ -9,6 +9,7 @@
         <item name="android:textSize">14sp</item>
     </style>
     <style name="Base.Theme.Quizora" parent="Theme.AppCompat.Light.NoActionBar">
+
         
         
     </style>

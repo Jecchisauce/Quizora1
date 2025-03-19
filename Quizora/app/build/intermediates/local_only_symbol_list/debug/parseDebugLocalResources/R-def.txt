@@ -63,6 +63,7 @@ drawable sp_lash
 drawable textbox
 drawable timer
 drawable up_date
+drawable web_bg
 drawable wrong_answer
 font poppins_extrabold
 font poppins_medium
@@ -82,6 +83,7 @@ id Password
 id Password1
 id Password2
 id Quiz1
+id QuizImage
 id Recbtn
 id Signin
 id Signup
@@ -115,9 +117,10 @@ id container
 id createQuizCard
 id deleteButton
 id deletebtn
+id exit_btn
 id forgotbtn
 id fragment_container
-id historyQuizImage
+id high_score_display
 id historyQuizScore
 id historyQuizTitle
 id imageView
@@ -146,6 +149,7 @@ id nickname
 id onboardingframe
 id overlay_blocker
 id parent
+id play_again_btn
 id profileImage
 id profileImageview
 id profileTitle
@@ -168,6 +172,9 @@ id rPassword
 id recyclerViewHistory
 id roundedImageView
 id saveButton
+id score_container
+id score_display
+id score_title
 id scoreboard
 id scrollbar
 id search_bar
@@ -190,6 +197,8 @@ id textView8
 id textView9
 id timer_progress
 id togglePassword
+id togglePassword1
+id togglePassword2
 id tvAverage
 id tvHistoryTitle
 id tvTotalQuizzes
@@ -208,6 +217,7 @@ layout activity_main
 layout activity_phase1
 layout activity_phase2
 layout activity_phase3
+layout activity_scoreboard
 layout activity_sign_up
 layout activity_splash_screen
 layout fragment_activity

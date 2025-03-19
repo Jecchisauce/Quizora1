@@ -3168,6 +3168,7 @@ drawable timer
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable up_date
+drawable web_bg
 drawable wrong_answer
 font poppins_extrabold
 font poppins_medium
@@ -3194,6 +3195,7 @@ id Password
 id Password1
 id Password2
 id Quiz1
+id QuizImage
 id Recbtn
 id SHIFT
 id SHOW_ALL
@@ -3403,6 +3405,7 @@ id enterAlways
 id enterAlwaysCollapsed
 id escape
 id exitUntilCollapsed
+id exit_btn
 id expand_activities_button
 id expanded_menu
 id fade
@@ -3435,7 +3438,7 @@ id groups
 id header_title
 id hide_ime_id
 id hideable
-id historyQuizImage
+id high_score_display
 id historyQuizScore
 id historyQuizTitle
 id home
@@ -3606,6 +3609,7 @@ id pathRelative
 id peekHeight
 id percent
 id pin
+id play_again_btn
 id position
 id postLayout
 id pressed
@@ -3648,6 +3652,9 @@ id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
 id scale
+id score_container
+id score_display
+id score_title
 id scoreboard
 id screen
 id scroll
@@ -3762,6 +3769,8 @@ id titleDividerNoCustom
 id title_template
 id toggle
 id togglePassword
+id togglePassword1
+id togglePassword2
 id top
 id topPanel
 id touch_outside
@@ -3932,6 +3941,7 @@ layout activity_main
 layout activity_phase1
 layout activity_phase2
 layout activity_phase3
+layout activity_scoreboard
 layout activity_sign_up
 layout activity_splash_screen
 layout custom_dialog
