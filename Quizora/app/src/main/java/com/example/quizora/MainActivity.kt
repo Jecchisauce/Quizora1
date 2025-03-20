@@ -1,5 +1,7 @@
 package com.example.quizora
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +15,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
+        // Change ActionBar color to white
+        supportActionBar?.apply {
+            setBackgroundDrawable(ColorDrawable(Color.WHITE)) // Set background color
+            title = "Quizora" // Change title if needed
+            setDisplayShowTitleEnabled(true)
+        }
 
         // Handling insets
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -36,8 +45,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_home -> loadFragment(HomeFragment())
                 R.id.navigation_explore -> loadFragment(ExploreFragment())
                 R.id.navigation_activity -> loadFragment(ActivityFragment())
-
-                else -> false // Corrected position
+                else -> false
             }
         }
     }
@@ -50,4 +58,3 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 }
-
