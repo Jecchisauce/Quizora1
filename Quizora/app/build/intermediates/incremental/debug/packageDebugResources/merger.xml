@@ -13,6 +13,8 @@
 
         
         
+        <item name="android:statusBarColor">#ffffff</item>
+        <item name="actionMenuTextColor">#000000</item> 
     </style><style name="Theme.Quizora" parent="Base.Theme.Quizora"/></file><file path="D:\Quizora Repo\Quizora1\Quizora\app\src\main\res\values-night\themes.xml" qualifiers="night-v8"><style name="Base.Theme.Quizora" parent="Theme.AppCompat.DayNight.NoActionBar">
 
         
