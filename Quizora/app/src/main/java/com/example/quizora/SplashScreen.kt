@@ -1,5 +1,6 @@
 package com.example.quizora
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
@@ -9,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
+@SuppressLint("CustomSplashScreen")
 class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +26,7 @@ class SplashScreen : AppCompatActivity() {
 
         // Delay for 2 seconds, then navigate to Phase1
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, LoginForm ::class.java) // Replace with your actual MainActivity
+            val intent = Intent(this, Phase1 ::class.java) // Replace with your actual MainActivity
             startActivity(intent)
             finish() // Close SplashScreen to prevent returning to it
         }, 3000) // 2 seconds delay

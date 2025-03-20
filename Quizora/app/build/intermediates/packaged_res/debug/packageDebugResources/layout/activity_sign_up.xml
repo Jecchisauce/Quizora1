@@ -7,7 +7,7 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bg"
+        android:background="#ADD8E6"
         tools:context=".SignUp" android:tag="layout/activity_sign_up_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
 
         <ImageView
@@ -100,6 +100,20 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/EmailAddress" />
 
+            <ImageButton
+                android:id="@+id/togglePassword1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="50dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="showpassword"
+                android:src="@drawable/baseline_remove_red_eye_24"
+                app:layout_constraintBottom_toBottomOf="@id/Password1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/Password1"
+                app:tint="#808080"
+                tools:ignore="TouchTargetSizeCheck" />
+
             <EditText
                 android:id="@+id/Password2"
                 android:layout_width="0dp"
@@ -117,6 +131,20 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/Password1" />
+
+            <ImageButton
+                android:id="@+id/togglePassword2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="50dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="showpassword"
+                android:src="@drawable/baseline_remove_red_eye_24"
+                app:layout_constraintBottom_toBottomOf="@id/Password2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/Password2"
+                app:tint="#808080"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <Button
                 android:id="@+id/Signup"

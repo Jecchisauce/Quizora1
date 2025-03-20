@@ -3,12 +3,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context=".ActivityFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
+        android:background="#411036"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
+
+        <!-- Delete Icon Button (Left) -->
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/textbox"
+            android:drawableLeft="@drawable/edit_mode"
+            android:drawableTint="#C97D8E"
+            android:paddingLeft="13dp"
+            android:contentDescription="deleteButton" />
+
+        <!-- Centered TextView -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/poppins_extrabold"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="YOUR QUIZ"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <!-- Button on the Right -->
+        <Button
+            android:id="@+id/myButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/textbox"
+            android:drawableLeft="@drawable/add"
+            android:drawableTint="#C97D8E"
+            android:paddingLeft="13dp"
+            android:contentDescription="backbutton"/>
+
+    </RelativeLayout>
 
 </FrameLayout>

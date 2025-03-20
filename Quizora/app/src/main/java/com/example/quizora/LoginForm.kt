@@ -2,81 +2,89 @@ package com.example.quizora
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
+import android.text.InputType
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.quizora.api.RetrofitClient
 import com.example.quizora.databinding.ActivityLoginFormBinding
-import com.example.quizora.models.LoginRequest
-import com.example.quizora.models.LoginResponse
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class LoginForm : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginFormBinding
+    private var isPasswordVisible = false // Track password visibility
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // Initialize View Binding
         binding = ActivityLoginFormBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Handle window insets (for proper layout handling on modern devices)
+        // Handle window insets
         ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        // Login Button Click
+        // ✅ Require input before signing in
         binding.Signin.setOnClickListener {
-            val username = binding.EmailAddress.text.toString().trim()
+            val email = binding.EmailAddress.text.toString().trim()
             val password = binding.Password.text.toString().trim()
 
-            if (username.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show()
+            if (email.isEmpty()) {
+                binding.EmailAddress.error = "Email is required!"
+                return@setOnClickListener
+            }
+
+            if (password.isEmpty()) {
+                binding.Password.error = "Password is required!"
+                return@setOnClickListener
+            }
+
+            // ✅ Check user in database (Replace with actual query)
+            if (checkUserInDatabase(email, password)) {
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
             } else {
-                loginUser(username, password)
+                binding.EmailAddress.error = "Invalid credentials"
+                binding.Password.error = "Invalid credentials"
             }
         }
 
-        // Sign Up Button Click
-        binding.Signupbtn.setOnClickListener {
-            startActivity(Intent(this, SignUp::class.java))
+        //  Toggle password visibility
+        binding.togglePassword.setOnClickListener {
+            isPasswordVisible = !isPasswordVisible
+            if (isPasswordVisible) {
+                binding.Password.inputType = InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+                binding.togglePassword.setImageResource(R.drawable.baseline_remove_red_eye_24) // Change to "eye off"
+            } else {
+                binding.Password.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+                binding.togglePassword.setImageResource(R.drawable.baseline_remove_red_eye_24) // Change to "eye on"
+            }
+            binding.Password.setSelection(binding.Password.text.length) // Keep cursor at the end
         }
 
-        // Forgot Password Button Click
-        binding.forgotbtn.setOnClickListener {
-            startActivity(Intent(this, ForgotPassword::class.java))
+        //  Other buttons remain unchanged
+        binding.Signupbtn.setOnClickListener {
+            val intent = Intent(this, SignUp::class.java)
+            startActivity(intent)
         }
+
+        binding.forgotbtn.setOnClickListener {
+            val intent = Intent(this, ForgotPassword::class.java)
+            startActivity(intent)
+        }
+
+        binding.bypassbtn.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
-    private fun loginUser(username: String, password: String) {
-        val request = LoginRequest(username, password)
-
-        RetrofitClient.instance.loginUser(request).enqueue(object : Callback<LoginResponse> {
-            override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
-                if (response.isSuccessful) {
-                    val loginResponse = response.body()
-                    if (loginResponse != null && loginResponse.success) {
-                        Toast.makeText(this@LoginForm, "Login successful", Toast.LENGTH_SHORT).show()
-                        startActivity(Intent(this@LoginForm, MainActivity::class.java))
-                        finish()
-                    } else {
-                        Toast.makeText(this@LoginForm, loginResponse?.message ?: "Login failed (no message)", Toast.LENGTH_SHORT).show()
-                    }
-                } else {
-                    Toast.makeText(this@LoginForm, "Server error: ${response.code()}", Toast.LENGTH_SHORT).show()
-                }
-            }
-
-            override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-                Toast.makeText(this@LoginForm, "Network error: ${t.message}", Toast.LENGTH_LONG).show()
-                t.printStackTrace()
-            }
-        })
+    // ✅ Simulated user database check (Replace with actual DB query)
+    private fun checkUserInDatabase(email: String, password: String): Boolean {
+        return email == "user@example.com" && password == "password123"  // Example credentials
     }
 }

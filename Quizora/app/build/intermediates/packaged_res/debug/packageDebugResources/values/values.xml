@@ -9,8 +9,14 @@
         <item name="android:textSize">14sp</item>
     </style>
     <style name="Base.Theme.Quizora" parent="Theme.AppCompat.Light.NoActionBar">
+
         
         
+    </style>
+    <style name="DialogTheme" parent="Theme.MaterialComponents.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
     </style>
     <style name="InactiveText" parent="TextAppearance.MaterialComponents.Caption">
         <item name="android:fontFamily">@font/poppins_medium</item>

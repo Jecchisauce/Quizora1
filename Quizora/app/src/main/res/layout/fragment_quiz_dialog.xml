@@ -1,0 +1,96 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="380dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="280dp"
+    android:layout_marginStart="15dp"
+    android:background="@drawable/border"
+    android:padding="20dp"
+    android:gravity="center">
+
+    <!-- Quiz Image (Inside the Border) -->
+    <ImageView
+        android:id="@+id/quiz_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/art_bg"
+        android:background="@drawable/border"
+        android:padding="5dp"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- Quiz Title -->
+    <TextView
+        android:id="@+id/quiz_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:fontFamily="@font/poppins_extrabold"
+        android:text="Quiz Title"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- New Border for Quiz Details -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textbox"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Quiz Description -->
+        <TextView
+            android:id="@+id/quiz_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Quiz Description"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Number of Questions -->
+        <TextView
+            android:id="@+id/quiz_question_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Number of Questions"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/wrong_answer"
+            android:text="CANCEL"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="10dp"/>
+
+        <Button
+            android:id="@+id/start_quiz_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ANSWER QUIZ"
+            android:background="@drawable/correct_answer"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -7,7 +7,7 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bg"
+        android:background="#ADD8E6"
         tools:context=".Login">
 
         <ImageView
@@ -25,10 +25,10 @@
             android:id="@+id/loginContainer"
             android:layout_width="0dp"
             android:layout_height="500dp"
-            android:layout_marginTop="96dp"
+            android:layout_marginTop="92dp"
             android:background="@drawable/borders"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ImageView1">
 
@@ -74,13 +74,30 @@
                 android:fontFamily="@font/poppins_regular"
                 android:hint="Password"
                 android:inputType="textPassword"
-                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="45dp"
                 android:textColor="@color/black"
                 android:textColorHint="#959595"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/EmailAddress" />
+
+
+            <ImageView
+                android:id="@+id/togglePassword"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="52dp"
+                android:clickable="true"
+                android:contentDescription="Toggle Password Visibility"
+                android:focusable="true"
+                android:src="@drawable/baseline_remove_red_eye_24"
+                android:tint="#808080"
+                app:layout_constraintBottom_toBottomOf="@id/Password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/Password"
+                tools:ignore="TouchTargetSizeCheck,UseAppTint" />
 
             <Button
                 android:id="@+id/forgotbtn"
@@ -98,34 +115,53 @@
                 app:layout_constraintTop_toBottomOf="@id/Password" />
 
             <Button
-                android:id="@+id/Signin"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="40dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/border"
-                android:fontFamily="@font/poppins_extrabold"
-                android:text="SIGN IN"
-                android:textColor="@color/white"
-                android:textSize="15sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/forgotbtn" />
-
-            <Button
                 android:id="@+id/Signupbtn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="40dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/create"
                 android:fontFamily="@font/poppins_extrabold"
                 android:text="CREATE ACCOUNT"
                 android:textColor="#C97D8E"
                 android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.675"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/Signin" />
+
+            <Button
+                android:id="@+id/Signin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/border"
+                android:fontFamily="@font/poppins_extrabold"
+                android:text="SIGN IN"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.675"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/forgotbtn" />
+
+            <Button
+                android:id="@+id/bypassbtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="64dp"
+                android:background="@drawable/create"
+                android:fontFamily="@font/poppins_extrabold"
+                android:text="BYPASS"
+                android:textColor="#C97D8E"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.675"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Signin" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
