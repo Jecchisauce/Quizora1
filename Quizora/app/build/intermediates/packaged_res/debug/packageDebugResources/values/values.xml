@@ -10,10 +10,7 @@
     </style>
     <style name="Base.Theme.Quizora" parent="Theme.AppCompat.Light.NoActionBar">
 
-        
-        
-        <item name="android:statusBarColor">#ffffff</item>
-        <item name="actionMenuTextColor">#000000</item> 
+
     </style>
     <style name="DialogTheme" parent="Theme.MaterialComponents.Dialog">
         <item name="android:windowBackground">@android:color/transparent</item>

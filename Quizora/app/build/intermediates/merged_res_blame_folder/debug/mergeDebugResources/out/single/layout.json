@@ -20,7 +20,7 @@
         "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\layout\\activity_sign_up.xml"
     },
     {
-        "merged": "com.example.quizora.app-mergeDebugResources-3:/layout/activity_main.xml",
-        "source": "com.example.quizora.app-main-6:/layout/activity_main.xml"
+        "merged": "com.example.quizora.app-mergeDebugResources-3:/layout/activity_login_form.xml",
+        "source": "com.example.quizora.app-main-6:/layout/activity_login_form.xml"
     }
 ]

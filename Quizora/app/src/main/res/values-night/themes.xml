@@ -4,13 +4,9 @@
 
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
-        <item name="android:windowBackground">@color/white</item>
 
-        <!-- Change Status Bar Color -->
-        <item name="android:statusBarColor">@color/white</item>
 
-        <!-- Optional: Change status bar icons to dark mode (black icons) -->
-        <item name="android:windowLightStatusBar">true</item>
+
 
     </style>
 </resources>
