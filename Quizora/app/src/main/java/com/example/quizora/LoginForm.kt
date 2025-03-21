@@ -3,7 +3,9 @@ package com.example.quizora
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.text.InputFilter
 import android.text.InputType
+import android.text.Spanned
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -26,6 +28,9 @@ class LoginForm : AppCompatActivity() {
         // Initialize View Binding
         binding = ActivityLoginFormBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.Password.filters = arrayOf(blockEmojis())
+
 
         // Handle window insets
         ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
@@ -93,5 +98,28 @@ class LoginForm : AppCompatActivity() {
     // ✅ Simulated user database check (Replace with actual DB query)
     private fun checkUserInDatabase(email: String, password: String): Boolean {
         return email == "user@example.com" && password == "password123"  // Example credentials
+    }
+
+    private fun blockEmojis(): InputFilter {
+        return object : InputFilter {
+            override fun filter(
+                source: CharSequence?,
+                start: Int,
+                end: Int,
+                dest: Spanned?,
+                dstart: Int,
+                dend: Int
+            ): CharSequence? {
+                if (source == null) return null
+
+                for (i in start until end) {
+                    val type = Character.getType(source[i])
+                    if (type == Character.SURROGATE.toInt() || type == Character.OTHER_SYMBOL.toInt()) {
+                        return ""
+                    }
+                }
+                return null
+            }
+        }
     }
 }

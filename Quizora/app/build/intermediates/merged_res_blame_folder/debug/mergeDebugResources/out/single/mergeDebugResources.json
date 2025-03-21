@@ -264,10 +264,6 @@
         "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.quizora.app-debug-4:/layout_fragment_update_password.xml.flat",
-        "source": "com.example.quizora.app-main-6:/layout/fragment_update_password.xml"
-    },
-    {
         "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_onboard_4.png.flat",
         "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\onboard_4.png"
     },
@@ -386,6 +382,10 @@
     {
         "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\drawable_up_date.png.flat",
         "source": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-main-6:\\drawable\\up_date.png"
+    },
+    {
+        "merged": "com.example.quizora.app-debug-4:/layout_activity_login_form.xml.flat",
+        "source": "com.example.quizora.app-main-6:/layout/activity_login_form.xml"
     },
     {
         "merged": "D:\\Quizora2\\daemon\\8.13-milestone-3\\com.example.quizora.app-debug-4:\\layout_activity_scoreboard.xml.flat",
