@@ -14,7 +14,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class LoginActivity : AppCompatActivity() {
-    private lateinit var usernameEditText: EditText
+    private lateinit var emailEditText: EditText
     private lateinit var passwordEditText: EditText
     private lateinit var loginButton: Button
     private lateinit var signupButton: Button
@@ -23,19 +23,19 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_form)
 
-        usernameEditText = findViewById(R.id.EmailAddress)
+        emailEditText = findViewById(R.id.EmailAddress)
         passwordEditText = findViewById(R.id.Password)
         loginButton = findViewById(R.id.Signin)
         signupButton = findViewById(R.id.Signupbtn)
 
         loginButton.setOnClickListener {
-            val username = usernameEditText.text.toString().trim()
+            val email = emailEditText.text.toString().trim()
             val password = passwordEditText.text.toString().trim()
 
-            if (username.isEmpty() || password.isEmpty()) {
+            if (email.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show()
             } else {
-                loginUser(username, password)
+                loginUser(email, password)
             }
         }
 
@@ -44,14 +44,13 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun loginUser(username: String, password: String) {
-        val request = LoginRequest(username, password)
+    private fun loginUser(email: String, password: String) {
+        val request = LoginRequest(email, password)
 
         RetrofitClient.instance.loginUser(request).enqueue(object : Callback<LoginResponse> {
             override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                 if (response.isSuccessful && response.body()?.success == true) {
                     Toast.makeText(this@LoginActivity, "Login successful", Toast.LENGTH_SHORT).show()
-                    // Example: Go to MainActivity after login
                     startActivity(Intent(this@LoginActivity, MainActivity::class.java))
                     finish()
                 } else {

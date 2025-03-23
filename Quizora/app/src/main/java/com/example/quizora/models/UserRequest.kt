@@ -1,10 +1,9 @@
 package com.example.quizora.models
 
-data class UserRequest(
-    val username: String,
-    val email: String?,
-    val password: String
+data class RegisterRequest(
+    val nickname: String,
+    val email: String,
+    val password: String,
+    val confirmPassword: String
 )
-
-
 
