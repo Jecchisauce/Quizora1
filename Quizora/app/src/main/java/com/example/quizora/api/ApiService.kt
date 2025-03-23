@@ -1,3 +1,5 @@
+package com.example.quizora.api
+
 import com.example.quizora.models.LoginRequest
 import com.example.quizora.models.LoginResponse
 import com.example.quizora.models.RegisterRequest

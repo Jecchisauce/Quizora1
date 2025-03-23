@@ -114,6 +114,7 @@
                 app:tint="#808080"
                 tools:ignore="TouchTargetSizeCheck" />
 
+
             <EditText
                 android:id="@+id/Password2"
                 android:layout_width="0dp"
@@ -131,6 +132,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/Password1" />
+
 
             <ImageButton
                 android:id="@+id/togglePassword2"

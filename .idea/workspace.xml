@@ -46,17 +46,15 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca899fb1-70e8-4b9c-aa2d-254c7316aca6" name="Changes" comment="update 2">
-      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ca899fb1-70e8-4b9c-aa2d-254c7316aca6" name="Changes" comment="update 3">
+      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/LoginActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/SignupActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/SignupActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/SignUp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/SignUp.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/api/ApiService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/api/ApiService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/models/LoginResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/models/LoginResponse.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/models/RegisterResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/models/RegisterResponse.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/models/UserRequest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/models/UserRequest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/api/RetrofitClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/api/RetrofitClient.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/models/LoginRequest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/java/com/example/quizora/models/LoginRequest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quizora/app/src/main/res/layout/activity_sign_up.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Quizora/app/src/main/res/layout/activity_sign_up.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +64,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\Jecchi\.android\avd\Pixel_Fold_API_35.avd)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=PhysicalDevice, isTemplate=false, identifier=serial=5DTCNRMJNZ7PJNBQ)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$/Quizora">
       <ProjectState />
@@ -500,7 +498,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741002786474</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update 3">
+      <option name="closed" value="true" />
+      <created>1742711296643</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1742711296643</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -530,7 +536,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="update" />
     <MESSAGE value="update 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="update 2" />
+    <MESSAGE value="update 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 3" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
