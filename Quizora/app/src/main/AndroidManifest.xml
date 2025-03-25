@@ -31,7 +31,7 @@
             android:name=".SignUp"
             android:exported="false" />
         <activity
-            android:name=".LoginForm"
+            android:name=".LoginActivity"
             android:exported="true" />
         <activity
             android:name=".Phase1"
