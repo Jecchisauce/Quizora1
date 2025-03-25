@@ -226,7 +226,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="History"
+        android:text="QUIZ LOGS"
         android:textAllCaps="true"
         android:textColor="@color/white"
         android:textSize="18sp"
@@ -250,6 +250,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quiz_buttons"
         tools:listitem="@layout/item_quiz_history" />
+
+<!--    reset not needed-->
+    <Button
+        android:id="@+id/btnResetStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:text="Reset Stats"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recyclerViewHistory" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
