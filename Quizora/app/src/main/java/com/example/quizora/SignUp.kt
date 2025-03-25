@@ -61,7 +61,7 @@ class SignUp : AppCompatActivity() {
         }
 
         binding.loginbtn1.setOnClickListener {
-            val intent = Intent(this, LoginForm::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
     }
@@ -89,7 +89,7 @@ class SignUp : AppCompatActivity() {
             override fun onResponse(call: Call<RegisterResponse>, response: Response<RegisterResponse>) {
                 if (response.isSuccessful && response.body()?.success == true) {
                     Toast.makeText(this@SignUp, "Registration successful!", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this@SignUp, LoginForm::class.java))
+                    startActivity(Intent(this@SignUp, LoginActivity::class.java))
                     finish()
                 } else {
                     Toast.makeText(this@SignUp, response.body()?.message ?: "Signup failed", Toast.LENGTH_SHORT).show()

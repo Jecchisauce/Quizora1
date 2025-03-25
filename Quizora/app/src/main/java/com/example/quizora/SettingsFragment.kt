@@ -91,7 +91,7 @@ class SettingsFragment : Fragment() {
     }
 
     private fun logoutUser() {
-        val intent = Intent(requireContext(), LoginForm::class.java)
+        val intent = Intent(requireContext(), LoginActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)
     }

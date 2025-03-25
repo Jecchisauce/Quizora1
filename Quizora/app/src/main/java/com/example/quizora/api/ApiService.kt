@@ -1,9 +1,6 @@
 package com.example.quizora.api
 
-import com.example.quizora.models.LoginRequest
-import com.example.quizora.models.LoginResponse
-import com.example.quizora.models.RegisterRequest
-import com.example.quizora.models.RegisterResponse
+import com.example.quizora.models.*
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.POST
@@ -14,4 +11,7 @@ interface ApiService {
 
     @POST("login.php")
     fun loginUser(@Body request: LoginRequest): Call<LoginResponse>
+
+    @POST("change_password.php")
+    fun changePassword(@Body request: ChangePasswordRequest): Call<ChangePasswordResponse>
 }

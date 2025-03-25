@@ -28,7 +28,7 @@ class Phase3 : AppCompatActivity() {
 
     private fun navigateToLogin() {
         // Navigate to Login activity (assuming it's Phase2)
-        val intent = Intent(this, LoginForm::class.java)
+        val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
     }
 

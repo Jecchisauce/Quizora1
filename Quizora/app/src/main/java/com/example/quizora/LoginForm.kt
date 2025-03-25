@@ -18,21 +18,19 @@ import retrofit2.Response
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginFormBinding
-    private var isPasswordVisible = false // Track password visibility
+    private var isPasswordVisible = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginFormBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Handle window insets
         ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        // Sign-in logic
         binding.Signin.setOnClickListener {
             val email = binding.EmailAddress.text.toString().trim()
             val password = binding.Password.text.toString().trim()
@@ -50,7 +48,6 @@ class LoginActivity : AppCompatActivity() {
             loginUser(email, password)
         }
 
-        // Toggle password visibility
         binding.togglePassword.setOnClickListener {
             isPasswordVisible = !isPasswordVisible
             if (isPasswordVisible) {
@@ -63,22 +60,16 @@ class LoginActivity : AppCompatActivity() {
             binding.Password.setSelection(binding.Password.text.length)
         }
 
-        // Signup button
         binding.Signupbtn.setOnClickListener {
-            val intent = Intent(this, SignUp::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, SignUp::class.java))
         }
 
-        // Forgot password button
         binding.forgotbtn.setOnClickListener {
-            val intent = Intent(this, ForgotPassword::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, ForgotPassword::class.java))
         }
 
-        // Bypass button
         binding.bypassbtn.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, MainActivity::class.java))
         }
     }
 

@@ -45,7 +45,7 @@ class Phase1 : AppCompatActivity() {
         // Button click event
         btnSkip.setOnClickListener {
             if (viewPager.currentItem == onboardingItems.size - 1) {
-                val intent = Intent(this, LoginForm::class.java) // Navigate to LoginForm
+                val intent = Intent(this, LoginActivity::class.java) // Navigate to LoginForm
                 startActivity(intent)
                 finish() // Close onboarding screen
             } else {
