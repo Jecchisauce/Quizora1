@@ -6,11 +6,18 @@ import android.os.Bundle
 import android.text.InputFilter
 import android.text.InputType
 import android.text.Spanned
+import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
 import com.example.quizora.databinding.ActivityLoginFormBinding
+import com.example.quizora.fucntions.Global
+import com.example.quizora.fucntions.LoginReq
+import com.example.quizora.fucntions.RetrofitClient
+import kotlinx.coroutines.launch
 
 class LoginForm : AppCompatActivity() {
 
@@ -46,22 +53,12 @@ class LoginForm : AppCompatActivity() {
 
             if (email.isEmpty()) {
                 binding.EmailAddress.error = "Email is required!"
-                return@setOnClickListener
             }
-
             if (password.isEmpty()) {
                 binding.Password.error = "Password is required!"
-                return@setOnClickListener
             }
 
-            // ✅ Check user in database (Replace with actual query)
-            if (checkUserInDatabase(email, password)) {
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-            } else {
-                binding.EmailAddress.error = "Invalid credentials"
-                binding.Password.error = "Invalid credentials"
-            }
+            checkUserInDatabase(email, password)
         }
 
         //  Toggle password visibility
@@ -96,9 +93,41 @@ class LoginForm : AppCompatActivity() {
     }
 
     // ✅ Simulated user database check (Replace with actual DB query)
-    private fun checkUserInDatabase(email: String, password: String): Boolean {
-        return email == "user@example.com" && password == "password123"  // Example credentials
+    private fun checkUserInDatabase(email: String, password: String) {
+        val loginReq = LoginReq(email = email, password = password)
+
+        lifecycleScope.launch {
+            try {
+                val response = RetrofitClient.api.login(loginReq)
+                Log.d("LoginDebug", "Response: $response") // Debugging line
+
+                if (response.success) {
+                    Global.LOGGED = true
+                    Global.USERNAME = response.user?.username
+                    Global.ID = response.user?.id
+                    Global.ACCESS = response.user?.access
+
+                    Toast.makeText(this@LoginForm, "Login successful!", Toast.LENGTH_SHORT).show()
+
+                    // ✅ Move to MainActivity after success
+                    val intent = Intent(this@LoginForm, MainActivity::class.java)
+                    startActivity(intent)
+                    finish() // ✅ Prevent user from returning to login
+
+                } else {
+                    Log.e("LoginDebug", "Login failed: $response")
+                    Toast.makeText(this@LoginForm, "Invalid credentials", Toast.LENGTH_SHORT).show()
+                    binding.EmailAddress.error = "Invalid credentials"
+                    binding.Password.error = "Invalid credentials"
+                }
+
+            } catch (e: Exception) {
+                Log.e("LoginDebug", "Error: ${e.message}")
+                Toast.makeText(this@LoginForm, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
+
 
     private fun blockEmojis(): InputFilter {
         return object : InputFilter {

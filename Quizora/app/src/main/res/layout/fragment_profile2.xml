@@ -3,147 +3,184 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#393636"
     tools:context=".Profile2">
 
+    <!-- Profile Section -->
 
-    <FrameLayout
+    <Button
+        android:id="@+id/btnBackProfile"
+        android:layout_width="48dp"
+        android:layout_height="46dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="890px"
+        android:layout_marginBottom="4dp"
+        android:background="@android:color/transparent"
+        android:paddingRight="9dp"
+        android:drawableRight="@drawable/baseline_arrow_back_24"
+        android:textSize="15sp"
+        android:backgroundTint="@android:color/transparent"
+        android:contentDescription="Editprofile"/>
+
+    <Button
+        android:id="@+id/btnSaveProfile"
+        android:layout_width="48dp"
+        android:layout_height="46dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="890px"
+        android:layout_marginBottom="4dp"
+        android:background="@android:color/transparent"
+        android:paddingRight="9dp"
+        android:drawableRight="@drawable/baseline_save_24"
+        android:textSize="15sp"
+        android:backgroundTint="@android:color/transparent"
+        android:contentDescription="Editprofile"/>
+
+    <RelativeLayout
+        android:background="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#1A1A1A"
-        tools:context=".ProfileFragment">
+        android:layout_height="50dp"
+        android:layout_marginTop="0dp">
+
+
+        <TextView
+            android:id="@+id/profileTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/poppins_extrabold"
+            android:text="Profile"
+            android:textColor="@color/black"
+            android:textSize="19sp" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="34dp"
+        android:background="#411036"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="30dp">
+
+        <ImageView
+            android:id="@+id/profileImageview"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/circle_border"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile_circle" />
+
+        <TextView
+            android:id="@+id/txtNickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Nickname"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtUserType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student"
+            android:textColor="#B0B0B0"
+            android:textSize="14sp" />
+
+
+        <View
+            android:layout_width="377dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:background="#555555" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="714dp"
-            android:layout_gravity="top"
+            android:layout_height="288dp"
+            android:layout_gravity="bottom"
+            android:layout_margin="16dp"
+            android:background="@drawable/textbox"
+            android:elevation="4dp"
             android:orientation="vertical"
             android:padding="16dp">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <Button
-                    android:id="@+id/backButton"
-                    android:layout_width="63dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:background="@android:color/transparent"
-                    android:drawableLeft="@drawable/baseline_arrow_back_ios_24"
-                    android:drawableTint="@color/white"
-                    android:paddingLeft="10dp" />
-
-                <TextView
-                    android:id="@+id/profileTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="Profile"
-                    android:textColor="#FFFFFF"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/saveButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:background="@android:color/transparent"
-                    android:text="Save"
-                    android:textColor="#FFFFFF"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-            </RelativeLayout>
-
-            <ImageView
-                android:id="@+id/profileImage"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/circle_border"
-                android:scaleType="centerCrop"
-                android:src="@drawable/profile" />
-
             <TextView
-                android:id="@+id/nickname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="8dp"
-                android:text="Nickname"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp"
+                android:layout_marginBottom="8dp"
+                android:text="Personal Details"
+                android:textColor="@color/black"
+                android:textSize="16sp"
                 android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/userType"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Student"
-                android:textColor="#B0B0B0"
-                android:textSize="14sp" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
                 android:background="#555555" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="224dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/sign_border"
-                android:elevation="4dp"
-                android:orientation="vertical"
-                android:padding="16dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Personal Details"
-                    android:textColor="#FFFFFF"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+            <EditText
+                android:layout_width="186dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="8dp"
+                android:text="Nickname"
+                android:textColor="#B0B0B0"
+                android:textSize="14sp"
+                tools:ignore="TouchTargetSizeCheck" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="#555555" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
-                <EditText
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/inputName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/textbox"
-                    android:hint="Name"
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#B0B0B0" />
+            <EditText
+                android:layout_width="186dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="8dp"
+                android:text="Email address"
+                android:textColor="#B0B0B0"
+                android:textSize="14sp"
+                tools:ignore="TouchTargetSizeCheck" />
 
-                <EditText
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/inputEmail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/textbox"
-                    android:hint="Email"
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#B0B0B0" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
-                <EditText
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/inputUser"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/textbox"
-                    android:hint="User Type"
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#B0B0B0" />
-            </LinearLayout>
+            <EditText
+                android:layout_width="185dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="3dp"
+                android:minHeight="48dp"
+                android:text="Student"
+                android:textColor="#B0B0B0"
+                android:textSize="14sp"
+                tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
-    </FrameLayout>
+    </LinearLayout>
 </FrameLayout>

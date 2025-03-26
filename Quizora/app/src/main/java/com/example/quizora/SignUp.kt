@@ -3,10 +3,15 @@ package com.example.quizora
 import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
 import com.example.quizora.databinding.ActivitySignUpBinding
+import com.example.quizora.fucntions.RetrofitClient
+import com.example.quizora.fucntions.SignupReq
+import kotlinx.coroutines.launch
 
 class SignUp : AppCompatActivity() {
 
@@ -56,9 +61,8 @@ class SignUp : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // ✅ Proceed to the next activity if all inputs are valid
-            val intent = Intent(this, LoginForm::class.java)
-            startActivity(intent)
+            // ✅ Now the function will handle navigation itself
+            signup(nickname, email, password1)
         }
 
         // Toggle Password1 visibility
@@ -91,6 +95,27 @@ class SignUp : AppCompatActivity() {
         binding.loginbtn1.setOnClickListener {
             val intent = Intent(this, LoginForm::class.java)
             startActivity(intent)
+        }
+    }
+    private fun signup(username: String, email: String, password: String) {
+        val signupReq = SignupReq(username = username, email = email, password = password, phoneNum = null)
+
+        lifecycleScope.launch {
+            try {
+                val response = RetrofitClient.api.signup(signupReq)
+                if (response.success) {
+                    Toast.makeText(this@SignUp, "Registration successful!", Toast.LENGTH_SHORT).show()
+
+                    // ✅ Navigate to LoginForm after successful signup
+                    val intent = Intent(this@SignUp, LoginForm::class.java)
+                    startActivity(intent)
+                    finish() // ✅ Prevent going back to signup page
+                } else {
+                    Toast.makeText(this@SignUp, "Signup failed: ${response.message}", Toast.LENGTH_SHORT).show()
+                }
+            } catch (e: Exception) {
+                Toast.makeText(this@SignUp, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }

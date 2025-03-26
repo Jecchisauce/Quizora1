@@ -31,6 +31,15 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 
+
+    packagingOptions {
+        exclude("META-INF/DEPENDENCIES")
+        exclude("META-INF/INDEX.LIST")
+        exclude("META-INF/NOTICE")
+        exclude("META-INF/LICENSE")
+        exclude("META-INF/io.netty.versions.properties") // Fix for Netty duplicates
+    }
+
     kotlinOptions {
         jvmTarget = "11"
     }
@@ -46,6 +55,14 @@ dependencies {
         implementation("androidx.viewpager2:viewpager2:1.0.0")
         implementation("com.google.code.gson:gson:2.10.1")
     }
+    implementation("com.squareup.picasso:picasso:2.8")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.1")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2") // Coroutine core
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2") // Coroutine support for Android
+    implementation ("com.google.android.gms:play-services-location:18.0.0")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
