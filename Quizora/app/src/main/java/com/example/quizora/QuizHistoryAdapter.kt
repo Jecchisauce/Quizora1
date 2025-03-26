@@ -3,17 +3,17 @@ package com.example.quizora
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-
-data class QuizHistory(val title: String, val score: String)
 
 class QuizHistoryAdapter(private val quizList: List<QuizHistory>) :
     RecyclerView.Adapter<QuizHistoryAdapter.QuizViewHolder>() {
 
     class QuizViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val quizTitle: TextView = view.findViewById(R.id.historyQuizTitle)
-        val quizScore: TextView = view.findViewById(R.id.historyQuizScore)
+        val quizAccuracy: TextView = view.findViewById(R.id.display_accuracy)
+        val quizImage: ImageView = view.findViewById(R.id.historyQuizImage)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): QuizViewHolder {
@@ -25,7 +25,8 @@ class QuizHistoryAdapter(private val quizList: List<QuizHistory>) :
     override fun onBindViewHolder(holder: QuizViewHolder, position: Int) {
         val quiz = quizList[position]
         holder.quizTitle.text = quiz.title
-        holder.quizScore.text = quiz.score
+        holder.quizAccuracy.text = quiz.accuracy
+        holder.quizImage.setImageResource(quiz.imageResId) // Set quiz image
     }
 
     override fun getItemCount(): Int = quizList.size

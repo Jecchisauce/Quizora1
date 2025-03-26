@@ -1,8 +1,10 @@
 package com.example.quizora
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,6 +14,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 
 class AnswerMath : Fragment() {
 
@@ -34,15 +38,15 @@ class AnswerMath : Fragment() {
 
     private val questions = listOf(
         Question("Solve for x: 2x + 3 = 7", listOf("x = 1", "x = 2", "x = 3", "x = 4"), 0),
-//        Question("What is 3x3?", listOf("6", "7", "9", "12"), 2),
-//        Question("Find the square root of 49", listOf("5", "7", "9", "11"), 1),
-//        Question("Simplify: 4 + 4 × 2", listOf("12", "16", "8", "20"), 1),
-//        Question("What is 15 ÷ 3?", listOf("2", "4", "5", "6"), 2),
-//        Question("What is 8²?", listOf("64", "16", "32", "128"), 0),
-//        Question("If a triangle has angles of 60° and 60°, what is the third angle?", listOf("30°", "45°", "60°", "90°"), 2),
-//        Question("Solve for x: 5x - 10 = 0", listOf("x = 0", "x = 1", "x = 2", "x = 3"), 2),
-//        Question("What is the value of π (pi) rounded to two decimal places?", listOf("3.10", "3.14", "3.16", "3.18"), 1),
-//        Question("What is the perimeter of a square with a side length of 5?", listOf("10", "15", "20", "25"), 2),
+        Question("What is 3x3?", listOf("6", "7", "9", "12"), 2),
+        Question("Find the square root of 49", listOf("5", "7", "9", "11"), 1),
+        Question("Simplify: 4 + 4 × 2", listOf("12", "16", "8", "20"), 1),
+        Question("What is 15 ÷ 3?", listOf("2", "4", "5", "6"), 2),
+        Question("What is 8²?", listOf("64", "16", "32", "128"), 0),
+        Question("If a triangle has angles of 60° and 60°, what is the third angle?", listOf("30°", "45°", "60°", "90°"), 2),
+        Question("Solve for x: 5x - 10 = 0", listOf("x = 0", "x = 1", "x = 2", "x = 3"), 2),
+        Question("What is the value of π (pi) rounded to two decimal places?", listOf("3.10", "3.14", "3.16", "3.18"), 1),
+        Question("What is the perimeter of a square with a side length of 5?", listOf("10", "15", "20", "25"), 2),
     )
 
     override fun onCreateView(
@@ -159,12 +163,46 @@ class AnswerMath : Fragment() {
 
 
     private fun endQuiz() {
+        saveQuizResult() // Save result before moving to the scoreboard
+
         val scoreboardFragment = ScoreboardFragment.newInstance(score)
         parentFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, scoreboardFragment) // Replace with your container ID
+            .replace(R.id.fragment_container, scoreboardFragment)
             .addToBackStack(null)
             .commit()
     }
+
+    // 🟢 Save quiz result to SharedPreferences
+    private fun saveQuizResult() {
+        val sharedPref = requireActivity().getSharedPreferences("QuizPrefs", Context.MODE_PRIVATE)
+        val gson = Gson()
+
+        // Get existing quiz history
+        val json = sharedPref.getString("QUIZ_HISTORY", "[]")
+        val type = object : TypeToken<List<QuizHistory>>() {}.type
+        val historyList: MutableList<QuizHistory> = gson.fromJson(json, type) ?: mutableListOf()
+
+        // Calculate accuracy
+        val accuracy = if (questions.isNotEmpty()) (score.toDouble() / questions.size * 100).toInt() else 0
+        val quizEntry = QuizHistory("Math Quiz", "Accuracy: $accuracy%", R.drawable.ma_th)
+
+        // ✅ Check if a Math Quiz entry already exists
+        val existingIndex = historyList.indexOfFirst { it.title == "Math Quiz" }
+
+        if (existingIndex != -1) {
+            // 🔄 Replace the existing entry
+            historyList[existingIndex] = quizEntry
+        } else {
+            // ➕ Add new entry if not found
+            historyList.add(quizEntry)
+        }
+
+        // Save updated history back to SharedPreferences
+        sharedPref.edit().putString("QUIZ_HISTORY", gson.toJson(historyList)).apply()
+
+        Log.d("QuizSave", "Quiz result saved (updated): $quizEntry")
+    }
+
 
 
 

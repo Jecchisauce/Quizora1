@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="18dp"
             android:fontFamily="@font/poppins_medium"
-            android:text="Return to save progress, retry, or continue."
+            android:text="Return to Main, retry, or continue."
             android:textSize="16sp"
             android:textColor="@android:color/white"
             android:textAlignment="center"

@@ -14,7 +14,7 @@
         android:layout_centerVertical="true"
         android:layout_marginVertical="40dp"
         android:layout_marginBottom="272dp"
-        android:background="@drawable/sign_border">
+        android:background="@drawable/borders">
 
         <TextView
             android:id="@+id/textView7"
