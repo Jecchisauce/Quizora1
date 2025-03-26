@@ -291,7 +291,7 @@ class AnswerMath : Fragment() {
     }
 }
 
-data class Question(
+data class Questions(
     val question: String,
     val choices: List<String>,
     val correctAnswer: Int
