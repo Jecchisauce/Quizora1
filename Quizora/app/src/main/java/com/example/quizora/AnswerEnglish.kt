@@ -17,7 +17,7 @@ import androidx.fragment.app.Fragment
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
-class AnswerHistory : Fragment() {
+class AnswerEnglish : Fragment() {
 
     private lateinit var timerProgressBar: ProgressBar
     private lateinit var questionText: TextView
@@ -35,23 +35,33 @@ class AnswerHistory : Fragment() {
     private var timer: CountDownTimer? = null
 
     private val questions = listOf(
-        Question("Who was the first President of the United States?", listOf("George Washington", "Abraham Lincoln", "Thomas Jefferson", "John Adams"), 0),
-        Question("Which year did World War II end?", listOf("1942", "1945", "1948", "1950"), 1),
-        Question("What was the name of the ship that carried the Pilgrims to America in 1620?", listOf("Santa Maria", "Mayflower", "Titanic", "Beagle"), 1),
-        Question("Who wrote the Declaration of Independence?", listOf("Benjamin Franklin", "John Adams", "Thomas Jefferson", "George Washington"), 2),
-        Question("Which ancient civilization built the pyramids of Giza?", listOf("Greeks", "Romans", "Egyptians", "Mayans"), 2),
-        Question("What year did the Titanic sink?", listOf("1905", "1912", "1918", "1925"), 1),
-        Question("Who discovered America in 1492?", listOf("Christopher Columbus", "Vasco da Gama", "James Cook", "Marco Polo"), 0),
-        Question("Which country was the first to land a man on the moon?", listOf("Russia", "United States", "China", "Germany"), 1),
-        Question("What was the capital of the Roman Empire?", listOf("Athens", "Carthage", "Rome", "Constantinople"), 2),
-        Question("Which war was fought between the North and South regions of the U.S.?", listOf("World War I", "Revolutionary War", "Civil War", "Vietnam War"), 2)
+        Question("Which of the following is a synonym for 'Happy'?", listOf("Sad", "Excited", "Joyful", "Angry"), 2),
+        Question("What is the past tense of 'go'?", listOf("Goed", "Goes", "Went", "Gone"), 2),
+        Question("Which word is a noun?", listOf("Run", "Beautiful", "Happiness", "Quickly"), 2),
+        Question("Identify the correct spelling:", listOf("Recieve", "Receive", "Recive", "Reveive"), 1),
+        Question("Which of these is an example of a simile?", listOf(
+            "She is a shining star.",
+            "He runs as fast as a cheetah.",
+            "The wind whispered in the trees.",
+            "Time is a thief."
+        ), 1),
+        Question("Who wrote 'Romeo and Juliet'?", listOf("Charles Dickens", "William Shakespeare", "Jane Austen", "Mark Twain"), 1),
+        Question("What is the plural form of 'child'?", listOf("Childs", "Childrens", "Children", "Chilren"), 2),
+        Question("Which sentence is grammatically correct?", listOf(
+            "She don’t like apples.",
+            "He go to school every day.",
+            "They is playing outside.",
+            "She doesn’t like apples."
+        ), 3),
+        Question("What is the antonym of 'Brave'?", listOf("Cowardly", "Strong", "Courageous", "Bold"), 0),
+        Question("What type of word is 'quickly'?", listOf("Noun", "Adjective", "Adverb", "Verb"), 2)
     )
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_answer_history, container, false)
+        return inflater.inflate(R.layout.fragment_answer_english, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -67,7 +77,7 @@ class AnswerHistory : Fragment() {
         answerC = view.findViewById(R.id.answer_c)
         answerD = view.findViewById(R.id.answer_d)
 
-        val backButton = view.findViewById<Button>(R.id.History_backbtn)
+        val backButton = view.findViewById<Button>(R.id.English_backbtn)
         backButton.setOnClickListener {
             stopQuizTimer()
             showQuizProgressDialog()
@@ -168,10 +178,10 @@ class AnswerHistory : Fragment() {
 
         // Calculate accuracy
         val accuracy = if (questions.isNotEmpty()) (score.toDouble() / questions.size * 100).toInt() else 0
-        val quizEntry = QuizHistory("History Quiz", "Accuracy: $accuracy%", R.drawable.his_tory)
+        val quizEntry = QuizHistory("English Quiz", "Accuracy: $accuracy%", R.drawable.en_glish)
 
-        // ✅ Check if a History Quiz entry already exists
-        val existingIndex = historyList.indexOfFirst { it.title == "History Quiz" }
+        // ✅ Check if a Science Quiz entry already exists
+        val existingIndex = historyList.indexOfFirst { it.title == "English Quiz" }
 
         if (existingIndex != -1) {
             // 🔄 Replace the existing entry
@@ -254,7 +264,7 @@ class AnswerHistory : Fragment() {
     }
 
     private fun nextQuestionDelayed() {
-        val backButton = view?.findViewById<Button>(R.id.Science_backbtn)
+        val backButton = view?.findViewById<Button>(R.id.English_backbtn)
         backButton?.isEnabled = false // Disable back button
 
         view?.postDelayed({
@@ -270,7 +280,7 @@ class AnswerHistory : Fragment() {
     }
 }
 
-data class Questions1(
+data class Questions2(
     val question: String,
     val choices: List<String>,
     val correctAnswer: Int

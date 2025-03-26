@@ -36,7 +36,7 @@ class ExploreFragment : Fragment() {
             Triple(R.id.Quiz1, "Math Quiz", R.drawable.ma_th) to Pair("Basic algebra and equations.", AnswerMath()),
             Triple(R.id.Quiz2, "Science Quiz", R.drawable.scie_nce) to Pair("Discover facts about nature.", AnswerScience()),
             Triple(R.id.Quiz3, "History Quiz", R.drawable.his_tory) to Pair("Test your history knowledge.", AnswerHistory()),
-//            Triple(R.id.Quiz4, "English Quiz", R.drawable.en_glish) to Pair("Learn fun language facts.", AnswerEnglish())
+            Triple(R.id.Quiz4, "English Quiz", R.drawable.en_glish) to Pair("Learn fun language facts.", AnswerEnglish())
         )
 
         for ((quizInfo, details) in quizData) {
