@@ -103,26 +103,6 @@
                 android:text="Recommendation"
                 android:textColor="@color/black" />
 
-            <Button
-                android:id="@+id/test"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@drawable/borders"
-                android:fontFamily="@font/poppins_extrabold"
-                android:text="IQ test"
-                android:textColor="@color/black"/>
-
-            <Button
-                android:id="@+id/Others"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@drawable/borders"
-                android:fontFamily="@font/poppins_extrabold"
-                android:text="Others"
-                android:textColor="@color/black"/>
-
         </LinearLayout>
 
     </HorizontalScrollView>

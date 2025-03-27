@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,61 +9,63 @@
 
     <!-- Profile Section -->
 
-    <Button
-        android:id="@+id/btnBackProfile"
-        android:layout_width="48dp"
-        android:layout_height="46dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="890px"
-        android:layout_marginBottom="4dp"
-        android:background="@android:color/transparent"
-        android:paddingRight="9dp"
-        android:drawableRight="@drawable/baseline_arrow_back_24"
-        android:textSize="15sp"
-        android:backgroundTint="@android:color/transparent"
-        android:contentDescription="Editprofile"/>
-
-    <Button
-        android:id="@+id/btnSaveProfile"
-        android:layout_width="48dp"
-        android:layout_height="46dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="890px"
-        android:layout_marginBottom="4dp"
-        android:background="@android:color/transparent"
-        android:paddingRight="9dp"
-        android:drawableRight="@drawable/baseline_save_24"
-        android:textSize="15sp"
-        android:backgroundTint="@android:color/transparent"
-        android:contentDescription="Editprofile"/>
-
-    <RelativeLayout
-        android:background="@color/white"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="0dp">
+        android:background="@color/white">
 
+        <!-- Back Button -->
+        <Button
+            android:id="@+id/btnBackProfile"
+            android:layout_marginStart="2dp"
+            android:paddingLeft="10dp"
+            android:layout_width="48dp"
+            android:layout_height="46dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Back to profile"
+            android:drawableLeft="@drawable/baseline_arrow_back_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
 
+        <!-- Profile Title (Centered) -->
         <TextView
             android:id="@+id/profileTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
             android:fontFamily="@font/poppins_extrabold"
             android:text="Profile"
             android:textColor="@color/black"
-            android:textSize="19sp" />
+            android:textSize="19sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btnSaveProfile"
+            android:layout_marginEnd="2dp"
+            android:paddingRight="10dp"
+            android:layout_width="48dp"
+            android:layout_height="46dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Save profile"
+            android:drawableRight="@drawable/baseline_save_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
 
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="700dp"
+        android:layout_height="751dp"
         android:layout_gravity="center"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="33dp"
         android:background="#411036"
         android:gravity="center"
         android:orientation="vertical"
@@ -141,7 +144,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="8dp"
-                android:text="Nickname"
+                android:background="@drawable/textbox"
+                android:hint="Username"
                 android:textColor="#B0B0B0"
                 android:textSize="14sp"
                 tools:ignore="TouchTargetSizeCheck" />
@@ -159,7 +163,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="8dp"
-                android:text="Email address"
+                android:background="@drawable/textbox"
+                android:hint="User Email"
                 android:textColor="#B0B0B0"
                 android:textSize="14sp"
                 tools:ignore="TouchTargetSizeCheck" />
@@ -176,8 +181,9 @@
                 android:layout_width="185dp"
                 android:layout_height="37dp"
                 android:layout_marginTop="3dp"
+                android:background="@drawable/textbox"
+                android:hint="Role"
                 android:minHeight="48dp"
-                android:text="Student"
                 android:textColor="#B0B0B0"
                 android:textSize="14sp"
                 tools:ignore="TouchTargetSizeCheck" />

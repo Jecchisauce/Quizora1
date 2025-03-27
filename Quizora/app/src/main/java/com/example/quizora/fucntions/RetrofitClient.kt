@@ -32,7 +32,7 @@ object RetrofitClient {
         Log.d("DEBUG", "Retrofit using BASE_URL: $baseUrl")
 
         Retrofit.Builder()
-            .baseUrl("http://${baseUrl.trimEnd('/')}:80/bitespot_api/api/")
+            .baseUrl("http://${baseUrl.trimEnd('/')}:80/quizora_api/api/")
             .client(client)
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()

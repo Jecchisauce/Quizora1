@@ -6,6 +6,10 @@ android {
     namespace = "com.example.quizora"
     compileSdk = 35
 
+    viewBinding {
+        enable = true
+    }
+
     defaultConfig {
         applicationId = "com.example.quizora"
         minSdk = 24

@@ -16,12 +16,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
+
         // Handling insets
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_nav1)
 
@@ -50,4 +52,12 @@ class MainActivity : AppCompatActivity() {
             .commit()
         return true
     }
+
+    fun navigateToProfile2() {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, Profile2())
+            .addToBackStack(null)
+            .commit()
+    }
+
 }
