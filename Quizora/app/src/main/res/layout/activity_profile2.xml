@@ -140,13 +140,14 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/Usernamep"
                 android:layout_width="186dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/textbox"
                 android:hint="Username"
-                android:textColor="#B0B0B0"
+                android:textColor="@color/black"
                 android:textSize="14sp"
                 tools:ignore="TouchTargetSizeCheck" />
 
@@ -159,13 +160,14 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:layout_width="186dp"
-                android:layout_height="wrap_content"
+                android:id="@+id/et_email"
+                android:layout_width="185dp"
+                android:layout_height="37dp"
                 android:layout_marginTop="3dp"
-                android:layout_marginBottom="8dp"
                 android:background="@drawable/textbox"
-                android:hint="User Email"
-                android:textColor="#B0B0B0"
+                android:hint="Role"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
                 android:textSize="14sp"
                 tools:ignore="TouchTargetSizeCheck" />
 
@@ -178,13 +180,14 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/editTextRolep"
                 android:layout_width="185dp"
                 android:layout_height="37dp"
                 android:layout_marginTop="3dp"
                 android:background="@drawable/textbox"
                 android:hint="Role"
                 android:minHeight="48dp"
-                android:textColor="#B0B0B0"
+                android:textColor="@color/black"
                 android:textSize="14sp"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
