@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,9 +8,9 @@
     tools:context=".ActivityFragment">
 
     <RelativeLayout
-        android:background="#411036"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#411036">
 
         <!-- Delete Icon Button (Left) -->
         <Button
@@ -19,10 +20,10 @@
             android:layout_alignParentStart="true"
             android:layout_margin="10dp"
             android:background="@drawable/textbox"
+            android:contentDescription="deleteButton"
             android:drawableLeft="@drawable/edit_mode"
             android:drawableTint="#C97D8E"
-            android:paddingLeft="13dp"
-            android:contentDescription="deleteButton" />
+            android:paddingLeft="13dp" />
 
         <!-- Centered TextView -->
         <TextView
@@ -44,11 +45,45 @@
             android:layout_alignParentEnd="true"
             android:layout_margin="10dp"
             android:background="@drawable/textbox"
+            android:contentDescription="backbutton"
             android:drawableLeft="@drawable/add"
             android:drawableTint="#C97D8E"
-            android:paddingLeft="13dp"
-            android:contentDescription="backbutton"/>
+            android:paddingLeft="13dp" />
 
     </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/capacity"
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:layout_marginTop="69dp"
+        android:background="@color/black">
+
+        <TextView
+            android:id="@+id/counterText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:fontFamily="@font/poppins_extrabold"
+            android:gravity="center"
+            android:text="0/6"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/quiz_items"
+        android:fadeScrollbars="true"
+        android:layout_width="match_parent"
+        android:layout_height="630dp"
+        android:layout_below="@id/capacity"
+        android:layout_marginTop="102dp"
+        android:padding="8dp"
+        android:scrollbars="vertical" />
 
 </FrameLayout>
