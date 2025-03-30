@@ -37,7 +37,7 @@ object Global {
         }
 
     var BASE_URL: String?
-        get() = sharedPreferences?.getString("BASE_URL", "192.168.100.51")
+        get() = sharedPreferences?.getString("BASE_URL", "192.168.18.6")
         set(value) {
             sharedPreferences?.edit()?.putString("BASE_URL", value)?.apply()
         }

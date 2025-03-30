@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    tools:context=".ActivityFragment">
+    tools:context=".ActivityFragment"
+    android:id="@+id/fragment_container">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -39,16 +40,16 @@
 
         <!-- Button on the Right -->
         <Button
-            android:id="@+id/myButton"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignParentEnd="true"
-            android:layout_margin="10dp"
-            android:background="@drawable/textbox"
-            android:contentDescription="backbutton"
-            android:drawableLeft="@drawable/add"
-            android:drawableTint="#C97D8E"
-            android:paddingLeft="13dp" />
+        android:id="@+id/AddQuiz"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/textbox"
+        android:contentDescription="backbutton"
+        android:drawableLeft="@drawable/add"
+        android:drawableTint="#C97D8E"
+        android:paddingLeft="13dp" />
 
     </RelativeLayout>
 

@@ -23,12 +23,12 @@ object RetrofitClient {
     private val retrofit by lazy {
         // Now safely access BASE_URL
         if (Global.BASE_URL.isNullOrEmpty()) {
-            Global.BASE_URL = "192.168.100.51"
+            Global.BASE_URL = "192.168.18.6"
         }
         val gson = GsonBuilder()
             .setLenient() // Allows parsing non-strict JSON
             .create()
-        val baseUrl = Global.BASE_URL ?: "192.168.100.51"
+        val baseUrl = Global.BASE_URL ?: "192.168.18.6"
         Log.d("DEBUG", "Retrofit using BASE_URL: $baseUrl")
 
         Retrofit.Builder()
