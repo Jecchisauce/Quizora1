@@ -72,11 +72,16 @@
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:layout_margin="24dp"
-        android:fontFamily="@font/poppins_medium"
+        android:layout_marginTop="112dp"
         android:background="@color/white"
+        android:fontFamily="@font/poppins_medium"
+
         android:text="Create Question"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/empty_quiz_text"
+        app:layout_constraintVertical_bias="0.889" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

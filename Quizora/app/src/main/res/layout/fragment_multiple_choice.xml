@@ -39,7 +39,7 @@
             android:background="@drawable/d"
             android:fontFamily="@font/poppins_extrabold"
             android:padding="8dp"
-            android:text="Fill in the blanks"
+            android:text="Multiple Choice"
             android:textColor="@android:color/white"
             android:textSize="14sp" />
 
@@ -68,46 +68,60 @@
 
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/answer_card"
+    <LinearLayout
+        android:id="@+id/choices_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_margin="16dp"
-        app:cardCornerRadius="8dp"
-        app:cardBackgroundColor="#B0E0E6"
         app:layout_constraintTop_toBottomOf="@id/question_card"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <LinearLayout
+        <EditText
+            android:id="@+id/choice_a"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:layout_height="56dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/textbox"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Answer"
+            android:padding="8dp"
+            tools:ignore="TouchTargetSizeCheck" />
 
-            <TextView
-                android:id="@+id/answer_label"
-                android:fontFamily="@font/poppins_regular"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Type Answer Here"
-                android:textColor="@android:color/black"
-                android:textSize="16sp"
-                android:layout_marginBottom="8dp" />
+        <EditText
+            android:id="@+id/choice_b"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/textbox"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Answer"
+            android:padding="8dp"
+            tools:ignore="TouchTargetSizeCheck" />
 
-            <EditText
-                android:id="@+id/answer_text"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:background="@drawable/textbox"
-                android:fontFamily="@font/poppins_regular"
-                android:hint="Answer"
-                android:padding="8dp"
-                tools:ignore="TouchTargetSizeCheck" />
+        <EditText
+            android:id="@+id/choice_c"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/textbox"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Answer"
+            android:padding="8dp"
+            tools:ignore="TouchTargetSizeCheck" />
 
-        </LinearLayout>
+        <EditText
+            android:id="@+id/choice_d"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/textbox"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Answer"
+            android:padding="8dp"
+            tools:ignore="TouchTargetSizeCheck" />
 
-    </androidx.cardview.widget.CardView>
+    </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottom_bar"
@@ -122,7 +136,7 @@
             android:id="@+id/time_limit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="4dp"
             android:background="@drawable/d"
             android:padding="8dp"
             android:text="no timer"
@@ -154,16 +168,14 @@
             android:id="@+id/add_question_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
+            android:text="Add question"
             android:background="@drawable/d"
             android:fontFamily="@font/poppins_regular"
-            android:padding="8dp"
-            android:text="Add question"
             android:textColor="@android:color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:padding="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintBottom_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

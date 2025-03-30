@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
@@ -123,6 +124,24 @@ class SelectQuestionTypeBottomSheet : BottomSheetDialogFragment() {
             fragmentTransaction.commit()
             dismiss()
             hideButton()
+        }
+
+        view.findViewById<LinearLayout>(R.id.multiple_choice_layout).setOnClickListener {
+            // Handle Multiple Choice selection
+            val fragmentTransaction: FragmentTransaction = parentFragmentManager.beginTransaction()
+            fragmentTransaction.replace(R.id.fragment_container,MultipleChoiceFragment()) // Replace MultipleChoiceFragment with your fragment class.
+            fragmentTransaction.addToBackStack(null) // Optional: Add to back stack
+            fragmentTransaction.commit()
+            dismiss() // Close the bottom sheet
+        }
+
+        view.findViewById<LinearLayout>(R.id.true_false_layout).setOnClickListener {
+            // Handle True or False selection
+            val fragmentTransaction: FragmentTransaction = parentFragmentManager.beginTransaction()
+            fragmentTransaction.replace(R.id.fragment_container, TrueFalseFragment()) // Replace TrueFalseFragment with your fragment class.
+            fragmentTransaction.addToBackStack(null) // Optional: Add to back stack
+            fragmentTransaction.commit()
+            dismiss() // Close the bottom sheet
         }
     }
 
