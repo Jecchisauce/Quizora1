@@ -11,12 +11,14 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.quizora.fucntions.Global
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
 class HomeFragment : Fragment() {
 
     private lateinit var tvTotalQuizzes: TextView
+    private lateinit var tvUsername: TextView
     private lateinit var tvAverage: TextView
     private lateinit var recyclerView: RecyclerView
     private lateinit var quizHistoryAdapter: QuizHistoryAdapter
@@ -33,10 +35,14 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Initialize UI Elements
+        tvUsername = view.findViewById(R.id.tvUsername)
         tvTotalQuizzes = view.findViewById(R.id.tvTotalQuizzes)
         tvAverage = view.findViewById(R.id.tvAverage)
         recyclerView = view.findViewById(R.id.recyclerViewHistory)
         val resetButton: Button = view.findViewById(R.id.btnResetStats)
+
+        tvUsername.text = Global.USERNAME
+        tvTotalQuizzes.text = Global.TOTAL_QUIZZES.toString()
 
         // Setup RecyclerView (Horizontal Scrolling)
         recyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)

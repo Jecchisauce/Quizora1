@@ -104,6 +104,7 @@ class LoginForm : AppCompatActivity() {
                 if (response.success) {
                     Global.LOGGED = true
                     Global.USERNAME = response.user?.username
+                    Global.EMAIL = response.user?.email
                     Global.ID = response.user?.id
                     Global.ACCESS = response.user?.access
 

@@ -4,6 +4,7 @@ package com.example.quizora.fucntions
 data class User(
     val username : String = "Default",
     val id : Int?,
+    val email: String?,
     val img : String?,
     val access : Int?,
 )

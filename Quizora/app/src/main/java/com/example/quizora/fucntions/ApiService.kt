@@ -1,9 +1,11 @@
 package com.example.quizora.fucntions
 
 import retrofit2.http.Body
+import retrofit2.http.DELETE
 import retrofit2.http.GET
 import retrofit2.http.Headers
 import retrofit2.http.POST
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface ApiService {
@@ -14,6 +16,9 @@ interface ApiService {
 
     @POST("users/login")
     suspend fun login(@Body request: LoginReq): LoginRes
+
+    @DELETE("users/{id}")
+    suspend fun delUser(@Path("id") id: Int): DefaultRes
 
     // Example of a request body
 //    @POST("comments")

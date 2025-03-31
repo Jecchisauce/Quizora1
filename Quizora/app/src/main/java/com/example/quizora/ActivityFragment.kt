@@ -25,18 +25,18 @@ class ActivityFragment : Fragment(R.layout.fragment_activity) {
         val addQuizButton: Button = view.findViewById(R.id.AddQuiz)
 
         // Sample quiz items
-        val quizList = listOf(
-            QuizItem("Math Quiz", 10),
-            QuizItem("Science Quiz", 15),
-            QuizItem("History Quiz", 8),
-            QuizItem("Geography Quiz", 12),
-            QuizItem("English Quiz", 20),
-            QuizItem("Programming Quiz", 25)
-        )
-
-        // Set layout manager (Grid with 2 columns)
-        recyclerView.layoutManager = GridLayoutManager(requireContext(), 1)
-        recyclerView.adapter = QuizAdapter(quizList)
+//        val quizList = listOf(
+//            QuizItem("Math Quiz", 10),
+//            QuizItem("Science Quiz", 15),
+//            QuizItem("History Quiz", 8),
+//            QuizItem("Geography Quiz", 12),
+//            QuizItem("English Quiz", 20),
+//            QuizItem("Programming Quiz", 25)
+//        )
+//
+//        // Set layout manager (Grid with 2 columns)
+//        recyclerView.layoutManager = GridLayoutManager(requireContext(), 1)
+//        recyclerView.adapter = QuizAdapter(quizList)
 
         // Set click listener for AddQuiz button
         addQuizButton.setOnClickListener {

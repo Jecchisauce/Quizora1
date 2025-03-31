@@ -24,6 +24,18 @@ object Global {
             sharedPreferences?.edit()?.putString("USERNAME", value)?.apply()
         }
 
+    var EMAIL: String?
+        get() = sharedPreferences?.getString("EMAIL", "hello@theotherside.com")
+        set(value) {
+            sharedPreferences?.edit()?.putString("EMAIL", value)?.apply()
+        }
+
+    var TOTAL_QUIZZES: Int
+        get() = sharedPreferences?.getInt("TOTAL_QUIZZES", 0) ?: 0
+        set(value) {
+            sharedPreferences?.edit()?.putInt("TOTAL_QUIZZES", value)?.apply()
+        }
+
     var ACCESS: Int?
         get() = sharedPreferences?.getInt("ACCESS", -1)?.takeIf { it != -1 }
         set(value) {
@@ -37,7 +49,7 @@ object Global {
         }
 
     var BASE_URL: String?
-        get() = sharedPreferences?.getString("BASE_URL", "192.168.18.6")
+        get() = sharedPreferences?.getString("BASE_URL", "192.168.21.132")
         set(value) {
             sharedPreferences?.edit()?.putString("BASE_URL", value)?.apply()
         }

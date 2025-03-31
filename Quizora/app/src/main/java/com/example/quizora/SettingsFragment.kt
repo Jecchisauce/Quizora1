@@ -4,6 +4,7 @@ import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
+import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +14,10 @@ import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
+import com.example.quizora.fucntions.Global
+import com.example.quizora.fucntions.RetrofitClient
+import kotlinx.coroutines.launch
 
 class SettingsFragment : Fragment() {
     override fun onCreateView(
@@ -199,10 +204,20 @@ class SettingsFragment : Fragment() {
 
 
     private fun deleteAccount(password: String) {
-        // Simulate deletion logic (e.g., Firebase/Auth API call)
-        Toast.makeText(requireContext(), "✅ Account deleted successfully!", Toast.LENGTH_LONG).show()
-
-        // TODO: Implement actual account deletion logic here
+        lifecycleScope.launch {
+            var userId = 1
+            if (Global.ID != null) {userId = Global.ID!!}
+            try {
+                val response = RetrofitClient.api.delUser(userId) // Replace `apiService` with your Retrofit instance
+                if (response.success) {
+                    Log.d("DeleteUser", "User deleted successfully")
+                } else {
+                    Log.e("DeleteUser", "Failed: ${response.message}")
+                }
+            } catch (e: Exception) {
+                Log.e("DeleteUser", "Error: ${e.message}")
+            }
+        }
     }
 
 
